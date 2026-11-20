@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Chargeback &amp; Dispute Intelligence — Try</title>
+<style>
+  :root { --navy:#11567F; --blue:#29B5E8; --muted:#4F6878; --line:#d0e8f2; --soft:#f4f9fc; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Arial,sans-serif; color:#1b2a33; }
+  header { background:linear-gradient(160deg,#EAF5FB,#fff 70%); border-bottom:1px solid var(--line); padding:1.3rem 1.25rem; }
+  header h1 { color:var(--navy); margin:0; font-size:1.4rem; }
+  header p { color:var(--muted); margin:.3rem 0 0; font-size:.9rem; }
+  .banner { background:#FFF4E5; border:1px solid #F3D19E; color:#7a4a00; border-radius:10px; padding:.6rem .9rem; margin:1rem 1.25rem 0; font-size:.85rem; }
+  .banner a { color:#0B6AA2; }
+  .layout { display:grid; grid-template-columns:320px 1fr; gap:1.25rem; padding:1.25rem; }
+  .panel { border:1px solid var(--line); border-radius:12px; padding:1rem; background:#fff; }
+  .panel h2 { font-size:1rem; color:var(--navy); margin:0 0 .7rem; }
+  .chk { margin-top:.8rem; font-size:.82rem; color:#33505f; }
+  button { margin-top:.9rem; width:100%; background:var(--blue); border:1px solid var(--blue); color:#06293b; font-weight:700; padding:.6rem; border-radius:9px; cursor:pointer; }
+  button:hover { filter:brightness(.97); }
+  .cards { display:grid; grid-template-columns:repeat(2,1fr); gap:.8rem; }
+  .card { border:1px solid var(--line); border-radius:12px; padding:.8rem; cursor:pointer; background:#fff; }
+  .card:hover { border-color:var(--blue); }
+  .badge { font-size:.8rem; font-weight:700; }
+  .ok { color:#1a7f37; } .warn { color:#b35900; }
+  .card .t { color:var(--navy); font-weight:600; margin:.2rem 0; }
+  .card .s { color:var(--muted); font-size:.78rem; }
+  .note { border:1px solid var(--line); border-radius:12px; padding:1.1rem 1.3rem; background:#fff; }
+  .note h1 { font-size:1.3rem; color:var(--navy); }
+  table { border-collapse:collapse; width:100%; margin:.6rem 0; font-size:.86rem; }
+  th,td { border:1px solid var(--line); padding:.35rem .5rem; text-align:left; }
+  th { background:var(--soft); color:var(--navy); }
+  td.n, th.n { text-align:right; }
+  .cat { background:#EAF5FB; font-weight:700; color:var(--navy); }
+  .edits { background:#FDECEA; border:1px solid #F3B4AC; border-radius:8px; padding:.6rem .8rem; margin:.6rem 0; font-size:.82rem; }
+  .mock { color:var(--muted); font-size:.78rem; margin-top:.6rem; }
+  .bench { border:1px solid var(--line); border-radius:12px; padding:1rem 1.1rem; background:#fff; margin-bottom:1rem; }
+  .bench h2 { font-size:1.05rem; color:var(--navy); margin:0 0 .3rem; }
+  .spike { background:#FFF4E5; border:1px solid #F3D19E; color:#7a4a00; border-radius:8px; padding:.5rem .7rem; margin:.6rem 0; font-size:.82rem; }
+  .cfpb { background:#eef7ef; border:1px solid #cfe8d2; color:#1a5a2a; border-radius:8px; padding:.5rem .7rem; margin:.6rem 0 0; font-size:.82rem; }
+  a.back { font-size:.85rem; color:#0B6AA2; cursor:pointer; }
+  @media (max-width:760px){ .layout{grid-template-columns:1fr;} .cards{grid-template-columns:1fr;} .kpis{grid-template-columns:repeat(2,1fr);} }
+
+  /* --- visual layer additions --- */
+  .kpis { display:grid; grid-template-columns:repeat(5,1fr); gap:.6rem; margin-bottom:1rem; }
+  .kpi { border:1px solid var(--line); border-radius:12px; padding:.7rem; background:#fff; }
+  .kpi .k { font-size:.72rem; color:var(--muted); font-weight:600; }
+  .kpi .v { color:var(--navy); font-weight:700; font-size:1.15rem; margin-top:.15rem; }
+  .kpi .d { font-size:.72rem; color:var(--muted); margin-top:.1rem; }
+  .kpi .v.pulse { display:inline-block; animation:pulse .5s ease; }
+  @keyframes pulse { 0%{transform:scale(1);} 40%{transform:scale(1.18);} 100%{transform:scale(1);} }
+  .bar { height:6px; background:#eef5f9; border-radius:4px; margin-top:.25rem; overflow:hidden; }
+  .bar i { display:block; height:100%; width:0; border-radius:4px; transition:width .7s ease, background .5s ease; }
+  .rcbar { transition:width .9s ease; }
+  .rcval { transition:x .9s ease; fill:var(--muted); font-size:11px; }
+  .rclbl { fill:#1b2a33; font-size:11px; }
+  button.running { opacity:.8; cursor:progress; }
+  .pipeline { border:1px dashed var(--blue); border-radius:12px; padding:1rem 1.2rem; background:#f4fbfe; }
+  .pipeline h2 { font-size:1.05rem; color:var(--navy); margin:.1rem 0 .7rem; }
+  .pipeline .step { display:flex; align-items:center; gap:.5rem; font-size:.92rem; color:#8aa0ac; margin:.35rem 0; }
+  .pipeline .step.active { color:var(--navy); font-weight:600; }
+  .pipeline .step.done { color:#1a7f37; font-weight:600; }
+  .spin { width:14px; height:14px; border:2px solid var(--line); border-top-color:var(--blue); border-radius:50%; display:inline-block; animation:spin .7s linear infinite; flex:0 0 auto; }
+  @keyframes spin { to { transform:rotate(360deg); } }
+  .claim { background:#FDECEA; border:1px solid #F3B4AC; border-radius:8px; padding:.45rem .7rem; margin:.5rem 0 0; font-size:.85rem; color:#8a1f12; max-height:80px; overflow:hidden; transition:opacity .5s ease, max-height .5s ease, padding .5s ease, margin .5s ease; }
+  .claim.struck { text-decoration:line-through; text-decoration-color:#c0392b; }
+  .claim.removed { opacity:0; max-height:0; padding-top:0; padding-bottom:0; margin:0; }
+  @keyframes flashnote { 0%{ box-shadow:0 0 0 3px rgba(41,181,232,0); } 18%{ box-shadow:0 0 0 4px rgba(41,181,232,.6); } 100%{ box-shadow:0 0 0 4px rgba(41,181,232,0); } }
+  .flash { animation:flashnote 1.3s ease-out 1; }
+
+@media (max-width:640px){
+  html,body{max-width:100%;overflow-x:hidden;}
+  .layout{grid-template-columns:1fr !important;}
+  .kpis{grid-template-columns:1fr 1fr !important;}
+  .cards{grid-template-columns:1fr !important;}
+  table{display:block;width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:nowrap;}
+  .block,main,.panel,header,.banner,.note,.pipeline,figure{min-width:0;max-width:100%;}
+  img,svg,.curve{max-width:100%;height:auto;}
+  .presets{grid-template-columns:1fr 1fr !important;}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Chargeback &amp; Dispute Intelligence</h1>
+  <p>Grounded, self-verifying dispute notes &mdash; running in your browser on synthetic data.</p>
+</header>
+<div class="banner">
+  <strong>Sample mode &mdash; synthetic data &amp; mock AI.</strong> Fictional dispute book and a synthetic complaint benchmark; responses are illustrative, not live inference.
+  Real consumer-complaint data for payment-card products is available free on the Snowflake Marketplace (CFPB complaint data) &mdash; the
+  <a href="https://github.com/sfc-gh-jsoliz/sfguide-dispute-intelligence">repo</a> deploys this same app benchmarked against it.
+</div>
+
+<div class="layout">
+  <aside class="panel">
+    <h2>Generate a note</h2>
+    <p class="mock">Benchmarks the dispute book by reason category and writes a verified chargeback note.</p>
+    <div class="chk"><label style="display:inline;"><input type="checkbox" id="breakit" /> Inject an unsupported/hedged forecast (to test the verifier)</label></div>
+    <button id="run">Run dispute analysis</button>
+    <p class="mock">The draft and verify steps run client-side on the baked synthetic facts.</p>
+  </aside>
+  <main>
+    <div id="kpis" class="kpis"></div>
+    <div id="bench"></div>
+    <div id="rcchart"></div>
+    <div id="gallery"></div>
+    <div id="report" style="display:none;"></div>
+  </main>
+</div>
+
+<script>
+// ---- Synthetic dispute book (full 24-month book: 2024-07 → 2026-06) --------
+// Figures derive from the same deterministic formulas as app/setup_synthetic.sql.
+// Friendly-fraud flag and win rate are reason-code attributes; win rate ≈ 35% on
+// fraud codes (friendly fraud settles against the merchant), ≈ 55% elsewhere.
+const AVG_USD = 613; // mean dispute_amount ≈ UNIFORM($25,$1200)
+const CODES = [
+  {cat:"Fraud",             code:"10.4", net:"VISA",       name:"Card-Absent / Friendly Fraud", count:2976, win:0.35, ff:1.00},
+  {cat:"Fraud",             code:"4837", net:"MASTERCARD", name:"No Cardholder Authorization",   count:498,  win:0.35, ff:1.00},
+  {cat:"Consumer Disputes", code:"13.1", net:"VISA",       name:"Merchandise Not Received",      count:2196, win:0.55, ff:0.00},
+  {cat:"Consumer Disputes", code:"13.2", net:"VISA",       name:"Cancelled Recurring",           count:1380, win:0.55, ff:0.00},
+  {cat:"Consumer Disputes", code:"13.3", net:"VISA",       name:"Not As Described",              count:1206, win:0.55, ff:0.00},
+  {cat:"Consumer Disputes", code:"4853", net:"MASTERCARD", name:"Cardholder Dispute",            count:996,  win:0.55, ff:0.00},
+  {cat:"Processing Errors", code:"12.6", net:"VISA",       name:"Duplicate / Paid Other Means",  count:708,  win:0.55, ff:0.00}
+];
+const CATS = ["Fraud","Consumer Disputes","Processing Errors"];
+const fmtUsd = v => v>=1e6 ? "$"+(v/1e6).toFixed(2)+"M" : "$"+Math.round(v/1e3)+"K";
+const pct = v => (v*100).toFixed(0)+"%";
+const usdOf = c => c.count*AVG_USD;
+
+function catAgg(cat){
+  const rows = CODES.filter(c=>c.cat===cat);
+  const count = rows.reduce((s,c)=>s+c.count,0);
+  const usd = rows.reduce((s,c)=>s+usdOf(c),0);
+  // weighted win rate over resolved; friendly-fraud share over all disputes
+  const win = rows.reduce((s,c)=>s+c.win*c.count,0)/count;
+  const ff  = rows.reduce((s,c)=>s+c.ff*c.count,0)/count;
+  return {cat,count,usd,win,ff};
+}
+const BOOK = CATS.map(catAgg);
+const TOTAL = {count:BOOK.reduce((s,c)=>s+c.count,0), usd:BOOK.reduce((s,c)=>s+c.usd,0)};
+const CFPB_MONTHLY = 4820;   // synthetic monthly complaint benchmark (non-additive)
+const CFPB_HOLIDAY = 5700;   // holiday-month benchmark
+
+// ---- Number tween helper (ease-out, build-once-then-update) -----------------
+function tween(el, to, dur, fmt){
+  const from = (el.__v!==undefined) ? el.__v : to; el.__v = to;
+  if(Math.abs(from-to) < 1e-9){ el.textContent = fmt(to); return; }
+  const token = (el.__t||0)+1; el.__t = token; const t0 = performance.now();
+  function step(now){
+    if(el.__t !== token) return;
+    let p = Math.min(1,(now-t0)/dur); const e = 1-Math.pow(1-p,3);
+    el.textContent = fmt(from+(to-from)*e);
+    if(p<1) requestAnimationFrame(step); else el.textContent = fmt(to);
+  }
+  requestAnimationFrame(step);
+}
+const fmtCount = v => Math.round(v).toLocaleString();
+function sevBad(r){ return r<0.34?"#1a7f37":r<0.67?"#b35900":"#c0392b"; }   // higher = worse (friendly-fraud)
+function sevGood(r){ return r>=0.5?"#1a7f37":r>=0.34?"#b35900":"#c0392b"; } // higher = better (win rate)
+
+// ---- Headline KPIs: tweened on reveal --------------------------------------
+const WIN_BLENDED = CODES.reduce((s,c)=>s+c.win*c.count,0)/TOTAL.count;
+const FF_SHARE    = CODES.reduce((s,c)=>s+c.ff*c.count,0)/TOTAL.count;
+const KPI_DEFS = [
+  {k:"Total disputes (24 mo)", val:TOTAL.count, fmt:fmtCount, d:"synthetic processor book"},
+  {k:"Disputed dollars",       val:TOTAL.usd,   fmt:fmtUsd,   d:"$"+AVG_USD+" avg / dispute"},
+  {k:"Blended win rate",       val:WIN_BLENDED, fmt:pct,      d:"won / resolved"},
+  {k:"Friendly-fraud share",   val:FF_SHARE,    fmt:pct,      d:"of all disputes"},
+  {k:"CFPB complaints / mo",   val:CFPB_MONTHLY,fmt:fmtCount, d:"external benchmark"}
+];
+let kpiBuilt=false; const kpiRefs=[];
+function buildKpis(){
+  const el=document.getElementById("kpis"); el.innerHTML=""; kpiRefs.length=0;
+  KPI_DEFS.forEach(def=>{
+    const card=document.createElement("div"); card.className="kpi";
+    card.innerHTML=`<div class="k">${def.k}</div><div class="v">0</div><div class="d">${def.d}</div>`;
+    el.appendChild(card); kpiRefs.push(card.querySelector(".v"));
+  });
+  kpiBuilt=true;
+}
+function renderKpis(){
+  if(!kpiBuilt) buildKpis();
+  KPI_DEFS.forEach((def,i)=>{ const el=kpiRefs[i]; el.__v=0; tween(el, def.val, 600, def.fmt);
+    el.classList.add("pulse"); setTimeout(()=>el.classList.remove("pulse"),560); });
+}
+
+// ---- Benchmark table: build ONCE, then tween values + animate risk bars -----
+let benchBuilt=false; const benchAnim=[];
+function benchCell(val,fmt,frac,color){
+  const key="b"+benchAnim.length; benchAnim.push({key,val,fmt,frac,color});
+  const bar = (frac!=null) ? `<div class="bar"><i data-b="${key}"></i></div>` : "";
+  return `<td class="n"><span data-c="${key}"></span>${bar}</td>`;
+}
+function buildBench(){
+  benchAnim.length=0; let rows="";
+  CATS.forEach(cat=>{
+    const a=BOOK.find(x=>x.cat===cat);
+    rows += `<tr class="cat"><td>${cat}</td>`+
+      benchCell(a.count, fmtCount, a.count/TOTAL.count, "#29B5E8")+
+      benchCell(a.usd,   fmtUsd,   a.usd/TOTAL.usd,     "#29B5E8")+
+      benchCell(a.win,   pct,      a.win,               sevGood(a.win))+
+      benchCell(a.ff,    pct,      a.ff,                sevBad(a.ff))+`</tr>`;
+    CODES.filter(c=>c.cat===cat).forEach(c=>{
+      rows += `<tr><td>&nbsp;&nbsp;${c.code} · ${c.net} <span style="color:#4F6878">${c.name}</span></td>`+
+        benchCell(c.count,  fmtCount, c.count/TOTAL.count, "#29B5E8")+
+        benchCell(usdOf(c), fmtUsd,   usdOf(c)/TOTAL.usd,  "#29B5E8")+
+        benchCell(c.win,    pct,      c.win,               sevGood(c.win))+
+        benchCell(c.ff,     pct,      c.ff,                sevBad(c.ff))+`</tr>`;
+    });
+  });
+  rows += `<tr class="cat"><td>Total</td>`+
+    `<td class="n"><span data-c="tot-c"></span></td>`+
+    `<td class="n"><span data-c="tot-u"></span></td>`+
+    `<td class="n">—</td><td class="n">—</td></tr>`;
+  benchAnim.push({key:"tot-c",val:TOTAL.count,fmt:fmtCount});
+  benchAnim.push({key:"tot-u",val:TOTAL.usd,fmt:fmtUsd});
+  document.getElementById("bench").innerHTML =
+    `<div class="bench"><h2>Dispute book by reason-code category</h2>`+
+    `<p class="mock">Synthetic processor book, 2024-07 → 2026-06. Win rate = won / resolved; friendly-fraud rate = friendly-fraud disputes / all disputes (a reason-code attribute).</p>`+
+    `<table><tr><th>Reason category / code</th><th class="n">Disputes</th><th class="n">Disputed $</th><th class="n">Win rate</th><th class="n">Friendly-fraud rate</th></tr>`+
+    rows+`</table>`+
+    `<div class="spike"><strong>Holiday spike.</strong> Dispute volume rises ~60% in <strong>Nov–Dec–Jan</strong> vs the rest of the year, led by fraud code 10.4 (Card-Absent / Friendly Fraud), which also carries the lowest win rate (~35%).</div>`+
+    `<div class="cfpb"><strong>CFPB complaint benchmark.</strong> Market-wide consumer complaints for payment-card products run ~${CFPB_MONTHLY.toLocaleString()}/month, rising toward ~${CFPB_HOLIDAY.toLocaleString()} in holiday months. This is a monthly external signal bridged by month — never summed with internal disputes.</div>`+
+    `</div>`;
+  benchBuilt=true;
+}
+function animateBench(){
+  if(!benchBuilt) buildBench();
+  benchAnim.forEach(a=>{
+    const el=document.querySelector(`[data-c="${a.key}"]`); if(el){ el.__v=0; tween(el, a.val, 650, a.fmt); }
+    if(a.frac!=null){ const i=document.querySelector(`[data-b="${a.key}"]`); if(i){ i.style.background=a.color; i.style.width="0";
+      requestAnimationFrame(()=>setTimeout(()=>{ i.style.width=(Math.min(1,a.frac)*100).toFixed(1)+"%"; },60)); } }
+  });
+}
+
+// ---- Disputes by reason code: inline SVG horizontal bar chart (animated in) -
+function buildRcChart(){
+  const codes = CODES.slice().sort((a,b)=>b.count-a.count);
+  const w=620, rowH=30, labelW=250, barX=labelW, barMaxW=w-labelW-66;
+  const maxC=Math.max(...codes.map(c=>c.count)), h=codes.length*rowH+12;
+  let s="";
+  codes.forEach((c,i)=>{
+    const y=i*rowH+10, bw=barMaxW*c.count/maxC;
+    const col = c.cat==="Fraud" ? "#11567F" : "#29B5E8";
+    s+=`<text class="rclbl" x="0" y="${y+13}">${c.code} · ${c.name}</text>`;
+    s+=`<rect class="rcbar" x="${barX}" y="${y+2}" height="18" rx="3" fill="${col}" width="0" data-w="${bw.toFixed(1)}"/>`;
+    s+=`<text class="rcval" x="${barX+4}" y="${y+15}" data-x="${(barX+bw+5).toFixed(1)}">${c.count.toLocaleString()}</text>`;
+  });
+  document.getElementById("rcchart").innerHTML =
+    `<div class="bench"><h2>Disputes by reason code</h2>`+
+    `<p class="mock">Card-Absent / Friendly Fraud (10.4) dominates volume; bars are navy for fraud codes, blue for consumer &amp; processing codes.</p>`+
+    `<svg viewBox="0 0 ${w} ${h}" style="width:100%;height:auto;" preserveAspectRatio="xMinYMid meet" id="rcsvg">${s}</svg></div>`;
+  const svg=document.getElementById("rcsvg");
+  requestAnimationFrame(()=>setTimeout(()=>{
+    svg.querySelectorAll(".rcbar").forEach(r=>r.setAttribute("width", r.dataset.w));
+    svg.querySelectorAll(".rcval").forEach(t=>t.setAttribute("x", t.dataset.x));
+  },80));
+}
+
+// ---- Grounded draft + verifier (client-side on the baked facts) ------------
+function draft(hedged){
+  const lead = BOOK.slice().sort((a,b)=>b.usd-a.usd)[0];
+  let md = `# Chargeback & dispute review — 2024-07 → 2026-06\n\n`;
+  md += `**Takeaway.** ${lead.cat} drove the most disputed dollars (${fmtUsd(lead.usd)} across ${lead.count.toLocaleString()} disputes); fraud code 10.4 carries the lowest win rate at 35%, and disputes spike ~60% in Nov–Jan.\n\n`;
+  md += `| Reason category | Disputes | Disputed $ | Win rate | Friendly-fraud rate |\n|---|---|---|---|---|\n`;
+  BOOK.forEach(a=> md += `| ${a.cat} | ${a.count.toLocaleString()} | ${fmtUsd(a.usd)} | ${pct(a.win)} | ${pct(a.ff)} |\n`);
+  md += `\n- Fraud (10.4 / 4837) is entirely first-party/friendly fraud and settles at a ~35% win rate — the hardest dollars to recover.\n`;
+  md += `- Consumer Disputes (13.1 / 13.2 / 13.3 / 4853) is the largest category by volume; 13.1 (merchandise not received) leads it.\n`;
+  md += `- Processing Errors (12.6) is the smallest category and wins at ~55%, consistent with clear duplicate-charge evidence.\n`;
+  if(hedged){
+    md += `- Friendly fraud will likely rise ~15% next quarter with industry-leading recovery.\n`;
+  }
+  md += `\n## Data Coverage\nSynthetic dispute book; monthly CFPB complaint benchmark ~${CFPB_MONTHLY.toLocaleString()} (non-additive).\n`;
+  return md;
+}
+const HEDGE = ["likely","approximately","around","could","industry-leading","~15%"];
+function verify(md){
+  const edits=[]; let hedges=0;
+  HEDGE.forEach(h=>{ if(md.toLowerCase().includes(h.toLowerCase())){ hedges++; edits.push(`hedge/unsupported term: "${h}"`); }});
+  if(/next quarter/i.test(md)) edits.push('unsupported forward estimate: "rise ~15% next quarter"');
+  // the "~60%" and "~35%" in the takeaway are supported by the baked facts; allow them
+  const supported = ["~60%","~35%"];
+  const flagged = edits.filter(e=> !supported.some(s=> e.includes(s)));
+  return { status: flagged.length? "needs_review":"verified", hedges: flagged.length, edits: flagged };
+}
+
+const SAMPLE=[];
+function renderNote(container, rec){
+  const v=rec.verify;
+  const badge = v.status==="verified" ? '<span class="badge ok">✅ Verified</span>' : '<span class="badge warn">⚠️ Needs review</span>';
+  let html = `<p><a class="back" onclick="showGallery()">← Back to gallery</a></p><div class="note">`;
+  html += `<p>${badge} &nbsp; residual hedges: ${v.hedges} &nbsp;|&nbsp; flagged: ${v.edits.length}</p>`;
+  if(v.edits.length){ html += `<div class="edits"><strong>Verifier removed / flagged:</strong><ul>`+v.edits.map(e=>`<li>${e}</li>`).join("")+`</ul></div>`; }
+  html += mdToHtml(rec.md) + `<p class="mock">Mock AI response — illustrative, not live inference.</p></div>`;
+  container.innerHTML = html;
+}
+function mdToHtml(md){
+  const lines=md.split("\n"); let html="",inTable=false,inList=false;
+  for(let i=0;i<lines.length;i++){ let L=lines[i];
+    if(/^\|/.test(L)){ const cells=L.split("|").slice(1,-1).map(c=>c.trim());
+      if(/^-+$/.test(cells.join(""))) continue;
+      if(!inTable){ html+="<table>"; inTable=true; html+="<tr>"+cells.map(c=>`<th>${c}</th>`).join("")+"</tr>"; continue; }
+      html+="<tr>"+cells.map(c=>`<td>${c}</td>`).join("")+"</tr>"; continue;
+    } else if(inTable){ html+="</table>"; inTable=false; }
+    if(/^# /.test(L)){ html+=`<h1>${L.slice(2)}</h1>`; continue; }
+    if(/^## /.test(L)){ html+=`<h3>${L.slice(3)}</h3>`; continue; }
+    if(/^- /.test(L)){ if(!inList){html+="<ul>";inList=true;} html+=`<li>${inline(L.slice(2))}</li>`; continue; }
+    else if(inList){ html+="</ul>"; inList=false; }
+    if(L.trim()) html+=`<p>${inline(L)}</p>`;
+  }
+  if(inTable)html+="</table>"; if(inList)html+="</ul>"; return html;
+}
+const inline = s => s.replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>");
+
+function showGallery(){ document.getElementById("report").style.display="none"; const g=document.getElementById("gallery"); g.style.display="block";
+  g.innerHTML = `<h2 style="color:#11567F;">Verified notes</h2><div class="cards">`+
+    SAMPLE.map((r,i)=>{ const v=r.verify; const b=v.status==="verified"?'<span class="badge ok">✅ Verified</span>':'<span class="badge warn">⚠️ Needs review</span>';
+      return `<div class="card" onclick="openReport(${i})">${b}<div class="t">${r.subject}</div><div class="s">${r.when} · ${v.edits.length} flagged</div></div>`; }).join("")+`</div>`;
+}
+function openReport(i){ document.getElementById("gallery").style.display="none"; const r=document.getElementById("report"); r.style.display="block"; renderNote(r, SAMPLE[i]); }
+
+function seed(){
+  const md=draft(false);
+  SAMPLE.push({subject:"Dispute & chargeback review", when:"2026-06", md, verify:verify(md)});
+  const md2=draft(true);
+  SAMPLE.push({subject:"Dispute & chargeback review (hedged draft)", when:"2026-06", md:md2, verify:verify(md2)});
+}
+const CLAIM_TEXT = "Friendly fraud will likely rise ~15% next quarter with industry-leading recovery.";
+const runBtn=document.getElementById("run");
+runBtn.onclick=()=>{
+  if(runBtn.disabled) return;
+  const broke=document.getElementById("breakit").checked;
+  const md=draft(broke);
+  const rec={subject:"Dispute & chargeback review"+(broke?" (hedged draft)":""), when:"2026-06", md, verify:verify(md)};
+  const label=runBtn.textContent;
+  runBtn.disabled=true; runBtn.classList.add("running"); runBtn.textContent="Running analysis\u2026";
+  document.getElementById("gallery").style.display="none";
+  const rep=document.getElementById("report"); rep.style.display="block"; rep.classList.remove("flash");
+  rep.innerHTML=`<div class="pipeline"><h2>Generating dispute note</h2>`+
+    `<div class="step active" id="st1"><span class="spin"></span> Drafting note from the benchmark&hellip;</div>`+
+    `<div class="step" id="st2">Verifying claims against the data&hellip;</div>`+
+    `<div class="step" id="st3">Gating unsupported statements&hellip;</div>`+
+    (broke?`<div class="claim" id="claimline">&ldquo;${CLAIM_TEXT}&rdquo;</div>`:``)+
+    `</div>`;
+  rep.scrollIntoView({behavior:"smooth",block:"start"});
+  const T = broke ? [700,1400,1850,2300,2650] : [700,1400,1400,1400,1900];
+  setTimeout(()=>{ const a=document.getElementById("st1"),b=document.getElementById("st2"); if(!a)return;
+    a.className="step done"; a.innerHTML="&#9989; Drafted note from the benchmark";
+    b.className="step active"; b.innerHTML='<span class="spin"></span> Verifying claims against the data&hellip;'; }, T[0]);
+  setTimeout(()=>{ const b=document.getElementById("st2"),c=document.getElementById("st3"); if(!b)return;
+    b.className="step done"; b.innerHTML="&#9989; Verified claims against the data";
+    if(broke){ c.className="step active"; c.innerHTML='<span class="spin"></span> Gating unsupported statements&hellip;'; } }, T[1]);
+  if(broke){
+    setTimeout(()=>{ const cl=document.getElementById("claimline"); if(cl) cl.classList.add("struck"); }, T[2]);
+    setTimeout(()=>{ const cl=document.getElementById("claimline"); if(cl) cl.classList.add("removed"); }, T[3]);
+  }
+  setTimeout(()=>{ const c=document.getElementById("st3"); if(c){ const n=rec.verify.edits.length;
+    c.className="step done"; c.innerHTML = n ? ("&#9888;&#65039; Flagged "+n+" unsupported statement"+(n>1?"s":"")+" \u2014 removed") : "&#9989; No unsupported statements"; } }, broke?T[3]:T[1]);
+  setTimeout(()=>{ SAMPLE.unshift(rec); openReport(0); rep.classList.add("flash");
+    runBtn.disabled=false; runBtn.classList.remove("running"); runBtn.textContent=label; }, T[4]);
+};
+buildKpis(); renderKpis(); buildBench(); animateBench(); buildRcChart(); seed(); showGallery();
+</script>
+</body>
+</html>
