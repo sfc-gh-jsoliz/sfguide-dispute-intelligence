@@ -1,0 +1,1071 @@
+{
+ "monthly": [
+  {
+   "month_end": "2024-07-31",
+   "reason_code": "13.3",
+   "disputes": 3
+  },
+  {
+   "month_end": "2024-07-31",
+   "reason_code": "10.4",
+   "disputes": 7
+  },
+  {
+   "month_end": "2024-07-31",
+   "reason_code": "4837",
+   "disputes": 1
+  },
+  {
+   "month_end": "2024-07-31",
+   "reason_code": "13.1",
+   "disputes": 5
+  },
+  {
+   "month_end": "2024-07-31",
+   "reason_code": "4853",
+   "disputes": 2
+  },
+  {
+   "month_end": "2024-07-31",
+   "reason_code": "13.2",
+   "disputes": 3
+  },
+  {
+   "month_end": "2024-07-31",
+   "reason_code": "12.6",
+   "disputes": 2
+  },
+  {
+   "month_end": "2024-08-31",
+   "reason_code": "4837",
+   "disputes": 1
+  },
+  {
+   "month_end": "2024-08-31",
+   "reason_code": "12.6",
+   "disputes": 2
+  },
+  {
+   "month_end": "2024-08-31",
+   "reason_code": "4853",
+   "disputes": 2
+  },
+  {
+   "month_end": "2024-08-31",
+   "reason_code": "10.4",
+   "disputes": 7
+  },
+  {
+   "month_end": "2024-08-31",
+   "reason_code": "13.2",
+   "disputes": 3
+  },
+  {
+   "month_end": "2024-08-31",
+   "reason_code": "13.1",
+   "disputes": 5
+  },
+  {
+   "month_end": "2024-08-31",
+   "reason_code": "13.3",
+   "disputes": 3
+  },
+  {
+   "month_end": "2024-09-30",
+   "reason_code": "4853",
+   "disputes": 2
+  },
+  {
+   "month_end": "2024-09-30",
+   "reason_code": "4837",
+   "disputes": 1
+  },
+  {
+   "month_end": "2024-09-30",
+   "reason_code": "12.6",
+   "disputes": 2
+  },
+  {
+   "month_end": "2024-09-30",
+   "reason_code": "13.2",
+   "disputes": 3
+  },
+  {
+   "month_end": "2024-09-30",
+   "reason_code": "13.3",
+   "disputes": 3
+  },
+  {
+   "month_end": "2024-09-30",
+   "reason_code": "10.4",
+   "disputes": 7
+  },
+  {
+   "month_end": "2024-09-30",
+   "reason_code": "13.1",
+   "disputes": 5
+  },
+  {
+   "month_end": "2024-10-31",
+   "reason_code": "13.3",
+   "disputes": 3
+  },
+  {
+   "month_end": "2024-10-31",
+   "reason_code": "12.6",
+   "disputes": 2
+  },
+  {
+   "month_end": "2024-10-31",
+   "reason_code": "4837",
+   "disputes": 1
+  },
+  {
+   "month_end": "2024-10-31",
+   "reason_code": "4853",
+   "disputes": 2
+  },
+  {
+   "month_end": "2024-10-31",
+   "reason_code": "10.4",
+   "disputes": 7
+  },
+  {
+   "month_end": "2024-10-31",
+   "reason_code": "13.1",
+   "disputes": 5
+  },
+  {
+   "month_end": "2024-10-31",
+   "reason_code": "13.2",
+   "disputes": 3
+  },
+  {
+   "month_end": "2024-11-30",
+   "reason_code": "13.1",
+   "disputes": 8
+  },
+  {
+   "month_end": "2024-11-30",
+   "reason_code": "4853",
+   "disputes": 4
+  },
+  {
+   "month_end": "2024-11-30",
+   "reason_code": "12.6",
+   "disputes": 3
+  },
+  {
+   "month_end": "2024-11-30",
+   "reason_code": "13.3",
+   "disputes": 5
+  },
+  {
+   "month_end": "2024-11-30",
+   "reason_code": "10.4",
+   "disputes": 11
+  },
+  {
+   "month_end": "2024-11-30",
+   "reason_code": "4837",
+   "disputes": 2
+  },
+  {
+   "month_end": "2024-11-30",
+   "reason_code": "13.2",
+   "disputes": 5
+  },
+  {
+   "month_end": "2024-12-31",
+   "reason_code": "12.6",
+   "disputes": 3
+  },
+  {
+   "month_end": "2024-12-31",
+   "reason_code": "4837",
+   "disputes": 2
+  },
+  {
+   "month_end": "2024-12-31",
+   "reason_code": "10.4",
+   "disputes": 11
+  },
+  {
+   "month_end": "2024-12-31",
+   "reason_code": "13.1",
+   "disputes": 8
+  },
+  {
+   "month_end": "2024-12-31",
+   "reason_code": "13.2",
+   "disputes": 5
+  },
+  {
+   "month_end": "2024-12-31",
+   "reason_code": "13.3",
+   "disputes": 5
+  },
+  {
+   "month_end": "2024-12-31",
+   "reason_code": "4853",
+   "disputes": 4
+  },
+  {
+   "month_end": "2025-01-31",
+   "reason_code": "4837",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-01-31",
+   "reason_code": "12.6",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-01-31",
+   "reason_code": "13.3",
+   "disputes": 5
+  },
+  {
+   "month_end": "2025-01-31",
+   "reason_code": "4853",
+   "disputes": 4
+  },
+  {
+   "month_end": "2025-01-31",
+   "reason_code": "13.2",
+   "disputes": 5
+  },
+  {
+   "month_end": "2025-01-31",
+   "reason_code": "13.1",
+   "disputes": 8
+  },
+  {
+   "month_end": "2025-01-31",
+   "reason_code": "10.4",
+   "disputes": 11
+  },
+  {
+   "month_end": "2025-02-28",
+   "reason_code": "12.6",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-02-28",
+   "reason_code": "10.4",
+   "disputes": 7
+  },
+  {
+   "month_end": "2025-02-28",
+   "reason_code": "13.2",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-02-28",
+   "reason_code": "13.1",
+   "disputes": 5
+  },
+  {
+   "month_end": "2025-02-28",
+   "reason_code": "13.3",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-02-28",
+   "reason_code": "4837",
+   "disputes": 1
+  },
+  {
+   "month_end": "2025-02-28",
+   "reason_code": "4853",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-03-31",
+   "reason_code": "4853",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-03-31",
+   "reason_code": "13.1",
+   "disputes": 5
+  },
+  {
+   "month_end": "2025-03-31",
+   "reason_code": "4837",
+   "disputes": 1
+  },
+  {
+   "month_end": "2025-03-31",
+   "reason_code": "10.4",
+   "disputes": 7
+  },
+  {
+   "month_end": "2025-03-31",
+   "reason_code": "12.6",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-03-31",
+   "reason_code": "13.2",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-03-31",
+   "reason_code": "13.3",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-04-30",
+   "reason_code": "13.1",
+   "disputes": 5
+  },
+  {
+   "month_end": "2025-04-30",
+   "reason_code": "4837",
+   "disputes": 1
+  },
+  {
+   "month_end": "2025-04-30",
+   "reason_code": "12.6",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-04-30",
+   "reason_code": "13.2",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-04-30",
+   "reason_code": "4853",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-04-30",
+   "reason_code": "10.4",
+   "disputes": 7
+  },
+  {
+   "month_end": "2025-04-30",
+   "reason_code": "13.3",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-05-31",
+   "reason_code": "4853",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-05-31",
+   "reason_code": "13.2",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-05-31",
+   "reason_code": "13.1",
+   "disputes": 5
+  },
+  {
+   "month_end": "2025-05-31",
+   "reason_code": "10.4",
+   "disputes": 7
+  },
+  {
+   "month_end": "2025-05-31",
+   "reason_code": "4837",
+   "disputes": 1
+  },
+  {
+   "month_end": "2025-05-31",
+   "reason_code": "12.6",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-05-31",
+   "reason_code": "13.3",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-06-30",
+   "reason_code": "4837",
+   "disputes": 1
+  },
+  {
+   "month_end": "2025-06-30",
+   "reason_code": "4853",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-06-30",
+   "reason_code": "12.6",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-06-30",
+   "reason_code": "13.3",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-06-30",
+   "reason_code": "10.4",
+   "disputes": 7
+  },
+  {
+   "month_end": "2025-06-30",
+   "reason_code": "13.1",
+   "disputes": 5
+  },
+  {
+   "month_end": "2025-06-30",
+   "reason_code": "13.2",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-07-31",
+   "reason_code": "4837",
+   "disputes": 1
+  },
+  {
+   "month_end": "2025-07-31",
+   "reason_code": "4853",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-07-31",
+   "reason_code": "13.1",
+   "disputes": 5
+  },
+  {
+   "month_end": "2025-07-31",
+   "reason_code": "13.3",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-07-31",
+   "reason_code": "13.2",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-07-31",
+   "reason_code": "10.4",
+   "disputes": 7
+  },
+  {
+   "month_end": "2025-07-31",
+   "reason_code": "12.6",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-08-31",
+   "reason_code": "10.4",
+   "disputes": 7
+  },
+  {
+   "month_end": "2025-08-31",
+   "reason_code": "12.6",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-08-31",
+   "reason_code": "4837",
+   "disputes": 1
+  },
+  {
+   "month_end": "2025-08-31",
+   "reason_code": "13.2",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-08-31",
+   "reason_code": "13.1",
+   "disputes": 5
+  },
+  {
+   "month_end": "2025-08-31",
+   "reason_code": "4853",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-08-31",
+   "reason_code": "13.3",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-09-30",
+   "reason_code": "4837",
+   "disputes": 1
+  },
+  {
+   "month_end": "2025-09-30",
+   "reason_code": "12.6",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-09-30",
+   "reason_code": "13.3",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-09-30",
+   "reason_code": "4853",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-09-30",
+   "reason_code": "13.1",
+   "disputes": 5
+  },
+  {
+   "month_end": "2025-09-30",
+   "reason_code": "13.2",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-09-30",
+   "reason_code": "10.4",
+   "disputes": 7
+  },
+  {
+   "month_end": "2025-10-31",
+   "reason_code": "4837",
+   "disputes": 1
+  },
+  {
+   "month_end": "2025-10-31",
+   "reason_code": "13.3",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-10-31",
+   "reason_code": "10.4",
+   "disputes": 7
+  },
+  {
+   "month_end": "2025-10-31",
+   "reason_code": "13.2",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-10-31",
+   "reason_code": "12.6",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-10-31",
+   "reason_code": "4853",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-10-31",
+   "reason_code": "13.1",
+   "disputes": 5
+  },
+  {
+   "month_end": "2025-11-30",
+   "reason_code": "4837",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-11-30",
+   "reason_code": "13.2",
+   "disputes": 5
+  },
+  {
+   "month_end": "2025-11-30",
+   "reason_code": "13.3",
+   "disputes": 5
+  },
+  {
+   "month_end": "2025-11-30",
+   "reason_code": "4853",
+   "disputes": 4
+  },
+  {
+   "month_end": "2025-11-30",
+   "reason_code": "10.4",
+   "disputes": 11
+  },
+  {
+   "month_end": "2025-11-30",
+   "reason_code": "12.6",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-11-30",
+   "reason_code": "13.1",
+   "disputes": 8
+  },
+  {
+   "month_end": "2025-12-31",
+   "reason_code": "13.1",
+   "disputes": 8
+  },
+  {
+   "month_end": "2025-12-31",
+   "reason_code": "13.2",
+   "disputes": 5
+  },
+  {
+   "month_end": "2025-12-31",
+   "reason_code": "13.3",
+   "disputes": 5
+  },
+  {
+   "month_end": "2025-12-31",
+   "reason_code": "12.6",
+   "disputes": 3
+  },
+  {
+   "month_end": "2025-12-31",
+   "reason_code": "10.4",
+   "disputes": 11
+  },
+  {
+   "month_end": "2025-12-31",
+   "reason_code": "4837",
+   "disputes": 2
+  },
+  {
+   "month_end": "2025-12-31",
+   "reason_code": "4853",
+   "disputes": 4
+  },
+  {
+   "month_end": "2026-01-31",
+   "reason_code": "4853",
+   "disputes": 4
+  },
+  {
+   "month_end": "2026-01-31",
+   "reason_code": "10.4",
+   "disputes": 11
+  },
+  {
+   "month_end": "2026-01-31",
+   "reason_code": "13.3",
+   "disputes": 5
+  },
+  {
+   "month_end": "2026-01-31",
+   "reason_code": "4837",
+   "disputes": 2
+  },
+  {
+   "month_end": "2026-01-31",
+   "reason_code": "13.1",
+   "disputes": 8
+  },
+  {
+   "month_end": "2026-01-31",
+   "reason_code": "12.6",
+   "disputes": 3
+  },
+  {
+   "month_end": "2026-01-31",
+   "reason_code": "13.2",
+   "disputes": 5
+  },
+  {
+   "month_end": "2026-02-28",
+   "reason_code": "10.4",
+   "disputes": 7
+  },
+  {
+   "month_end": "2026-02-28",
+   "reason_code": "13.3",
+   "disputes": 3
+  },
+  {
+   "month_end": "2026-02-28",
+   "reason_code": "4837",
+   "disputes": 1
+  },
+  {
+   "month_end": "2026-02-28",
+   "reason_code": "4853",
+   "disputes": 2
+  },
+  {
+   "month_end": "2026-02-28",
+   "reason_code": "13.1",
+   "disputes": 5
+  },
+  {
+   "month_end": "2026-02-28",
+   "reason_code": "13.2",
+   "disputes": 3
+  },
+  {
+   "month_end": "2026-02-28",
+   "reason_code": "12.6",
+   "disputes": 2
+  },
+  {
+   "month_end": "2026-03-31",
+   "reason_code": "4837",
+   "disputes": 1
+  },
+  {
+   "month_end": "2026-03-31",
+   "reason_code": "4853",
+   "disputes": 2
+  },
+  {
+   "month_end": "2026-03-31",
+   "reason_code": "13.3",
+   "disputes": 3
+  },
+  {
+   "month_end": "2026-03-31",
+   "reason_code": "13.1",
+   "disputes": 5
+  },
+  {
+   "month_end": "2026-03-31",
+   "reason_code": "13.2",
+   "disputes": 3
+  },
+  {
+   "month_end": "2026-03-31",
+   "reason_code": "10.4",
+   "disputes": 7
+  },
+  {
+   "month_end": "2026-03-31",
+   "reason_code": "12.6",
+   "disputes": 2
+  },
+  {
+   "month_end": "2026-04-30",
+   "reason_code": "13.1",
+   "disputes": 5
+  },
+  {
+   "month_end": "2026-04-30",
+   "reason_code": "10.4",
+   "disputes": 7
+  },
+  {
+   "month_end": "2026-04-30",
+   "reason_code": "4853",
+   "disputes": 2
+  },
+  {
+   "month_end": "2026-04-30",
+   "reason_code": "12.6",
+   "disputes": 2
+  },
+  {
+   "month_end": "2026-04-30",
+   "reason_code": "13.2",
+   "disputes": 3
+  },
+  {
+   "month_end": "2026-04-30",
+   "reason_code": "13.3",
+   "disputes": 3
+  },
+  {
+   "month_end": "2026-04-30",
+   "reason_code": "4837",
+   "disputes": 1
+  },
+  {
+   "month_end": "2026-05-31",
+   "reason_code": "13.1",
+   "disputes": 5
+  },
+  {
+   "month_end": "2026-05-31",
+   "reason_code": "4837",
+   "disputes": 1
+  },
+  {
+   "month_end": "2026-05-31",
+   "reason_code": "13.3",
+   "disputes": 3
+  },
+  {
+   "month_end": "2026-05-31",
+   "reason_code": "12.6",
+   "disputes": 2
+  },
+  {
+   "month_end": "2026-05-31",
+   "reason_code": "10.4",
+   "disputes": 7
+  },
+  {
+   "month_end": "2026-05-31",
+   "reason_code": "13.2",
+   "disputes": 3
+  },
+  {
+   "month_end": "2026-05-31",
+   "reason_code": "4853",
+   "disputes": 2
+  },
+  {
+   "month_end": "2026-06-30",
+   "reason_code": "10.4",
+   "disputes": 7
+  },
+  {
+   "month_end": "2026-06-30",
+   "reason_code": "13.3",
+   "disputes": 3
+  },
+  {
+   "month_end": "2026-06-30",
+   "reason_code": "13.1",
+   "disputes": 5
+  },
+  {
+   "month_end": "2026-06-30",
+   "reason_code": "4853",
+   "disputes": 2
+  },
+  {
+   "month_end": "2026-06-30",
+   "reason_code": "13.2",
+   "disputes": 3
+  },
+  {
+   "month_end": "2026-06-30",
+   "reason_code": "12.6",
+   "disputes": 2
+  },
+  {
+   "month_end": "2026-06-30",
+   "reason_code": "4837",
+   "disputes": 1
+  }
+ ],
+ "inflight": [
+  {
+   "dispute_id": 8816,
+   "network": "VISA",
+   "reason_code": "13.3",
+   "date_filed": "2026-03-06",
+   "respond_by": "2026-04-05",
+   "status": "open",
+   "dispute_amount": 608.4
+  },
+  {
+   "dispute_id": 8811,
+   "network": "VISA",
+   "reason_code": "13.2",
+   "date_filed": "2026-03-23",
+   "respond_by": "2026-04-22",
+   "status": "pre-arb",
+   "dispute_amount": 1064.3
+  },
+  {
+   "dispute_id": 9178,
+   "network": "VISA",
+   "reason_code": "13.3",
+   "date_filed": "2026-04-13",
+   "respond_by": "2026-05-13",
+   "status": "pre-arb",
+   "dispute_amount": 30.81
+  },
+  {
+   "dispute_id": 9137,
+   "network": "VISA",
+   "reason_code": "12.6",
+   "date_filed": "2026-04-17",
+   "respond_by": "2026-05-17",
+   "status": "pre-arb",
+   "dispute_amount": 955.91
+  },
+  {
+   "dispute_id": 9129,
+   "network": "VISA",
+   "reason_code": "10.4",
+   "date_filed": "2026-04-18",
+   "respond_by": "2026-05-18",
+   "status": "pre-arb",
+   "dispute_amount": 1142.8
+  },
+  {
+   "dispute_id": 9104,
+   "network": "MASTERCARD",
+   "reason_code": "4853",
+   "date_filed": "2026-04-26",
+   "respond_by": "2026-05-26",
+   "status": "open",
+   "dispute_amount": 355.75
+  },
+  {
+   "dispute_id": 9117,
+   "network": "VISA",
+   "reason_code": "10.4",
+   "date_filed": "2026-04-28",
+   "respond_by": "2026-05-28",
+   "status": "pre-arb",
+   "dispute_amount": 165.77
+  },
+  {
+   "dispute_id": 9121,
+   "network": "VISA",
+   "reason_code": "10.4",
+   "date_filed": "2026-04-28",
+   "respond_by": "2026-05-28",
+   "status": "open",
+   "dispute_amount": 1112.45
+  },
+  {
+   "dispute_id": 9544,
+   "network": "VISA",
+   "reason_code": "13.3",
+   "date_filed": "2026-05-01",
+   "respond_by": "2026-05-31",
+   "status": "open",
+   "dispute_amount": 48.23
+  },
+  {
+   "dispute_id": 9514,
+   "network": "VISA",
+   "reason_code": "13.1",
+   "date_filed": "2026-05-03",
+   "respond_by": "2026-06-02",
+   "status": "open",
+   "dispute_amount": 1106.23
+  },
+  {
+   "dispute_id": 9548,
+   "network": "VISA",
+   "reason_code": "13.3",
+   "date_filed": "2026-05-04",
+   "respond_by": "2026-06-03",
+   "status": "open",
+   "dispute_amount": 687.68
+  },
+  {
+   "dispute_id": 9495,
+   "network": "VISA",
+   "reason_code": "10.4",
+   "date_filed": "2026-05-05",
+   "respond_by": "2026-06-04",
+   "status": "open",
+   "dispute_amount": 765.59
+  },
+  {
+   "dispute_id": 9506,
+   "network": "VISA",
+   "reason_code": "13.1",
+   "date_filed": "2026-05-05",
+   "respond_by": "2026-06-04",
+   "status": "open",
+   "dispute_amount": 927.3
+  },
+  {
+   "dispute_id": 9499,
+   "network": "VISA",
+   "reason_code": "12.6",
+   "date_filed": "2026-05-07",
+   "respond_by": "2026-06-06",
+   "status": "open",
+   "dispute_amount": 744.1
+  },
+  {
+   "dispute_id": 9531,
+   "network": "VISA",
+   "reason_code": "13.2",
+   "date_filed": "2026-05-09",
+   "respond_by": "2026-06-08",
+   "status": "open",
+   "dispute_amount": 181.43
+  },
+  {
+   "dispute_id": 9503,
+   "network": "VISA",
+   "reason_code": "12.6",
+   "date_filed": "2026-05-11",
+   "respond_by": "2026-06-10",
+   "status": "open",
+   "dispute_amount": 1068.89
+  },
+  {
+   "dispute_id": 9535,
+   "network": "VISA",
+   "reason_code": "13.2",
+   "date_filed": "2026-05-13",
+   "respond_by": "2026-06-12",
+   "status": "open",
+   "dispute_amount": 269.58
+  },
+  {
+   "dispute_id": 9491,
+   "network": "VISA",
+   "reason_code": "10.4",
+   "date_filed": "2026-05-14",
+   "respond_by": "2026-06-13",
+   "status": "open",
+   "dispute_amount": 862.71
+  },
+  {
+   "dispute_id": 9475,
+   "network": "VISA",
+   "reason_code": "10.4",
+   "date_filed": "2026-05-17",
+   "respond_by": "2026-06-16",
+   "status": "pre-arb",
+   "dispute_amount": 488.61
+  },
+  {
+   "dispute_id": 9527,
+   "network": "VISA",
+   "reason_code": "13.2",
+   "date_filed": "2026-05-18",
+   "respond_by": "2026-06-17",
+   "status": "pre-arb",
+   "dispute_amount": 420.64
+  },
+  {
+   "dispute_id": 9487,
+   "network": "VISA",
+   "reason_code": "10.4",
+   "date_filed": "2026-05-19",
+   "respond_by": "2026-06-18",
+   "status": "open",
+   "dispute_amount": 801.98
+  },
+  {
+   "dispute_id": 9462,
+   "network": "MASTERCARD",
+   "reason_code": "4853",
+   "date_filed": "2026-05-24",
+   "respond_by": "2026-06-23",
+   "status": "open",
+   "dispute_amount": 935.94
+  },
+  {
+   "dispute_id": 9479,
+   "network": "VISA",
+   "reason_code": "10.4",
+   "date_filed": "2026-05-24",
+   "respond_by": "2026-06-23",
+   "status": "open",
+   "dispute_amount": 117.73
+  },
+  {
+   "dispute_id": 9833,
+   "network": "VISA",
+   "reason_code": "10.4",
+   "date_filed": "2026-06-02",
+   "respond_by": "2026-07-02",
+   "status": "open",
+   "dispute_amount": 1046.03
+  },
+  {
+   "dispute_id": 9861,
+   "network": "VISA",
+   "reason_code": "12.6",
+   "date_filed": "2026-06-02",
+   "respond_by": "2026-07-02",
+   "status": "open",
+   "dispute_amount": 684.84
+  }
+ ]
+}

@@ -1,0 +1,77 @@
+{
+ "scope": "book",
+ "fact_pack": [
+  {
+   "id": "F1",
+   "reason_category": "Consumer Disputes",
+   "month": "2024-07-31",
+   "dispute_count": 210,
+   "dispute_usd": 128886,
+   "win_rate": 0.567,
+   "friendly_fraud_rate": 0.0,
+   "cfpb_complaints": 4155
+  },
+  {
+   "id": "F2",
+   "reason_category": "Consumer Disputes",
+   "month": "2026-06-30",
+   "dispute_count": 210,
+   "dispute_usd": 125313,
+   "win_rate": 0.53,
+   "friendly_fraud_rate": 0.0,
+   "cfpb_complaints": 4213
+  },
+  {
+   "id": "F3",
+   "reason_category": "Fraud",
+   "month": "2024-07-31",
+   "dispute_count": 126,
+   "dispute_usd": 80733,
+   "win_rate": 0.421,
+   "friendly_fraud_rate": 1.0,
+   "cfpb_complaints": 4155
+  },
+  {
+   "id": "F4",
+   "reason_category": "Fraud",
+   "month": "2026-06-30",
+   "dispute_count": 126,
+   "dispute_usd": 79397,
+   "win_rate": 0.441,
+   "friendly_fraud_rate": 1.0,
+   "cfpb_complaints": 4213
+  },
+  {
+   "id": "F5",
+   "reason_category": "Processing Errors",
+   "month": "2024-07-31",
+   "dispute_count": 26,
+   "dispute_usd": 15512,
+   "win_rate": 0.654,
+   "friendly_fraud_rate": 0.0,
+   "cfpb_complaints": 4155
+  },
+  {
+   "id": "F6",
+   "reason_category": "Processing Errors",
+   "month": "2026-06-30",
+   "dispute_count": 26,
+   "dispute_usd": 14838,
+   "win_rate": 0.5,
+   "friendly_fraud_rate": 0.0,
+   "cfpb_complaints": 4213
+  }
+ ],
+ "draft": "# Chargeback Summary\n\nConsumer Disputes drove volume (210 disputes), followed by Fraud (126 disputes), with stable counts but declining win rates across categories.\n\n| Reason Category | Disputes | Disputed $ | Win Rate | Friendly-Fraud Rate |\n|---|---|---|---|---|\n| Consumer Disputes | 210 [F2] | $125K [F2] | 53.0% [F2] | 0.0% [F2] |\n| Fraud | 126 [F4] | $79K [F4] | 44.1% [F4] | 100.0% [F4] |\n| Processing Errors | 26 [F6] | $15K [F6] | 50.0% [F6] | 0.0% [F6] |\n\n- **Consumer Disputes** maintained 210 disputes [F1][F2] with disputed amounts declining 3% from $129K to $125K [F1][F2], while win rate dropped 3.7 percentage points from 56.7% to 53.0% [F1][F2]; CFPB complaints increased from 4,155 to 4,213 [F1][F2]\n- **Fraud** disputes remained at 126 [F3][F4] with 100.0% friendly-fraud rate [F3][F4], disputed amounts down 2% from $81K to $79K [F3][F4], and win rate improved 2.0 percentage points from 42.1% to 44.1% [F3][F4]; CFPB complaints 4,155 -> 4,213 [F3][F4]\n- **Processing Errors** held steady at 26 disputes [F5][F6] but win rate declined 15.4 percentage points from 65.4% to 50.0% [F5][F6], with disputed amounts decreasing 4% from $16K to $15K [F5][F6]; CFPB complaints 4,155 -> 4,213 [F5][F6]\n\n## Data Coverage\nLatest month (2026-06-30) win rates cover resolved disputes only.",
+ "verdict": {
+  "status": "verified",
+  "residual_hedges": 0,
+  "edits": []
+ },
+ "latency_ms": 8009,
+ "timings_ms": {
+  "fact_pack": 196,
+  "draft": 6213,
+  "verify": 1598
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "verdict": {
+  "status": "needs_review",
+  "residual_hedges": 3,
+  "edits": [
+   "Final sentence contains hedge words 'likely', 'around', and 'could' - remove all hedges",
+   "Final sentence claims 'around 40%' but facts show 60% increase - either remove sentence or cite correct 60% figure without hedging"
+  ]
+ },
+ "latency_ms": 2845
+}

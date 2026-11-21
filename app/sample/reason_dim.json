@@ -1,0 +1,65 @@
+[
+ {
+  "reason_code": "10.4",
+  "network": "VISA",
+  "reason_category": "Fraud",
+  "reason_name": "Card-Absent / Friendly Fraud",
+  "description": "Cardholder claims they did not authorize a card-not-present charge",
+  "typical_root_cause": "Friendly fraud / first-party misuse",
+  "is_friendly_fraud": true
+ },
+ {
+  "reason_code": "12.6",
+  "network": "VISA",
+  "reason_category": "Processing Errors",
+  "reason_name": "Duplicate / Paid Other Means",
+  "description": "Transaction billed twice or already paid another way",
+  "typical_root_cause": "Processing / terminal error",
+  "is_friendly_fraud": false
+ },
+ {
+  "reason_code": "13.1",
+  "network": "VISA",
+  "reason_category": "Consumer Disputes",
+  "reason_name": "Merchandise Not Received",
+  "description": "Goods or services not received by the promised date",
+  "typical_root_cause": "Fulfillment / delivery failure",
+  "is_friendly_fraud": false
+ },
+ {
+  "reason_code": "13.2",
+  "network": "VISA",
+  "reason_category": "Consumer Disputes",
+  "reason_name": "Cancelled Recurring",
+  "description": "Charge after a recurring subscription was cancelled",
+  "typical_root_cause": "Cancellation-flow / billing defect",
+  "is_friendly_fraud": false
+ },
+ {
+  "reason_code": "13.3",
+  "network": "VISA",
+  "reason_category": "Consumer Disputes",
+  "reason_name": "Not As Described",
+  "description": "Goods differ materially from the description",
+  "typical_root_cause": "Product description / quality",
+  "is_friendly_fraud": false
+ },
+ {
+  "reason_code": "4837",
+  "network": "MASTERCARD",
+  "reason_category": "Fraud",
+  "reason_name": "No Cardholder Authorization",
+  "description": "Cardholder denies authorizing the transaction",
+  "typical_root_cause": "Fraud / friendly fraud",
+  "is_friendly_fraud": true
+ },
+ {
+  "reason_code": "4853",
+  "network": "MASTERCARD",
+  "reason_category": "Consumer Disputes",
+  "reason_name": "Cardholder Dispute",
+  "description": "General cardholder dispute of goods/services",
+  "typical_root_cause": "Fulfillment / description",
+  "is_friendly_fraud": false
+ }
+]

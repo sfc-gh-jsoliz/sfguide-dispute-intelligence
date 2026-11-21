@@ -1,0 +1,10 @@
+{
+ "verdict": {
+  "status": "needs_review",
+  "residual_hedges": 3,
+  "edits": [
+   "Final sentence ('Fraud disputes likely rose around 40% and could keep climbing into next season') is entirely unsupported by FACTS and contains hedge words 'likely', 'around', and 'could'"
+  ]
+ },
+ "latency_ms": 2697
+}

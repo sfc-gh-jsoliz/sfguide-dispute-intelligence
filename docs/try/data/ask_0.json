@@ -1,0 +1,41 @@
+{
+ "question": "How did chargeback volume in Nov-Dec compare to the prior 3 months, by reason category?",
+ "text": "I compared Nov\u2013Dec 2025 with Aug\u2013Oct 2025. The data stops at June 2026, so there are no Nov\u2013Dec 2026 figures yet. Because the two periods have different lengths (two months against three), I compared average disputes per month.\n\n\n\n**Chargebacks rose about 58% a month in Nov\u2013Dec, and every reason category went up by a similar amount:**\n- **Fraud** grew the most in percentage terms, from 126 to 201 a month (+60%).\n- **Consumer Disputes** added the most disputes, from 210 to 333 a month (+59%). It's still the largest category, at about 58% of all disputes.\n- **Processing Errors** went from 26 to 40 a month (+54%).\n- **In total**, disputes went from 362 to 574 a month.\n\n**The pattern looks seasonal, not like a one-off:**\n- **Every year:** The same higher level shows up each Nov, Dec and Jan (2024\u201325 and 2025\u201326), and drops back by February.\n- **Flat in between:** In the non-holiday months the numbers are exactly the same from month to month.\n- **Plan for it:** Consumer Disputes and Fraud will likely need extra capacity for Nov 2026\u2013Jan 2027.\n\n**Data caveat:** Because the numbers repeat exactly, this looks like a modelled or synthetic dataset rather than real operating results.",
+ "tables": [
+  {
+   "title": "Avg Monthly Chargebacks by Reason Category: Nov\u2013Dec 2025 vs Aug\u2013Oct 2025",
+   "columns": [
+    "REASON_CATEGORY",
+    "NOV_DEC_AVG_MONTHLY",
+    "AUG_OCT_AVG_MONTHLY",
+    "ABS_CHANGE",
+    "PCT_CHANGE"
+   ],
+   "rows": [
+    [
+     "Consumer Disputes",
+     "333.000000",
+     "210.000000",
+     "123.000000",
+     "0.585714285714"
+    ],
+    [
+     "Fraud",
+     "201.000000",
+     "126.000000",
+     "75.000000",
+     "0.595238095238"
+    ],
+    [
+     "Processing Errors",
+     "40.000000",
+     "26.000000",
+     "14.000000",
+     "0.538461538462"
+    ]
+   ]
+  }
+ ],
+ "sql": "WITH m AS (SELECT reason_category, month_end, SUM(dispute_count) AS disputes FROM __d WHERE month_end BETWEEN '2025-08-01' AND '2025-12-31' GROUP BY 1,2)\nSELECT reason_category,\n SUM(CASE WHEN month_end >= '2025-11-01' THEN disputes END)/2.0 AS nov_dec_avg_monthly,\n SUM(CASE WHEN month_end < '2025-11-01' THEN disputes END)/3.0 AS aug_oct_avg_monthly,\n nov_dec_avg_monthly - aug_oct_avg_monthly AS abs_change,\n (nov_dec_avg_monthly - aug_oct_avg_monthly)/NULLIF(aug_oct_avg_monthly,0) AS pct_change\nFROM m GROUP BY 1 ORDER BY nov_dec_avg_monthly DESC",
+ "latency_ms": 29819
+}
