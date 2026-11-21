@@ -3,11 +3,8 @@
   "status": "needs_review",
   "residual_hedges": 3,
   "edits": [
-   "Hedge word 'likely' not allowed",
-   "Hedge word 'around' not allowed",
-   "Hedge word 'could' not allowed",
-   "Claim 'Fraud disputes likely rose around 40%' is unsupported - FACTS show Fraud disputes stayed flat at 126 in both periods [F3][F4]"
+   "Final sentence ('Fraud disputes likely rose around 40% and could keep climbing into next season') is entirely unsupported by FACTS and contains hedge words 'likely', 'around', and 'could'"
   ]
  },
- "latency_ms": 2886
+ "latency_ms": 2697
 }

@@ -154,7 +154,7 @@ def live_fact_pack(sess, scope):
                    SUM(won_count) w, SUM(resolved_count) r, SUM(friendly_fraud_count) ff, MAX(cfpb_complaint_count) c
             FROM {SCHEMA}.DISPUTE_BENCHMARK WHERE month_end BETWEEN '2025-08-31' AND '2026-01-31' GROUP BY 1, 2)
           SELECT reason_category, IFF(month_end >= '2025-11-30', 'Nov 2025-Jan 2026', 'Aug-Oct 2025') AS period,
-                 ROUND(AVG(d)) AS avg_monthly_disputes, ROUND(SUM(usd)) AS dispute_usd,
+                 ROUND(AVG(d)) AS avg_monthly_disputes, ROUND(AVG(usd)) AS avg_monthly_dispute_usd,
                  ROUND(SUM(w) / NULLIF(SUM(r), 0), 3) AS win_rate, ROUND(SUM(ff) / NULLIF(SUM(d), 0), 3) AS friendly_fraud_rate,
                  ROUND(AVG(c)) AS avg_monthly_cfpb_complaints
           FROM m GROUP BY 1, 2 ORDER BY 1, 2 DESC""")
@@ -170,7 +170,8 @@ def live_fact_pack(sess, scope):
 
 
 def _draft_prompt(scope, fp):
-    compare = ("compare Nov 2025-Jan 2026 (holiday) with Aug-Oct 2025 per reason category; avg_monthly_* are monthly averages"
+    compare = ("compare Nov 2025-Jan 2026 (holiday) with Aug-Oct 2025 per reason category; avg_monthly_* are monthly averages; "
+               "call it 'holiday vs the prior three months', never month-over-month"
                if scope == "holiday" else "compare the latest month (2026-06-30) with the earliest (2024-07-31) per reason category, showing earliest -> latest; "
                "the latest month still has open disputes, so say its win rate covers resolved disputes only")
     return (
@@ -196,8 +197,22 @@ def _complete(sess, prompt):
 
 
 ALLOWED = ("Allowed and NOT a problem: rounding dollars to $K/$M, rounding rates to one decimal %, percentage changes "
-           "computed from two facts if correct to the nearest whole percent, citation tags like [F2], and saying that the "
+           "computed from two facts if correct to the nearest whole percent, win-rate changes stated in percentage points, citation tags like [F2], and saying that the "
            "latest month's win rate covers resolved disputes only (recent disputes are still open).")
+
+
+def _last_json(raw):
+    """The verifier sometimes re-checks itself and writes several JSON objects; its final one is the verdict."""
+    dec, found, i = json.JSONDecoder(), None, raw.find("{")
+    while i != -1:
+        try:
+            obj, end = dec.raw_decode(raw, i)
+            if isinstance(obj, dict) and "status" in obj:
+                found = obj
+            i = raw.find("{", end)
+        except ValueError:
+            i = raw.find("{", i + 1)
+    return found
 
 
 def _verify(sess, fp, draft):
@@ -205,18 +220,14 @@ def _verify(sess, fp, draft):
         "You are a fact-checker. Compare the DRAFT against the FACTS JSON (the only allowed source). " + ALLOWED + " "
         "Flag only numbers or claims that FACTS do not support, and hedge words like likely/approximately/around/could. "
         "Return ONLY a JSON object, no code fences, with keys status ('verified' if nothing is flagged, else 'needs_review'), "
-        "residual_hedges (int), edits (array of short strings, one per problem; empty if verified).\n\n"
+        "residual_hedges (int), edits (array of short strings, one per real problem; never list items you found acceptable; empty if verified).\n\n"
         f"FACTS: {json.dumps(fp)}\n\nDRAFT:\n{draft}"
     )
     v = None
     for _ in range(2):
-        raw = _complete(sess, vp).replace("```json", "").replace("```", "")
-        s, e = raw.find("{"), raw.rfind("}")
-        try:
-            v = json.loads(raw[s:e + 1])
+        v = _last_json(_complete(sess, vp))
+        if v is not None:
             break
-        except ValueError:
-            continue
     if v is None:
         v = {"status": "needs_review", "residual_hedges": None, "edits": ["Verifier output could not be parsed"]}
     v["edits"] = [str(x) for x in (v.get("edits") or [])]
@@ -498,6 +509,10 @@ border:2.5px solid currentColor;border-radius:8px;padding:.25rem .7rem;transform
 .rb-table td.n,.rb-table th.n{text-align:right}
 .rb-scroll{position:relative;overflow-x:auto;max-width:100%}
 .rb-empty{border:1.5px dashed var(--line);border-radius:12px;padding:1.6rem;text-align:center;color:var(--muted);background:var(--paper)}
+.rb-note-md{font-size:.92rem}.rb-note-md p{margin:.35rem 0}.rb-note-md ul{margin:.3rem 0 .5rem 1.1rem;padding:0}
+.rb-md-h1{font-family:Sora,sans-serif;font-weight:700;font-size:1.2rem;margin:.2rem 0 .5rem}
+.rb-md-h2,.rb-md-h3{font-family:Sora,sans-serif;font-weight:650;font-size:.98rem;margin:.9rem 0 .35rem}
+.rb-md td,.rb-md th{white-space:normal}
 .rb-cite{font-size:.68rem;font-weight:700;color:var(--ai);background:#E2F1F3;border-radius:4px;padding:0 .25rem;margin-left:.1rem}
 .stButton button[kind="primary"]{background:var(--primary);border-color:var(--primary)}
 [data-testid="stDataFrame"]{border:1px solid var(--line);border-radius:10px}
@@ -509,8 +524,42 @@ border:2.5px solid currentColor;border-radius:8px;padding:.25rem .7rem;transform
 """
 
 
+def _inline(t):
+    t = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", t)
+    return re.sub(r"\[(F\d+(?:\s*,\s*F\d+)*)\]",
+                  lambda m: "".join(f'<span class="rb-cite">{x}</span>' for x in re.split(r"\s*,\s*", m.group(1))), t)
+
+
 def cite(md):
-    return re.sub(r"\[(F\d+)\]", r'<span class="rb-cite">\1</span>', md)
+    """Render the note's markdown (headings, tables, bullets, bold, [F#] citations) to HTML.
+    Done by hand so citation chips survive inside tables and "$" is never read as math."""
+    lines, out, i = esc(md).replace("$", "&#36;").split("\n"), [], 0
+    while i < len(lines):
+        ln = lines[i]
+        if ln.startswith("|"):
+            rows = []
+            while i < len(lines) and lines[i].startswith("|"):
+                if not re.match(r"^\|[\s:|-]+\|?$", lines[i]):
+                    rows.append([c.strip() for c in lines[i].strip().strip("|").split("|")])
+                i += 1
+            body = "".join("<tr>" + "".join(f"<{'th' if j == 0 else 'td'}>{_inline(c)}</{'th' if j == 0 else 'td'}>" for c in r) + "</tr>"
+                           for j, r in enumerate(rows))
+            out.append(f'<div class="rb-scroll"><table class="rb-table rb-md">{body}</table></div>')
+            continue
+        if re.match(r"^[-*] ", ln):
+            items = []
+            while i < len(lines) and re.match(r"^[-*] ", lines[i]):
+                items.append(f"<li>{_inline(lines[i][2:])}</li>")
+                i += 1
+            out.append("<ul>" + "".join(items) + "</ul>")
+            continue
+        h = re.match(r"^(#{1,3}) (.*)$", ln)
+        if h:
+            out.append(f'<div class="rb-md-h{len(h.group(1))}">{_inline(h.group(2))}</div>')
+        elif ln.strip():
+            out.append(f"<p>{_inline(ln)}</p>")
+        i += 1
+    return '<div class="rb-note-md">' + "".join(out) + "</div>"
 
 
 # ----------------------------------------------------------------------------
@@ -883,9 +932,9 @@ def page_notes():
                 if note.get("fresh"):
                     ph = st.empty()
                     acc = ""
-                    for tok in stream_words(body, 90):
+                    for tok in stream_words(body, 140):
                         acc += tok
-                        ph.markdown(cite(acc) + '<span style="color:#0E6E7E">▍</span>', unsafe_allow_html=True)
+                        ph.markdown(cite(acc + " ▍"), unsafe_allow_html=True)
                     ph.markdown(cite(body), unsafe_allow_html=True)
                     note["fresh"] = False
                 else:
@@ -947,10 +996,11 @@ def report_dialog(r):
 
 def render_answer(a, fresh):
     ai_label(a.get("latency_ms"))
+    text = a["text"].replace("$", "\\$")  # dollar amounts, not LaTeX
     if fresh:
-        st.write_stream(stream_words(a["text"], 80))
+        st.write_stream(stream_words(text, 80))
     else:
-        st.markdown(a["text"])
+        st.markdown(text)
     for t in a.get("tables", []):
         if t["rows"]:
             st.dataframe(pd.DataFrame(t["rows"], columns=t["columns"] or None), hide_index=True, width="stretch")
