@@ -132,5 +132,5 @@ pre{white-space:pre-wrap;word-break:break-word;font-size:.78rem;background:var(-
 .callout{background:#FFF1D6;border:1px solid #E9C979;color:#5C4000;border-radius:10px;padding:.7rem .9rem;font-size:.86rem;margin:.6rem 0}
 .callout code{background:#fff;padding:0 .25rem;border-radius:4px}
 @media (max-width:900px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.grid,.two{grid-template-columns:1fr}.gallery,.qs{grid-template-columns:1fr}.kpis.k4{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:560px){.wrap,.mast-in{padding-left:.8rem;padding-right:.8rem}.mast-in{gap:.7rem}.wm2{display:none}.kv{font-size:1.2rem}h1{font-size:1.25rem}}
+@media (max-width:560px){.wrap,.mast-in{padding-left:.8rem;padding-right:.8rem}.mast-in{gap:.7rem}.wm,.wm2{display:none}.kv{font-size:1.2rem}h1{font-size:1.25rem}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
