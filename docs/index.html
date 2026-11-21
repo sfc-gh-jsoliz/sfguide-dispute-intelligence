@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chargeback &amp; Dispute Intelligence · Snow Pack</title>
+<meta name="description" content="Explain a chargeback spike in one verified page. A Streamlit app reads a card dispute book by reason code, network and merchant, benchmarks it against monthly consumer complaints, and uses Cortex AI_COMPLETE to draft and fact-check a note, with a Cortex Agent over a semantic view. Synthetic data.">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <a class="brand" href="./" aria-label="Rebuttra Dispute Desk">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#0C3B3E" stroke="#3E6B6E"/><path d="M22 11h-9.5a4.5 4.5 0 0 0 0 9H15" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round"/><path d="M15.5 8.5 12.5 11l3 2.5" fill="none" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="m17.5 20.5 2.3 2.3 4.7-5" fill="none" stroke="#3FD3A1" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Rebuttra <small>Dispute Desk</small></span>
+      </a>
+      <p class="eyebrow">Snow Pack · Payments · Operations</p>
+      <h1>Chargebacks spiked again. Explain why in one page every number backs up.</h1>
+      <p class="lede">Every holiday season, a card processor's dispute book jumps. The dispute-ops lead has to tell merchants and the CFO which reason codes drove it, how much is friendly fraud, and where the team is losing money. This example reads the book by reason code, network and merchant, sets it against a monthly consumer-complaint benchmark, and has Cortex AI_COMPLETE draft the note. A second AI pass then checks every figure and refuses anything unsupported or hedged.</p>
+      <div class="cta">
+        <a class="btn primary" href="try/">Try it, no account needed</a>
+        <a class="btn" href="https://github.com/sfc-gh-jsoliz/sfguide-dispute-intelligence">View the repository</a>
+      </div>
+      <ul class="facts" aria-label="At a glance">
+        <li><b>Setup</b> about 20 s on an XSMALL warehouse</li>
+        <li><b>Cost</b> well under 1 warehouse credit, plus about 2 AI_COMPLETE calls per note</li>
+        <li><b>Needs</b> Cortex AI in your region, a role that can create a database</li>
+      </ul>
+    </div>
+    <div class="tickets" aria-hidden="true">
+      <div class="ticket t3"><span class="code">MC 4837</span><span class="amt">$412.80</span><span class="st prearb">Pre-arb</span></div>
+      <div class="ticket t2"><span class="code">Visa 13.2</span><span class="amt">$59.99</span><span class="st won">Won</span></div>
+      <div class="ticket t1">
+        <div class="trow"><span class="code">Visa 10.4</span><span class="st lost">Lost</span></div>
+        <div class="tname">Card-absent / friendly fraud</div>
+        <div class="tgrid"><span>Disputes</span><b>2,976</b><span>Win rate</span><b>35.2%</b><span>Lost</span><b>$1.14M</b></div>
+        <div class="stamp">Verified</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="wrap band">
+    <div class="disclaimer" role="note"><b>Synthetic data, illustrative logic.</b> Halvane Payments, Rebuttra and every merchant are fictional. This is an example, not a production system, and not regulatory, compliance or legal advice.</div>
+  </section>
+
+  <section class="wrap band">
+    <h2>What you get</h2>
+    <div class="cards4">
+      <article><h3>Overview</h3><p>Disputes, dollars, win rate and chargeback rate for 24 months, with the holiday spike shaded and the complaint benchmark on its own axis.</p></article>
+      <article><h3>Reason codes</h3><p>Every Visa and Mastercard code, sortable and filterable, with a panel per code: trend, merchant-category split and root cause.</p></article>
+      <article><h3>Merchants</h3><p>A chargeback-rate heatmap and a merchant table that flags reason codes running far above the category's mix.</p></article>
+      <article><h3>Verified notes and Q&amp;A</h3><p>An AI chargeback note that cites its sources and gets a Verified stamp, plus a Cortex Agent that answers in plain English and shows its SQL.</p></article>
+    </div>
+  </section>
+
+  <section class="wrap band shots" id="screens">
+    <h2>The app</h2>
+    <figure class="wide">
+      <img src="images/overview.jpg" width="1440" height="900" loading="lazy" alt="Chargeback overview: five KPI tiles (9,960 disputes, $6.12M disputed, 47.7% win rate, $3.03M lost, 61 bps), a stacked area chart of monthly disputes by reason category with holiday bands and a dashed complaint line, and a What stands out panel">
+      <figcaption><b>Overview.</b> KPI tiles and the monthly trend come straight from a <b>SEMANTIC_VIEW()</b> query on the <b>DISPUTE_SV</b> semantic view. Disputes rise 59% in Nov–Jan on this synthetic data set.</figcaption>
+    </figure>
+    <div class="two">
+      <figure>
+        <img src="images/reason-code-panel.jpg" width="1440" height="900" loading="lazy" alt="Reason code panel for Visa 10.4 card-absent friendly fraud: pills for Fraud, Friendly fraud and Below book win rate, tiles showing 2,976 disputes, $1.85M disputed, 35.2% win rate and $1.14M lost, a monthly bar and win-rate chart, and a merchant-category table">
+        <figcaption><b>Reason code panel.</b> Visa 10.4 wins 35.2% against 47.7% for the book and loses the most dollars. Figures from the <b>DISPUTE_SV</b> semantic view.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/merchant-panel.jpg" width="1440" height="900" loading="lazy" alt="Merchant panel for Strevix Stream: Digital Goods, MCC 5815 and in-flight pills, tiles with 1,615 disputes, 50.7% win rate, $468K lost and hot code 13.2 at 29% versus 14% for the category, a stacked monthly bar chart by reason code, and a table of open and pre-arbitration disputes with respond-by dates">
+        <figcaption><b>Merchant panel.</b> Strevix Stream runs twice its category's share of Visa 13.2 (cancelled recurring) disputes. Rows come from the dispute ledger in <b>Snowflake SQL</b>.</figcaption>
+      </figure>
+    </div>
+    <div class="two">
+      <figure>
+        <img src="images/note-verified.jpg" width="1440" height="900" loading="lazy" alt="Chargeback notes screen: scope picker, a Sample AI response label, a drafted holiday-spike note with a table and bullets where each figure carries a citation chip such as F1 or F3">
+        <figcaption><b>A cited note.</b> <b>Cortex AI_COMPLETE</b> drafts the note from a six-row fact pack. Every figure cites its row (F1–F6), and a second AI_COMPLETE pass stamps it Verified.</figcaption>
+      </figure>
+      <figure>
+        <img src="images/note-needs-review.jpg" width="1440" height="900" loading="lazy" alt="Try to break it panel: a hedged sentence was added to the draft, the verifier stamped it Needs review and listed flags for the hedge words and the unsupported 40% claim">
+        <figcaption><b>Try to break it.</b> Add a hedged, made-up sentence and the <b>AI_COMPLETE</b> verifier stamps the note Needs review and names each problem.</figcaption>
+      </figure>
+    </div>
+    <figure class="wide">
+      <img src="images/ask-the-desk.jpg" width="1440" height="900" loading="lazy" alt="Ask the desk: an answer about where the most dollars are lost, with bullets for 10.4, 13.1, 4837 and the other codes, a result table by reason code, and a collapsed source section with the generated SQL">
+      <figcaption><b>Ask the desk.</b> A <b>Cortex Agent</b> answers plain-English questions with <b>Cortex Analyst</b> over the semantic view, and shows the result table and the SQL it ran.</figcaption>
+    </figure>
+  </section>
+
+  <section class="wrap band">
+    <h2>How it works</h2>
+    <ol class="flow">
+      <li><span class="n">1</span><div><b>Synthetic dispute book</b><p><code>sql/setup.sql</code> generates 9,960 disputes over 24 months with a fixed hash seed, plus a monthly complaint benchmark. Same rows every run.</p></div></li>
+      <li><span class="n">2</span><div><b>Semantic view</b><p><code>DISPUTE_SV</code> gives the book its business meaning: reason code, network, merchant category, month, win rate (won ÷ resolved) and a complaint metric that is never summed.</p></div></li>
+      <li><span class="n">3</span><div><b>Fact pack → draft → verify</b><p>The app builds a small fact pack, has <code>AI_COMPLETE</code> write the note using only those numbers, and runs a second <code>AI_COMPLETE</code> pass as a fact-checker. Notes and verdicts are stored in <code>DISPUTE_REPORTS</code>.</p></div></li>
+      <li><span class="n">4</span><div><b>Agent over the same model</b><p><code>DISPUTE_AGENT</code> uses Cortex Analyst on <code>DISPUTE_SV</code>, so questions and notes share one definition of every metric.</p></div></li>
+    </ol>
+    <div class="scroll">
+      <table class="caps">
+        <thead><tr><th>Snowflake capability</th><th>Where you see it</th><th>Measured in Live mode</th></tr></thead>
+        <tbody>
+          <tr><td>Semantic Views (<code>SEMANTIC_VIEW()</code> query)</td><td>Overview, Reason codes, Merchants heatmap</td><td>Sub-second per screen</td></tr>
+          <tr><td>Cortex AI_COMPLETE (draft + verifier)</td><td>Chargeback notes, Try to break it</td><td>8–11 s per note, 3–6 s per re-verify</td></tr>
+          <tr><td>Cortex Agents + Cortex Analyst</td><td>Ask the desk</td><td>25–34 s per answer</td></tr>
+          <tr><td>Streamlit in Snowflake</td><td>The app itself (or run it locally)</td><td>Warehouse runtime, Streamlit 1.52.2</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="wrap band two-col">
+    <div class="card">
+      <h2>Run it in your account</h2>
+      <ol class="steps">
+        <li>Run <code>sql/setup.sql</code> in a Snowsight worksheet (about 20 s).</li>
+        <li>Upload the <code>app/</code> files to the stage and run <code>sql/deploy_streamlit.sql</code>, or run the app locally with key-pair auth.</li>
+        <li>Optional: <code>sql/setup_cfpb.sql</code> swaps in real CFPB complaint data.</li>
+        <li>When you're done, <code>sql/cleanup.sql</code> removes the database, warehouse and role.</li>
+      </ol>
+      <p class="small">Step-by-step instructions, the object list, cost and limitations are in the <a href="https://github.com/sfc-gh-jsoliz/sfguide-dispute-intelligence#readme">README</a>.</p>
+    </div>
+    <div class="card">
+      <h2>Customize with Cortex Code</h2>
+      <ul class="prompts">
+        <li>"Map my chargeback ledger to <code>DISPUTE_FACT</code> without changing any objects, and show which columns line up."</li>
+        <li>"Add Visa 11.x authorization codes to the reason-code table and carry them through the semantic view and the app."</li>
+        <li>"Make the verifier also check chargeback-to-sales ratio per merchant category."</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="wrap band">
+    <h2>Learn more</h2>
+    <ul class="links">
+      <li><a href="https://docs.snowflake.com/en/user-guide/views-semantic/overview">Semantic views</a></li>
+      <li><a href="https://docs.snowflake.com/en/sql-reference/functions/ai_complete">AI_COMPLETE</a></li>
+      <li><a href="https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-agents">Cortex Agents</a></li>
+      <li><a href="https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-analyst">Cortex Analyst</a></li>
+      <li><a href="https://docs.snowflake.com/en/developer-guide/streamlit/about-streamlit">Streamlit in Snowflake</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <p><b>Chargeback &amp; Dispute Intelligence</b> · Owner: Javier Soliz · Last reviewed: November 2026</p>
+    <p>Apache 2.0. An illustrative example provided as-is: not an official Snowflake product and not supported by Snowflake Support. Synthetic data only; no customer data. Review and test before any production use.</p>
+    <p><a href="try/">Try it</a> · <a href="https://github.com/sfc-gh-jsoliz/sfguide-dispute-intelligence">Repository</a> · <a href="https://sfc-gh-ooral.github.io/snow-packs/">Snow Packs</a></p>
+  </div>
+</footer>
+</body>
+</html>
