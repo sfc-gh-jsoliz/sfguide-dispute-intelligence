@@ -7,8 +7,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "lost",
-  "disputes": 121,
-  "dispute_usd": 73185.49
+  "disputes": 124,
+  "dispute_usd": 75061.62
  },
  {
   "merchant_id": 101,
@@ -29,8 +29,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "pre-arb",
-  "disputes": 11,
-  "dispute_usd": 6545.41
+  "disputes": 6,
+  "dispute_usd": 3720.16
  },
  {
   "merchant_id": 101,
@@ -40,8 +40,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "won",
-  "disputes": 62,
-  "dispute_usd": 39096.38
+  "disputes": 64,
+  "dispute_usd": 40045.5
  },
  {
   "merchant_id": 101,
@@ -95,8 +95,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "lost",
-  "disputes": 70,
-  "dispute_usd": 44258.83
+  "disputes": 71,
+  "dispute_usd": 45088.61
  },
  {
   "merchant_id": 101,
@@ -117,8 +117,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "pre-arb",
-  "disputes": 4,
-  "dispute_usd": 2706.98
+  "disputes": 3,
+  "dispute_usd": 1877.2
  },
  {
   "merchant_id": 101,
@@ -139,8 +139,8 @@
   "network": "VISA",
   "reason_code": "13.2",
   "status": "lost",
-  "disputes": 44,
-  "dispute_usd": 28439.7
+  "disputes": 45,
+  "dispute_usd": 28989.54
  },
  {
   "merchant_id": 101,
@@ -161,8 +161,8 @@
   "network": "VISA",
   "reason_code": "13.2",
   "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 1366.28
+  "disputes": 1,
+  "dispute_usd": 816.44
  },
  {
   "merchant_id": 101,
@@ -183,8 +183,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "lost",
-  "disputes": 33,
-  "dispute_usd": 17587.04
+  "disputes": 35,
+  "dispute_usd": 18607.34
  },
  {
   "merchant_id": 101,
@@ -205,8 +205,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "pre-arb",
-  "disputes": 5,
-  "dispute_usd": 2524.07
+  "disputes": 1,
+  "dispute_usd": 717.47
  },
  {
   "merchant_id": 101,
@@ -216,8 +216,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "won",
-  "disputes": 43,
-  "dispute_usd": 29721.06
+  "disputes": 45,
+  "dispute_usd": 30507.36
  },
  {
   "merchant_id": 101,
@@ -271,8 +271,8 @@
   "network": "MASTERCARD",
   "reason_code": "4853",
   "status": "lost",
-  "disputes": 37,
-  "dispute_usd": 24004.75
+  "disputes": 39,
+  "dispute_usd": 24775.07
  },
  {
   "merchant_id": 101,
@@ -292,20 +292,9 @@
   "merchant_category": "RETAIL",
   "network": "MASTERCARD",
   "reason_code": "4853",
-  "status": "pre-arb",
-  "disputes": 3,
-  "dispute_usd": 1101.92
- },
- {
-  "merchant_id": 101,
-  "merchant_name": "Quenfield Outfitters",
-  "mcc": "5651",
-  "merchant_category": "RETAIL",
-  "network": "MASTERCARD",
-  "reason_code": "4853",
   "status": "won",
-  "disputes": 36,
-  "dispute_usd": 22901.82
+  "disputes": 37,
+  "dispute_usd": 23233.42
  },
  {
   "merchant_id": 102,
@@ -315,8 +304,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "lost",
-  "disputes": 125,
-  "dispute_usd": 79810.75
+  "disputes": 128,
+  "dispute_usd": 81884.67
  },
  {
   "merchant_id": 102,
@@ -337,8 +326,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "pre-arb",
-  "disputes": 7,
-  "dispute_usd": 4929.34
+  "disputes": 3,
+  "dispute_usd": 1797.18
  },
  {
   "merchant_id": 102,
@@ -348,8 +337,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "won",
-  "disputes": 53,
-  "dispute_usd": 34659.64
+  "disputes": 54,
+  "dispute_usd": 35717.88
  },
  {
   "merchant_id": 102,
@@ -359,8 +348,8 @@
   "network": "VISA",
   "reason_code": "12.6",
   "status": "lost",
-  "disputes": 14,
-  "dispute_usd": 8547.68
+  "disputes": 15,
+  "dispute_usd": 9590.47
  },
  {
   "merchant_id": 102,
@@ -381,8 +370,8 @@
   "network": "VISA",
   "reason_code": "12.6",
   "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 1998.7
+  "disputes": 1,
+  "dispute_usd": 955.91
  },
  {
   "merchant_id": 102,
@@ -403,8 +392,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "lost",
-  "disputes": 60,
-  "dispute_usd": 38221.44
+  "disputes": 61,
+  "dispute_usd": 38704.41
  },
  {
   "merchant_id": 102,
@@ -424,20 +413,9 @@
   "merchant_category": "RETAIL",
   "network": "VISA",
   "reason_code": "13.1",
-  "status": "pre-arb",
-  "disputes": 3,
-  "dispute_usd": 1907.67
- },
- {
-  "merchant_id": 102,
-  "merchant_name": "Marrowby Home",
-  "mcc": "5732",
-  "merchant_category": "RETAIL",
-  "network": "VISA",
-  "reason_code": "13.1",
   "status": "won",
-  "disputes": 71,
-  "dispute_usd": 48035.16
+  "disputes": 73,
+  "dispute_usd": 49459.86
  },
  {
   "merchant_id": 102,
@@ -447,8 +425,8 @@
   "network": "VISA",
   "reason_code": "13.2",
   "status": "lost",
-  "disputes": 33,
-  "dispute_usd": 19009.87
+  "disputes": 34,
+  "dispute_usd": 19531.64
  },
  {
   "merchant_id": 102,
@@ -469,8 +447,8 @@
   "network": "VISA",
   "reason_code": "13.2",
   "status": "pre-arb",
-  "disputes": 3,
-  "dispute_usd": 2006.71
+  "disputes": 2,
+  "dispute_usd": 1484.94
  },
  {
   "merchant_id": 102,
@@ -491,8 +469,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "lost",
-  "disputes": 30,
-  "dispute_usd": 16426.56
+  "disputes": 31,
+  "dispute_usd": 17449.66
  },
  {
   "merchant_id": 102,
@@ -513,8 +491,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "pre-arb",
-  "disputes": 5,
-  "dispute_usd": 1999.84
+  "disputes": 2,
+  "dispute_usd": 284.14
  },
  {
   "merchant_id": 102,
@@ -524,8 +502,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "won",
-  "disputes": 46,
-  "dispute_usd": 27167.65
+  "disputes": 48,
+  "dispute_usd": 27860.25
  },
  {
   "merchant_id": 102,
@@ -579,8 +557,8 @@
   "network": "MASTERCARD",
   "reason_code": "4853",
   "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 1362.49
+  "disputes": 1,
+  "dispute_usd": 266.09
  },
  {
   "merchant_id": 102,
@@ -590,8 +568,8 @@
   "network": "MASTERCARD",
   "reason_code": "4853",
   "status": "won",
-  "disputes": 28,
-  "dispute_usd": 11927.55
+  "disputes": 29,
+  "dispute_usd": 13023.95
  },
  {
   "merchant_id": 103,
@@ -601,8 +579,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "lost",
-  "disputes": 110,
-  "dispute_usd": 64288.94
+  "disputes": 116,
+  "dispute_usd": 68576.3
  },
  {
   "merchant_id": 103,
@@ -623,8 +601,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "pre-arb",
-  "disputes": 9,
-  "dispute_usd": 5443.74
+  "disputes": 3,
+  "dispute_usd": 1156.38
  },
  {
   "merchant_id": 103,
@@ -666,20 +644,9 @@
   "merchant_category": "RETAIL",
   "network": "VISA",
   "reason_code": "12.6",
-  "status": "pre-arb",
-  "disputes": 3,
-  "dispute_usd": 2149.95
- },
- {
-  "merchant_id": 103,
-  "merchant_name": "Tessaly Market",
-  "mcc": "5311",
-  "merchant_category": "RETAIL",
-  "network": "VISA",
-  "reason_code": "12.6",
   "status": "won",
-  "disputes": 21,
-  "dispute_usd": 15002.71
+  "disputes": 24,
+  "dispute_usd": 17152.66
  },
  {
   "merchant_id": 103,
@@ -689,8 +656,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "lost",
-  "disputes": 55,
-  "dispute_usd": 31800.57
+  "disputes": 57,
+  "dispute_usd": 33006.63
  },
  {
   "merchant_id": 103,
@@ -711,8 +678,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "pre-arb",
-  "disputes": 6,
-  "dispute_usd": 3485.63
+  "disputes": 1,
+  "dispute_usd": 223.44
  },
  {
   "merchant_id": 103,
@@ -722,8 +689,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "won",
-  "disputes": 71,
-  "dispute_usd": 47761.7
+  "disputes": 74,
+  "dispute_usd": 49817.83
  },
  {
   "merchant_id": 103,
@@ -777,8 +744,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "lost",
-  "disputes": 32,
-  "dispute_usd": 19524.43
+  "disputes": 33,
+  "dispute_usd": 19969.29
  },
  {
   "merchant_id": 103,
@@ -798,20 +765,9 @@
   "merchant_category": "RETAIL",
   "network": "VISA",
   "reason_code": "13.3",
-  "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 1418.81
- },
- {
-  "merchant_id": 103,
-  "merchant_name": "Tessaly Market",
-  "mcc": "5311",
-  "merchant_category": "RETAIL",
-  "network": "VISA",
-  "reason_code": "13.3",
   "status": "won",
-  "disputes": 41,
-  "dispute_usd": 25749.0
+  "disputes": 42,
+  "dispute_usd": 26722.95
  },
  {
   "merchant_id": 103,
@@ -886,20 +842,9 @@
   "merchant_category": "RETAIL",
   "network": "MASTERCARD",
   "reason_code": "4853",
-  "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 2221.41
- },
- {
-  "merchant_id": 103,
-  "merchant_name": "Tessaly Market",
-  "mcc": "5311",
-  "merchant_category": "RETAIL",
-  "network": "MASTERCARD",
-  "reason_code": "4853",
   "status": "won",
-  "disputes": 28,
-  "dispute_usd": 16098.67
+  "disputes": 30,
+  "dispute_usd": 18320.08
  },
  {
   "merchant_id": 104,
@@ -909,8 +854,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "lost",
-  "disputes": 115,
-  "dispute_usd": 64694.28
+  "disputes": 118,
+  "dispute_usd": 66100.55
  },
  {
   "merchant_id": 104,
@@ -931,8 +876,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "pre-arb",
-  "disputes": 10,
-  "dispute_usd": 6807.23
+  "disputes": 7,
+  "dispute_usd": 5400.96
  },
  {
   "merchant_id": 104,
@@ -974,20 +919,9 @@
   "merchant_category": "RETAIL",
   "network": "VISA",
   "reason_code": "12.6",
-  "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 1984.9
- },
- {
-  "merchant_id": 104,
-  "merchant_name": "Orvane Apparel",
-  "mcc": "5651",
-  "merchant_category": "RETAIL",
-  "network": "VISA",
-  "reason_code": "12.6",
   "status": "won",
-  "disputes": 17,
-  "dispute_usd": 9585.79
+  "disputes": 19,
+  "dispute_usd": 11570.69
  },
  {
   "merchant_id": 104,
@@ -997,8 +931,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "lost",
-  "disputes": 52,
-  "dispute_usd": 30531.83
+  "disputes": 56,
+  "dispute_usd": 32148.32
  },
  {
   "merchant_id": 104,
@@ -1019,8 +953,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "pre-arb",
-  "disputes": 6,
-  "dispute_usd": 3008.12
+  "disputes": 1,
+  "dispute_usd": 602.04
  },
  {
   "merchant_id": 104,
@@ -1030,8 +964,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "won",
-  "disputes": 72,
-  "dispute_usd": 47561.95
+  "disputes": 73,
+  "dispute_usd": 48351.54
  },
  {
   "merchant_id": 104,
@@ -1063,8 +997,8 @@
   "network": "VISA",
   "reason_code": "13.2",
   "status": "pre-arb",
-  "disputes": 3,
-  "dispute_usd": 1137.9
+  "disputes": 2,
+  "dispute_usd": 1047.92
  },
  {
   "merchant_id": 104,
@@ -1074,8 +1008,8 @@
   "network": "VISA",
   "reason_code": "13.2",
   "status": "won",
-  "disputes": 42,
-  "dispute_usd": 27395.77
+  "disputes": 43,
+  "dispute_usd": 27485.75
  },
  {
   "merchant_id": 104,
@@ -1129,8 +1063,8 @@
   "network": "MASTERCARD",
   "reason_code": "4837",
   "status": "lost",
-  "disputes": 19,
-  "dispute_usd": 9619.56
+  "disputes": 21,
+  "dispute_usd": 10270.8
  },
  {
   "merchant_id": 104,
@@ -1142,17 +1076,6 @@
   "status": "open",
   "disputes": 1,
   "dispute_usd": 559.49
- },
- {
-  "merchant_id": 104,
-  "merchant_name": "Orvane Apparel",
-  "mcc": "5651",
-  "merchant_category": "RETAIL",
-  "network": "MASTERCARD",
-  "reason_code": "4837",
-  "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 651.24
  },
  {
   "merchant_id": 104,
@@ -1173,8 +1096,8 @@
   "network": "MASTERCARD",
   "reason_code": "4853",
   "status": "lost",
-  "disputes": 24,
-  "dispute_usd": 12185.96
+  "disputes": 25,
+  "dispute_usd": 12874.27
  },
  {
   "merchant_id": 104,
@@ -1186,17 +1109,6 @@
   "status": "open",
   "disputes": 2,
   "dispute_usd": 925.39
- },
- {
-  "merchant_id": 104,
-  "merchant_name": "Orvane Apparel",
-  "mcc": "5651",
-  "merchant_category": "RETAIL",
-  "network": "MASTERCARD",
-  "reason_code": "4853",
-  "status": "pre-arb",
-  "disputes": 1,
-  "dispute_usd": 688.31
  },
  {
   "merchant_id": 104,
@@ -1239,8 +1151,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "pre-arb",
-  "disputes": 4,
-  "dispute_usd": 2778.5
+  "disputes": 2,
+  "dispute_usd": 1031.04
  },
  {
   "merchant_id": 201,
@@ -1250,8 +1162,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "won",
-  "disputes": 35,
-  "dispute_usd": 18032.06
+  "disputes": 37,
+  "dispute_usd": 19779.52
  },
  {
   "merchant_id": 201,
@@ -1283,8 +1195,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "lost",
-  "disputes": 30,
-  "dispute_usd": 19673.26
+  "disputes": 32,
+  "dispute_usd": 20756.21
  },
  {
   "merchant_id": 201,
@@ -1305,8 +1217,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "pre-arb",
-  "disputes": 6,
-  "dispute_usd": 3761.68
+  "disputes": 2,
+  "dispute_usd": 1322.89
  },
  {
   "merchant_id": 201,
@@ -1316,8 +1228,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "won",
-  "disputes": 47,
-  "dispute_usd": 30028.86
+  "disputes": 49,
+  "dispute_usd": 31384.7
  },
  {
   "merchant_id": 201,
@@ -1348,20 +1260,9 @@
   "merchant_category": "TRAVEL",
   "network": "VISA",
   "reason_code": "13.2",
-  "status": "pre-arb",
-  "disputes": 1,
-  "dispute_usd": 505.7
- },
- {
-  "merchant_id": 201,
-  "merchant_name": "Skerrow Travel",
-  "mcc": "4722",
-  "merchant_category": "TRAVEL",
-  "network": "VISA",
-  "reason_code": "13.2",
   "status": "won",
-  "disputes": 30,
-  "dispute_usd": 19640.31
+  "disputes": 31,
+  "dispute_usd": 20146.01
  },
  {
   "merchant_id": 201,
@@ -1371,19 +1272,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "lost",
-  "disputes": 28,
-  "dispute_usd": 20434.77
- },
- {
-  "merchant_id": 201,
-  "merchant_name": "Skerrow Travel",
-  "mcc": "4722",
-  "merchant_category": "TRAVEL",
-  "network": "VISA",
-  "reason_code": "13.3",
-  "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 1815.62
+  "disputes": 29,
+  "dispute_usd": 21604.08
  },
  {
   "merchant_id": 201,
@@ -1393,8 +1283,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "won",
-  "disputes": 24,
-  "dispute_usd": 15591.0
+  "disputes": 25,
+  "dispute_usd": 16237.31
  },
  {
   "merchant_id": 201,
@@ -1437,8 +1327,8 @@
   "network": "MASTERCARD",
   "reason_code": "4853",
   "status": "lost",
-  "disputes": 19,
-  "dispute_usd": 13171.5
+  "disputes": 20,
+  "dispute_usd": 13813.14
  },
  {
   "merchant_id": 201,
@@ -1458,20 +1348,9 @@
   "merchant_category": "TRAVEL",
   "network": "MASTERCARD",
   "reason_code": "4853",
-  "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 775.6
- },
- {
-  "merchant_id": 201,
-  "merchant_name": "Skerrow Travel",
-  "mcc": "4722",
-  "merchant_category": "TRAVEL",
-  "network": "MASTERCARD",
-  "reason_code": "4853",
   "status": "won",
-  "disputes": 25,
-  "dispute_usd": 14919.82
+  "disputes": 26,
+  "dispute_usd": 15053.78
  },
  {
   "merchant_id": 202,
@@ -1481,8 +1360,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "lost",
-  "disputes": 67,
-  "dispute_usd": 43275.5
+  "disputes": 69,
+  "dispute_usd": 44505.25
  },
  {
   "merchant_id": 202,
@@ -1503,8 +1382,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "pre-arb",
-  "disputes": 3,
-  "dispute_usd": 2150.76
+  "disputes": 1,
+  "dispute_usd": 921.01
  },
  {
   "merchant_id": 202,
@@ -1558,8 +1437,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "lost",
-  "disputes": 33,
-  "dispute_usd": 23004.0
+  "disputes": 35,
+  "dispute_usd": 24008.17
  },
  {
   "merchant_id": 202,
@@ -1571,17 +1450,6 @@
   "status": "open",
   "disputes": 5,
   "dispute_usd": 3244.13
- },
- {
-  "merchant_id": 202,
-  "merchant_name": "Vellmar Resorts",
-  "mcc": "7011",
-  "merchant_category": "TRAVEL",
-  "network": "VISA",
-  "reason_code": "13.1",
-  "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 1004.17
  },
  {
   "merchant_id": 202,
@@ -1602,8 +1470,8 @@
   "network": "VISA",
   "reason_code": "13.2",
   "status": "lost",
-  "disputes": 20,
-  "dispute_usd": 11327.25
+  "disputes": 21,
+  "dispute_usd": 11966.57
  },
  {
   "merchant_id": 202,
@@ -1615,17 +1483,6 @@
   "status": "open",
   "disputes": 1,
   "dispute_usd": 854.13
- },
- {
-  "merchant_id": 202,
-  "merchant_name": "Vellmar Resorts",
-  "mcc": "7011",
-  "merchant_category": "TRAVEL",
-  "network": "VISA",
-  "reason_code": "13.2",
-  "status": "pre-arb",
-  "disputes": 1,
-  "dispute_usd": 639.32
  },
  {
   "merchant_id": 202,
@@ -1701,8 +1558,8 @@
   "network": "MASTERCARD",
   "reason_code": "4837",
   "status": "pre-arb",
-  "disputes": 3,
-  "dispute_usd": 2016.28
+  "disputes": 2,
+  "dispute_usd": 1086.37
  },
  {
   "merchant_id": 202,
@@ -1712,8 +1569,8 @@
   "network": "MASTERCARD",
   "reason_code": "4837",
   "status": "won",
-  "disputes": 7,
-  "dispute_usd": 4449.37
+  "disputes": 8,
+  "dispute_usd": 5379.28
  },
  {
   "merchant_id": 202,
@@ -1744,20 +1601,9 @@
   "merchant_category": "TRAVEL",
   "network": "MASTERCARD",
   "reason_code": "4853",
-  "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 870.67
- },
- {
-  "merchant_id": 202,
-  "merchant_name": "Vellmar Resorts",
-  "mcc": "7011",
-  "merchant_category": "TRAVEL",
-  "network": "MASTERCARD",
-  "reason_code": "4853",
   "status": "won",
-  "disputes": 15,
-  "dispute_usd": 9117.63
+  "disputes": 17,
+  "dispute_usd": 9988.3
  },
  {
   "merchant_id": 203,
@@ -1767,8 +1613,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "lost",
-  "disputes": 58,
-  "dispute_usd": 32582.28
+  "disputes": 60,
+  "dispute_usd": 33524.01
  },
  {
   "merchant_id": 203,
@@ -1789,8 +1635,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "pre-arb",
-  "disputes": 7,
-  "dispute_usd": 3464.92
+  "disputes": 3,
+  "dispute_usd": 895.06
  },
  {
   "merchant_id": 203,
@@ -1800,8 +1646,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "won",
-  "disputes": 40,
-  "dispute_usd": 23357.13
+  "disputes": 42,
+  "dispute_usd": 24985.26
  },
  {
   "merchant_id": 203,
@@ -1844,8 +1690,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "lost",
-  "disputes": 39,
-  "dispute_usd": 21464.44
+  "disputes": 40,
+  "dispute_usd": 21667.48
  },
  {
   "merchant_id": 203,
@@ -1857,17 +1703,6 @@
   "status": "open",
   "disputes": 3,
   "dispute_usd": 3052.78
- },
- {
-  "merchant_id": 203,
-  "merchant_name": "Aerquill Air",
-  "mcc": "3000",
-  "merchant_category": "TRAVEL",
-  "network": "VISA",
-  "reason_code": "13.1",
-  "status": "pre-arb",
-  "disputes": 1,
-  "dispute_usd": 203.04
  },
  {
   "merchant_id": 203,
@@ -1976,8 +1811,8 @@
   "network": "MASTERCARD",
   "reason_code": "4853",
   "status": "lost",
-  "disputes": 13,
-  "dispute_usd": 7413.26
+  "disputes": 14,
+  "dispute_usd": 7583.45
  },
  {
   "merchant_id": 203,
@@ -1997,20 +1832,9 @@
   "merchant_category": "TRAVEL",
   "network": "MASTERCARD",
   "reason_code": "4853",
-  "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 642.25
- },
- {
-  "merchant_id": 203,
-  "merchant_name": "Aerquill Air",
-  "mcc": "3000",
-  "merchant_category": "TRAVEL",
-  "network": "MASTERCARD",
-  "reason_code": "4853",
   "status": "won",
-  "disputes": 14,
-  "dispute_usd": 8997.68
+  "disputes": 15,
+  "dispute_usd": 9469.74
  },
  {
   "merchant_id": 204,
@@ -2020,8 +1844,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "lost",
-  "disputes": 55,
-  "dispute_usd": 39118.54
+  "disputes": 56,
+  "dispute_usd": 39450.43
  },
  {
   "merchant_id": 204,
@@ -2042,8 +1866,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "pre-arb",
-  "disputes": 7,
-  "dispute_usd": 3342.95
+  "disputes": 4,
+  "dispute_usd": 1894.17
  },
  {
   "merchant_id": 204,
@@ -2053,8 +1877,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "won",
-  "disputes": 20,
-  "dispute_usd": 10120.26
+  "disputes": 22,
+  "dispute_usd": 11237.15
  },
  {
   "merchant_id": 204,
@@ -2108,8 +1932,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "pre-arb",
-  "disputes": 6,
-  "dispute_usd": 4189.19
+  "disputes": 3,
+  "dispute_usd": 2160.45
  },
  {
   "merchant_id": 204,
@@ -2119,8 +1943,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "won",
-  "disputes": 28,
-  "dispute_usd": 16583.91
+  "disputes": 31,
+  "dispute_usd": 18612.65
  },
  {
   "merchant_id": 204,
@@ -2174,8 +1998,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "lost",
-  "disputes": 11,
-  "dispute_usd": 7641.74
+  "disputes": 12,
+  "dispute_usd": 7666.86
  },
  {
   "merchant_id": 204,
@@ -2196,8 +2020,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 310.57
+  "disputes": 1,
+  "dispute_usd": 285.45
  },
  {
   "merchant_id": 204,
@@ -2273,8 +2097,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "lost",
-  "disputes": 217,
-  "dispute_usd": 137321.28
+  "disputes": 222,
+  "dispute_usd": 140495.82
  },
  {
   "merchant_id": 301,
@@ -2295,8 +2119,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "pre-arb",
-  "disputes": 17,
-  "dispute_usd": 9869.25
+  "disputes": 10,
+  "dispute_usd": 5609.29
  },
  {
   "merchant_id": 301,
@@ -2306,8 +2130,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "won",
-  "disputes": 134,
-  "dispute_usd": 86552.08
+  "disputes": 136,
+  "dispute_usd": 87637.5
  },
  {
   "merchant_id": 301,
@@ -2339,8 +2163,8 @@
   "network": "VISA",
   "reason_code": "12.6",
   "status": "pre-arb",
-  "disputes": 5,
-  "dispute_usd": 2311.57
+  "disputes": 2,
+  "dispute_usd": 397.65
  },
  {
   "merchant_id": 301,
@@ -2350,8 +2174,8 @@
   "network": "VISA",
   "reason_code": "12.6",
   "status": "won",
-  "disputes": 57,
-  "dispute_usd": 35621.44
+  "disputes": 60,
+  "dispute_usd": 37535.36
  },
  {
   "merchant_id": 301,
@@ -2361,8 +2185,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "lost",
-  "disputes": 112,
-  "dispute_usd": 67895.22
+  "disputes": 115,
+  "dispute_usd": 69381.19
  },
  {
   "merchant_id": 301,
@@ -2383,8 +2207,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "pre-arb",
-  "disputes": 15,
-  "dispute_usd": 8363.21
+  "disputes": 6,
+  "dispute_usd": 3083.4
  },
  {
   "merchant_id": 301,
@@ -2394,8 +2218,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "won",
-  "disputes": 145,
-  "dispute_usd": 86551.78
+  "disputes": 151,
+  "dispute_usd": 90345.62
  },
  {
   "merchant_id": 301,
@@ -2405,8 +2229,8 @@
   "network": "VISA",
   "reason_code": "13.2",
   "status": "lost",
-  "disputes": 206,
-  "dispute_usd": 124586.25
+  "disputes": 212,
+  "dispute_usd": 128443.84
  },
  {
   "merchant_id": 301,
@@ -2427,8 +2251,8 @@
   "network": "VISA",
   "reason_code": "13.2",
   "status": "pre-arb",
-  "disputes": 15,
-  "dispute_usd": 9272.03
+  "disputes": 3,
+  "dispute_usd": 1821.79
  },
  {
   "merchant_id": 301,
@@ -2438,8 +2262,8 @@
   "network": "VISA",
   "reason_code": "13.2",
   "status": "won",
-  "disputes": 233,
-  "dispute_usd": 146001.56
+  "disputes": 239,
+  "dispute_usd": 149594.21
  },
  {
   "merchant_id": 301,
@@ -2449,8 +2273,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "lost",
-  "disputes": 67,
-  "dispute_usd": 42287.39
+  "disputes": 69,
+  "dispute_usd": 43091.56
  },
  {
   "merchant_id": 301,
@@ -2471,8 +2295,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "pre-arb",
-  "disputes": 5,
-  "dispute_usd": 2907.29
+  "disputes": 2,
+  "dispute_usd": 1980.53
  },
  {
   "merchant_id": 301,
@@ -2482,8 +2306,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "won",
-  "disputes": 87,
-  "dispute_usd": 61163.87
+  "disputes": 88,
+  "dispute_usd": 61286.46
  },
  {
   "merchant_id": 301,
@@ -2493,8 +2317,8 @@
   "network": "MASTERCARD",
   "reason_code": "4837",
   "status": "lost",
-  "disputes": 44,
-  "dispute_usd": 25233.7
+  "disputes": 45,
+  "dispute_usd": 26036.53
  },
  {
   "merchant_id": 301,
@@ -2515,8 +2339,8 @@
   "network": "MASTERCARD",
   "reason_code": "4837",
   "status": "pre-arb",
-  "disputes": 4,
-  "dispute_usd": 2365.22
+  "disputes": 2,
+  "dispute_usd": 863.12
  },
  {
   "merchant_id": 301,
@@ -2526,8 +2350,8 @@
   "network": "MASTERCARD",
   "reason_code": "4837",
   "status": "won",
-  "disputes": 26,
-  "dispute_usd": 13405.53
+  "disputes": 27,
+  "dispute_usd": 14104.8
  },
  {
   "merchant_id": 301,
@@ -2537,8 +2361,8 @@
   "network": "MASTERCARD",
   "reason_code": "4853",
   "status": "lost",
-  "disputes": 57,
-  "dispute_usd": 36740.0
+  "disputes": 58,
+  "dispute_usd": 37735.46
  },
  {
   "merchant_id": 301,
@@ -2559,8 +2383,8 @@
   "network": "MASTERCARD",
   "reason_code": "4853",
   "status": "pre-arb",
-  "disputes": 3,
-  "dispute_usd": 2062.09
+  "disputes": 1,
+  "dispute_usd": 842.76
  },
  {
   "merchant_id": 301,
@@ -2570,8 +2394,8 @@
   "network": "MASTERCARD",
   "reason_code": "4853",
   "status": "won",
-  "disputes": 73,
-  "dispute_usd": 45462.01
+  "disputes": 74,
+  "dispute_usd": 45685.88
  },
  {
   "merchant_id": 302,
@@ -2581,8 +2405,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "lost",
-  "disputes": 213,
-  "dispute_usd": 143729.04
+  "disputes": 223,
+  "dispute_usd": 150674.81
  },
  {
   "merchant_id": 302,
@@ -2603,8 +2427,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "pre-arb",
-  "disputes": 19,
-  "dispute_usd": 12585.62
+  "disputes": 3,
+  "dispute_usd": 1936.43
  },
  {
   "merchant_id": 302,
@@ -2614,8 +2438,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "won",
-  "disputes": 138,
-  "dispute_usd": 87913.62
+  "disputes": 144,
+  "dispute_usd": 91617.04
  },
  {
   "merchant_id": 302,
@@ -2625,8 +2449,8 @@
   "network": "VISA",
   "reason_code": "12.6",
   "status": "lost",
-  "disputes": 37,
-  "dispute_usd": 25846.49
+  "disputes": 39,
+  "dispute_usd": 27714.53
  },
  {
   "merchant_id": 302,
@@ -2638,17 +2462,6 @@
   "status": "open",
   "disputes": 5,
   "dispute_usd": 2027.92
- },
- {
-  "merchant_id": 302,
-  "merchant_name": "Plunvault Games",
-  "mcc": "5816",
-  "merchant_category": "DIGITAL",
-  "network": "VISA",
-  "reason_code": "12.6",
-  "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 1868.04
  },
  {
   "merchant_id": 302,
@@ -2669,8 +2482,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "lost",
-  "disputes": 122,
-  "dispute_usd": 66930.84
+  "disputes": 123,
+  "dispute_usd": 67611.95
  },
  {
   "merchant_id": 302,
@@ -2691,8 +2504,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "pre-arb",
-  "disputes": 10,
-  "dispute_usd": 6896.39
+  "disputes": 6,
+  "dispute_usd": 3710.68
  },
  {
   "merchant_id": 302,
@@ -2702,8 +2515,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "won",
-  "disputes": 133,
-  "dispute_usd": 75721.17
+  "disputes": 136,
+  "dispute_usd": 78225.77
  },
  {
   "merchant_id": 302,
@@ -2768,8 +2581,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "pre-arb",
-  "disputes": 3,
-  "dispute_usd": 848.03
+  "disputes": 2,
+  "dispute_usd": 314.74
  },
  {
   "merchant_id": 302,
@@ -2779,8 +2592,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "won",
-  "disputes": 81,
-  "dispute_usd": 50983.18
+  "disputes": 82,
+  "dispute_usd": 51516.47
  },
  {
   "merchant_id": 302,
@@ -2790,8 +2603,8 @@
   "network": "MASTERCARD",
   "reason_code": "4837",
   "status": "lost",
-  "disputes": 32,
-  "dispute_usd": 21704.88
+  "disputes": 35,
+  "dispute_usd": 22524.38
  },
  {
   "merchant_id": 302,
@@ -2812,8 +2625,8 @@
   "network": "MASTERCARD",
   "reason_code": "4837",
   "status": "pre-arb",
-  "disputes": 4,
-  "dispute_usd": 1554.5
+  "disputes": 1,
+  "dispute_usd": 735.0
  },
  {
   "merchant_id": 302,
@@ -2834,8 +2647,8 @@
   "network": "MASTERCARD",
   "reason_code": "4853",
   "status": "lost",
-  "disputes": 52,
-  "dispute_usd": 33474.3
+  "disputes": 54,
+  "dispute_usd": 34647.53
  },
  {
   "merchant_id": 302,
@@ -2856,8 +2669,8 @@
   "network": "MASTERCARD",
   "reason_code": "4853",
   "status": "pre-arb",
-  "disputes": 8,
-  "dispute_usd": 4330.2
+  "disputes": 4,
+  "dispute_usd": 1830.09
  },
  {
   "merchant_id": 302,
@@ -2867,8 +2680,8 @@
   "network": "MASTERCARD",
   "reason_code": "4853",
   "status": "won",
-  "disputes": 67,
-  "dispute_usd": 40801.01
+  "disputes": 69,
+  "dispute_usd": 42127.89
  },
  {
   "merchant_id": 303,
@@ -2878,8 +2691,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "lost",
-  "disputes": 209,
-  "dispute_usd": 130105.42
+  "disputes": 214,
+  "dispute_usd": 132818.67
  },
  {
   "merchant_id": 303,
@@ -2900,8 +2713,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "pre-arb",
-  "disputes": 11,
-  "dispute_usd": 4706.31
+  "disputes": 2,
+  "dispute_usd": 672.31
  },
  {
   "merchant_id": 303,
@@ -2911,8 +2724,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "won",
-  "disputes": 125,
-  "dispute_usd": 76688.67
+  "disputes": 129,
+  "dispute_usd": 78009.42
  },
  {
   "merchant_id": 303,
@@ -2922,8 +2735,8 @@
   "network": "VISA",
   "reason_code": "12.6",
   "status": "lost",
-  "disputes": 39,
-  "dispute_usd": 23945.84
+  "disputes": 43,
+  "dispute_usd": 27455.71
  },
  {
   "merchant_id": 303,
@@ -2944,8 +2757,8 @@
   "network": "VISA",
   "reason_code": "12.6",
   "status": "pre-arb",
-  "disputes": 5,
-  "dispute_usd": 4085.26
+  "disputes": 1,
+  "dispute_usd": 575.39
  },
  {
   "merchant_id": 303,
@@ -2966,8 +2779,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "lost",
-  "disputes": 126,
-  "dispute_usd": 65036.8
+  "disputes": 131,
+  "dispute_usd": 68073.84
  },
  {
   "merchant_id": 303,
@@ -2988,8 +2801,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "pre-arb",
-  "disputes": 11,
-  "dispute_usd": 6828.59
+  "disputes": 4,
+  "dispute_usd": 1923.0
  },
  {
   "merchant_id": 303,
@@ -2999,8 +2812,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "won",
-  "disputes": 129,
-  "dispute_usd": 81480.07
+  "disputes": 131,
+  "dispute_usd": 83348.62
  },
  {
   "merchant_id": 303,
@@ -3010,8 +2823,8 @@
   "network": "VISA",
   "reason_code": "13.2",
   "status": "lost",
-  "disputes": 21,
-  "dispute_usd": 13266.98
+  "disputes": 22,
+  "dispute_usd": 14020.63
  },
  {
   "merchant_id": 303,
@@ -3031,20 +2844,9 @@
   "merchant_category": "DIGITAL",
   "network": "VISA",
   "reason_code": "13.2",
-  "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 1221.21
- },
- {
-  "merchant_id": 303,
-  "merchant_name": "Cindrel Cloud",
-  "mcc": "5817",
-  "merchant_category": "DIGITAL",
-  "network": "VISA",
-  "reason_code": "13.2",
   "status": "won",
-  "disputes": 46,
-  "dispute_usd": 26369.95
+  "disputes": 47,
+  "dispute_usd": 26837.51
  },
  {
   "merchant_id": 303,
@@ -3054,8 +2856,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "lost",
-  "disputes": 58,
-  "dispute_usd": 32343.11
+  "disputes": 61,
+  "dispute_usd": 33897.86
  },
  {
   "merchant_id": 303,
@@ -3076,8 +2878,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "pre-arb",
-  "disputes": 9,
-  "dispute_usd": 5981.47
+  "disputes": 4,
+  "dispute_usd": 2938.07
  },
  {
   "merchant_id": 303,
@@ -3087,8 +2889,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "won",
-  "disputes": 70,
-  "dispute_usd": 45274.68
+  "disputes": 72,
+  "dispute_usd": 46763.33
  },
  {
   "merchant_id": 303,
@@ -3098,8 +2900,8 @@
   "network": "MASTERCARD",
   "reason_code": "4837",
   "status": "lost",
-  "disputes": 37,
-  "dispute_usd": 18637.27
+  "disputes": 39,
+  "dispute_usd": 20510.03
  },
  {
   "merchant_id": 303,
@@ -3111,17 +2913,6 @@
   "status": "open",
   "disputes": 1,
   "dispute_usd": 563.62
- },
- {
-  "merchant_id": 303,
-  "merchant_name": "Cindrel Cloud",
-  "mcc": "5817",
-  "merchant_category": "DIGITAL",
-  "network": "MASTERCARD",
-  "reason_code": "4837",
-  "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 1872.76
  },
  {
   "merchant_id": 303,
@@ -3142,8 +2933,8 @@
   "network": "MASTERCARD",
   "reason_code": "4853",
   "status": "lost",
-  "disputes": 51,
-  "dispute_usd": 28629.95
+  "disputes": 52,
+  "dispute_usd": 29267.17
  },
  {
   "merchant_id": 303,
@@ -3163,20 +2954,9 @@
   "merchant_category": "DIGITAL",
   "network": "MASTERCARD",
   "reason_code": "4853",
-  "status": "pre-arb",
-  "disputes": 4,
-  "dispute_usd": 2964.23
- },
- {
-  "merchant_id": 303,
-  "merchant_name": "Cindrel Cloud",
-  "mcc": "5817",
-  "merchant_category": "DIGITAL",
-  "network": "MASTERCARD",
-  "reason_code": "4853",
   "status": "won",
-  "disputes": 55,
-  "dispute_usd": 30587.45
+  "disputes": 58,
+  "dispute_usd": 32914.46
  },
  {
   "merchant_id": 304,
@@ -3186,8 +2966,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "lost",
-  "disputes": 229,
-  "dispute_usd": 143280.82
+  "disputes": 234,
+  "dispute_usd": 146795.39
  },
  {
   "merchant_id": 304,
@@ -3208,8 +2988,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "pre-arb",
-  "disputes": 9,
-  "dispute_usd": 5669.4
+  "disputes": 4,
+  "dispute_usd": 2154.83
  },
  {
   "merchant_id": 304,
@@ -3230,8 +3010,8 @@
   "network": "VISA",
   "reason_code": "12.6",
   "status": "lost",
-  "disputes": 32,
-  "dispute_usd": 21821.08
+  "disputes": 34,
+  "dispute_usd": 23553.08
  },
  {
   "merchant_id": 304,
@@ -3251,20 +3031,9 @@
   "merchant_category": "DIGITAL",
   "network": "VISA",
   "reason_code": "12.6",
-  "status": "pre-arb",
-  "disputes": 4,
-  "dispute_usd": 3101.92
- },
- {
-  "merchant_id": 304,
-  "merchant_name": "Moxquin Play",
-  "mcc": "5816",
-  "merchant_category": "DIGITAL",
-  "network": "VISA",
-  "reason_code": "12.6",
   "status": "won",
-  "disputes": 42,
-  "dispute_usd": 21274.28
+  "disputes": 44,
+  "dispute_usd": 22644.2
  },
  {
   "merchant_id": 304,
@@ -3274,8 +3043,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "lost",
-  "disputes": 108,
-  "dispute_usd": 63156.54
+  "disputes": 111,
+  "dispute_usd": 65580.76
  },
  {
   "merchant_id": 304,
@@ -3296,8 +3065,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "pre-arb",
-  "disputes": 9,
-  "dispute_usd": 5676.1
+  "disputes": 1,
+  "dispute_usd": 393.1
  },
  {
   "merchant_id": 304,
@@ -3307,8 +3076,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "won",
-  "disputes": 141,
-  "dispute_usd": 93005.04
+  "disputes": 146,
+  "dispute_usd": 95863.82
  },
  {
   "merchant_id": 304,
@@ -3318,8 +3087,8 @@
   "network": "VISA",
   "reason_code": "13.2",
   "status": "lost",
-  "disputes": 25,
-  "dispute_usd": 15676.9
+  "disputes": 28,
+  "dispute_usd": 17264.0
  },
  {
   "merchant_id": 304,
@@ -3340,8 +3109,8 @@
   "network": "VISA",
   "reason_code": "13.2",
   "status": "pre-arb",
-  "disputes": 5,
-  "dispute_usd": 2901.05
+  "disputes": 2,
+  "dispute_usd": 1313.95
  },
  {
   "merchant_id": 304,
@@ -3362,8 +3131,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "lost",
-  "disputes": 58,
-  "dispute_usd": 33093.84
+  "disputes": 60,
+  "dispute_usd": 33325.45
  },
  {
   "merchant_id": 304,
@@ -3384,8 +3153,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "pre-arb",
-  "disputes": 7,
-  "dispute_usd": 4256.94
+  "disputes": 4,
+  "dispute_usd": 2936.99
  },
  {
   "merchant_id": 304,
@@ -3395,8 +3164,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "won",
-  "disputes": 71,
-  "dispute_usd": 43445.83
+  "disputes": 72,
+  "dispute_usd": 44534.17
  },
  {
   "merchant_id": 304,
@@ -3406,8 +3175,8 @@
   "network": "MASTERCARD",
   "reason_code": "4837",
   "status": "lost",
-  "disputes": 36,
-  "dispute_usd": 21043.79
+  "disputes": 37,
+  "dispute_usd": 21527.34
  },
  {
   "merchant_id": 304,
@@ -3428,8 +3197,8 @@
   "network": "MASTERCARD",
   "reason_code": "4837",
   "status": "pre-arb",
-  "disputes": 3,
-  "dispute_usd": 1683.23
+  "disputes": 1,
+  "dispute_usd": 412.22
  },
  {
   "merchant_id": 304,
@@ -3439,8 +3208,8 @@
   "network": "MASTERCARD",
   "reason_code": "4837",
   "status": "won",
-  "disputes": 12,
-  "dispute_usd": 6349.54
+  "disputes": 13,
+  "dispute_usd": 7137.0
  },
  {
   "merchant_id": 304,
@@ -3450,8 +3219,8 @@
   "network": "MASTERCARD",
   "reason_code": "4853",
   "status": "lost",
-  "disputes": 54,
-  "dispute_usd": 36904.59
+  "disputes": 55,
+  "dispute_usd": 37322.49
  },
  {
   "merchant_id": 304,
@@ -3463,17 +3232,6 @@
   "status": "open",
   "disputes": 3,
   "dispute_usd": 2417.93
- },
- {
-  "merchant_id": 304,
-  "merchant_name": "Moxquin Play",
-  "mcc": "5816",
-  "merchant_category": "DIGITAL",
-  "network": "MASTERCARD",
-  "reason_code": "4853",
-  "status": "pre-arb",
-  "disputes": 1,
-  "dispute_usd": 417.9
  },
  {
   "merchant_id": 304,
@@ -3494,8 +3252,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "lost",
-  "disputes": 52,
-  "dispute_usd": 38127.01
+  "disputes": 53,
+  "dispute_usd": 38860.45
  },
  {
   "merchant_id": 401,
@@ -3516,8 +3274,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "pre-arb",
-  "disputes": 3,
-  "dispute_usd": 2103.87
+  "disputes": 1,
+  "dispute_usd": 389.3
  },
  {
   "merchant_id": 401,
@@ -3527,8 +3285,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "won",
-  "disputes": 25,
-  "dispute_usd": 16276.39
+  "disputes": 26,
+  "dispute_usd": 17257.52
  },
  {
   "merchant_id": 401,
@@ -3559,20 +3317,9 @@
   "merchant_category": "GROCERY",
   "network": "VISA",
   "reason_code": "12.6",
-  "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 333.24
- },
- {
-  "merchant_id": 401,
-  "merchant_name": "Fennick Grocer",
-  "mcc": "5411",
-  "merchant_category": "GROCERY",
-  "network": "VISA",
-  "reason_code": "12.6",
   "status": "won",
-  "disputes": 10,
-  "dispute_usd": 5710.35
+  "disputes": 12,
+  "dispute_usd": 6043.59
  },
  {
   "merchant_id": 401,
@@ -3603,20 +3350,9 @@
   "merchant_category": "GROCERY",
   "network": "VISA",
   "reason_code": "13.1",
-  "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 1408.87
- },
- {
-  "merchant_id": 401,
-  "merchant_name": "Fennick Grocer",
-  "mcc": "5411",
-  "merchant_category": "GROCERY",
-  "network": "VISA",
-  "reason_code": "13.1",
   "status": "won",
-  "disputes": 31,
-  "dispute_usd": 16908.1
+  "disputes": 33,
+  "dispute_usd": 18316.97
  },
  {
   "merchant_id": 401,
@@ -3725,8 +3461,8 @@
   "network": "MASTERCARD",
   "reason_code": "4837",
   "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 1975.64
+  "disputes": 1,
+  "dispute_usd": 1105.33
  },
  {
   "merchant_id": 401,
@@ -3736,8 +3472,8 @@
   "network": "MASTERCARD",
   "reason_code": "4837",
   "status": "won",
-  "disputes": 7,
-  "dispute_usd": 4761.57
+  "disputes": 8,
+  "dispute_usd": 5631.88
  },
  {
   "merchant_id": 401,
@@ -3747,8 +3483,8 @@
   "network": "MASTERCARD",
   "reason_code": "4853",
   "status": "lost",
-  "disputes": 18,
-  "dispute_usd": 8670.12
+  "disputes": 19,
+  "dispute_usd": 9138.76
  },
  {
   "merchant_id": 401,
@@ -3760,17 +3496,6 @@
   "status": "open",
   "disputes": 1,
   "dispute_usd": 899.23
- },
- {
-  "merchant_id": 401,
-  "merchant_name": "Fennick Grocer",
-  "mcc": "5411",
-  "merchant_category": "GROCERY",
-  "network": "MASTERCARD",
-  "reason_code": "4853",
-  "status": "pre-arb",
-  "disputes": 1,
-  "dispute_usd": 468.64
  },
  {
   "merchant_id": 401,
@@ -3791,8 +3516,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "lost",
-  "disputes": 55,
-  "dispute_usd": 25030.8
+  "disputes": 57,
+  "dispute_usd": 26762.19
  },
  {
   "merchant_id": 402,
@@ -3813,8 +3538,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "pre-arb",
-  "disputes": 5,
-  "dispute_usd": 3333.41
+  "disputes": 1,
+  "dispute_usd": 234.97
  },
  {
   "merchant_id": 402,
@@ -3824,8 +3549,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "won",
-  "disputes": 22,
-  "dispute_usd": 13119.42
+  "disputes": 24,
+  "dispute_usd": 14486.47
  },
  {
   "merchant_id": 402,
@@ -3868,8 +3593,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "lost",
-  "disputes": 18,
-  "dispute_usd": 9962.8
+  "disputes": 19,
+  "dispute_usd": 10051.56
  },
  {
   "merchant_id": 402,
@@ -3889,20 +3614,9 @@
   "merchant_category": "GROCERY",
   "network": "VISA",
   "reason_code": "13.1",
-  "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 1170.28
- },
- {
-  "merchant_id": 402,
-  "merchant_name": "Pallowmere Market",
-  "mcc": "5411",
-  "merchant_category": "GROCERY",
-  "network": "VISA",
-  "reason_code": "13.1",
   "status": "won",
-  "disputes": 33,
-  "dispute_usd": 19772.71
+  "disputes": 34,
+  "dispute_usd": 20854.23
  },
  {
   "merchant_id": 402,
@@ -3945,8 +3659,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "lost",
-  "disputes": 13,
-  "dispute_usd": 7567.66
+  "disputes": 14,
+  "dispute_usd": 7958.35
  },
  {
   "merchant_id": 402,
@@ -3967,8 +3681,8 @@
   "network": "VISA",
   "reason_code": "13.3",
   "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 643.15
+  "disputes": 1,
+  "dispute_usd": 252.46
  },
  {
   "merchant_id": 402,
@@ -3989,8 +3703,8 @@
   "network": "MASTERCARD",
   "reason_code": "4837",
   "status": "lost",
-  "disputes": 11,
-  "dispute_usd": 5460.87
+  "disputes": 12,
+  "dispute_usd": 6273.75
  },
  {
   "merchant_id": 402,
@@ -4002,17 +3716,6 @@
   "status": "open",
   "disputes": 1,
   "dispute_usd": 957.2
- },
- {
-  "merchant_id": 402,
-  "merchant_name": "Pallowmere Market",
-  "mcc": "5411",
-  "merchant_category": "GROCERY",
-  "network": "MASTERCARD",
-  "reason_code": "4837",
-  "status": "pre-arb",
-  "disputes": 1,
-  "dispute_usd": 812.88
  },
  {
   "merchant_id": 402,
@@ -4066,8 +3769,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "lost",
-  "disputes": 45,
-  "dispute_usd": 27996.21
+  "disputes": 47,
+  "dispute_usd": 29671.04
  },
  {
   "merchant_id": 403,
@@ -4088,8 +3791,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "pre-arb",
-  "disputes": 5,
-  "dispute_usd": 3218.35
+  "disputes": 3,
+  "dispute_usd": 1543.52
  },
  {
   "merchant_id": 403,
@@ -4131,20 +3834,9 @@
   "merchant_category": "GROCERY",
   "network": "VISA",
   "reason_code": "12.6",
-  "status": "pre-arb",
-  "disputes": 1,
-  "dispute_usd": 1115.11
- },
- {
-  "merchant_id": 403,
-  "merchant_name": "Quillby Pantry",
-  "mcc": "5499",
-  "merchant_category": "GROCERY",
-  "network": "VISA",
-  "reason_code": "12.6",
   "status": "won",
-  "disputes": 14,
-  "dispute_usd": 7871.52
+  "disputes": 15,
+  "dispute_usd": 8986.63
  },
  {
   "merchant_id": 403,
@@ -4275,19 +3967,8 @@
   "network": "MASTERCARD",
   "reason_code": "4853",
   "status": "lost",
-  "disputes": 11,
-  "dispute_usd": 6551.19
- },
- {
-  "merchant_id": 403,
-  "merchant_name": "Quillby Pantry",
-  "mcc": "5499",
-  "merchant_category": "GROCERY",
-  "network": "MASTERCARD",
-  "reason_code": "4853",
-  "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 1683.89
+  "disputes": 12,
+  "dispute_usd": 7301.04
  },
  {
   "merchant_id": 403,
@@ -4297,8 +3978,8 @@
   "network": "MASTERCARD",
   "reason_code": "4853",
   "status": "won",
-  "disputes": 11,
-  "dispute_usd": 6674.9
+  "disputes": 12,
+  "dispute_usd": 7608.94
  },
  {
   "merchant_id": 404,
@@ -4308,8 +3989,8 @@
   "network": "VISA",
   "reason_code": "10.4",
   "status": "lost",
-  "disputes": 37,
-  "dispute_usd": 24705.79
+  "disputes": 38,
+  "dispute_usd": 25108.23
  },
  {
   "merchant_id": 404,
@@ -4321,17 +4002,6 @@
   "status": "open",
   "disputes": 2,
   "dispute_usd": 990.14
- },
- {
-  "merchant_id": 404,
-  "merchant_name": "Thressa Foods",
-  "mcc": "5411",
-  "merchant_category": "GROCERY",
-  "network": "VISA",
-  "reason_code": "10.4",
-  "status": "pre-arb",
-  "disputes": 1,
-  "dispute_usd": 402.44
  },
  {
   "merchant_id": 404,
@@ -4374,8 +4044,8 @@
   "network": "VISA",
   "reason_code": "13.1",
   "status": "lost",
-  "disputes": 23,
-  "dispute_usd": 12361.36
+  "disputes": 24,
+  "dispute_usd": 13476.85
  },
  {
   "merchant_id": 404,
@@ -4395,20 +4065,9 @@
   "merchant_category": "GROCERY",
   "network": "VISA",
   "reason_code": "13.1",
-  "status": "pre-arb",
-  "disputes": 2,
-  "dispute_usd": 2152.03
- },
- {
-  "merchant_id": 404,
-  "merchant_name": "Thressa Foods",
-  "mcc": "5411",
-  "merchant_category": "GROCERY",
-  "network": "VISA",
-  "reason_code": "13.1",
   "status": "won",
-  "disputes": 28,
-  "dispute_usd": 18136.35
+  "disputes": 29,
+  "dispute_usd": 19172.89
  },
  {
   "merchant_id": 404,
@@ -4418,8 +4077,8 @@
   "network": "VISA",
   "reason_code": "13.2",
   "status": "lost",
-  "disputes": 9,
-  "dispute_usd": 5500.57
+  "disputes": 11,
+  "dispute_usd": 7637.13
  },
  {
   "merchant_id": 404,
@@ -4440,8 +4099,8 @@
   "network": "VISA",
   "reason_code": "13.2",
   "status": "pre-arb",
-  "disputes": 3,
-  "dispute_usd": 2250.26
+  "disputes": 1,
+  "dispute_usd": 113.7
  },
  {
   "merchant_id": 404,

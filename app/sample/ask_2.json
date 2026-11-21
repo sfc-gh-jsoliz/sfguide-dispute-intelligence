@@ -1,177 +1,177 @@
 {
  "question": "How do our dispute trends compare to CFPB complaint volume for the same period?",
- "text": "Our disputes follow a regular seasonal pattern, but CFPB complaint volume doesn't move with it. I compared the two month by month from Jul 2024 to Jun 2026.\n\n**Our disputes**\n- There are 362 disputes in every month except Nov\u2013Jan, when there are 574 (about 59% more). That held in both years.\n- Disputed dollars follow the same pattern: about $0.20\u20130.24M in a normal month and about $0.34\u20130.36M in Nov\u2013Jan. The highest was Dec 2025 at $0.36M.\n- Win rate (won \u00f7 resolved) has no seasonal pattern. It ranges from 43.1% (Oct 2025) to 52.7% (Feb 2025).\n\n**CFPB complaints (one benchmark figure per month)**\n- Volume ranges from 4,135 (Sep 2025) to 6,091 (Dec 2024) and goes up and down from month to month without a clear direction.\n- In 2024\u201325, complaints did rise during our peak season: 5,271 in Nov, 6,091 in Dec and 5,563 in Jan.\n- In 2025\u201326 they didn't: 5,076 in Nov, 4,955 in Dec and 5,298 in Jan, which is about the same as, or below, months like Feb 2026 (5,402) and May 2026 (5,486).\n\n**What this means**\n- Our holiday-season jump looks like it comes from our own business, not from consumer complaints rising across the market. The benchmark showed a matching rise in one of the two seasons only.\n- Month-to-month changes in CFPB volume (for example, 5,486 in May 2026 falling to 4,213 in Jun 2026) didn't show up in our dispute counts at all.\n- **Check before relying on the counts:** having exactly 362 disputes in every regular month and exactly 574 in every peak month is unusually uniform. The dispute data may be modeled or templated rather than actual counts, so confirm its source before drawing firm conclusions from the comparison.",
+ "text": "**Our dispute volume and CFPB complaint volume don't move together.** From July 2024 to June 2026, our disputes followed a fixed seasonal step pattern, while CFPB complaints moved up and down from month to month with no clear direction.\n\n\n\n**Our disputes:**\n- Every month has either exactly 362 or exactly 574 disputes. The jump to 574 (59% higher) happens only in November\u2013January. Dispute dollars follow the same pattern: about $0.20\u20130.24M in normal months and about $0.34\u20130.36M in peak months.\n- **Caution:** Getting exactly the same count in 18 of 24 months isn't realistic for real dispute activity. The dispute data looks templated or simulated, so I wouldn't draw conclusions about real trends until the source is checked.\n- The overall win rate stayed between about 43% and 53%. The lowest month was July 2025 (43.1%) and the highest was February 2025 (53.0%). It didn't change in the peak season.\n\n**CFPB benchmark (one figure per month):**\n- Monthly complaints ranged from 4,135 (September 2025) to 6,091 (December 2024).\n- In the first winter peak there was some overlap: complaints rose to 5,271 in November 2024, 6,091 in December 2024 and 5,563 in January 2025.\n- In the second winter there was no matching rise: 5,076 in November 2025, 4,955 in December 2025 and 5,298 in January 2026, which are typical levels. Several normal months were similar or higher, such as 5,484 in June 2025 and 5,486 in May 2026.\n\n**Ratio:** We had about 0.07\u20130.09 disputes per CFPB complaint in normal months and about 0.09\u20130.12 in peak months. The highest was December 2025 at 0.116. Our seasonal rise is much larger and more consistent than anything in the national complaint data.\n\n**Bottom line:** Our winter dispute spike looks driven by our own business, such as holiday sales volume, not by wider consumer-complaint trends. The CFPB benchmark only matched it in the 2024\u201325 winter.",
  "tables": [
   {
-   "title": "Monthly Disputes, Dispute $, Win Rate vs CFPB Complaints (Jul 2024\u2013Jun 2026)",
+   "title": "Monthly Disputes vs CFPB Complaint Benchmark (Jul 2024 \u2013 Jun 2026)",
    "columns": [
     "MONTH_END",
     "TOTAL_DISPUTES",
     "DISPUTE_USD",
     "WIN_RATE",
     "CFPB_COMPLAINTS",
-    "CFPB_SPREAD"
+    "DISPUTES_PER_COMPLAINT"
    ],
    "rows": [
     [
      "2024-07-31",
      "362",
      "225130.70",
-     "0.518310",
+     "0.522099",
      "4155",
-     "0"
+     "0.087124"
     ],
     [
      "2024-08-31",
      "362",
      "203986.62",
-     "0.469914",
+     "0.466851",
      "5192",
-     "0"
+     "0.069723"
     ],
     [
      "2024-09-30",
      "362",
      "223970.22",
-     "0.474286",
+     "0.475138",
      "4452",
-     "0"
+     "0.081312"
     ],
     [
      "2024-10-31",
      "362",
      "226794.11",
-     "0.501408",
+     "0.497238",
      "4990",
-     "0"
+     "0.072545"
     ],
     [
      "2024-11-30",
      "574",
      "353309.89",
-     "0.462633",
+     "0.466899",
      "5271",
-     "0"
+     "0.108898"
     ],
     [
      "2024-12-31",
      "574",
      "335824.05",
-     "0.513417",
+     "0.513937",
      "6091",
-     "0"
+     "0.094237"
     ],
     [
      "2025-01-31",
      "574",
      "357432.89",
-     "0.470163",
+     "0.465157",
      "5563",
-     "0"
+     "0.103182"
     ],
     [
      "2025-02-28",
      "362",
      "223587.10",
-     "0.527066",
+     "0.530387",
      "5063",
-     "0"
+     "0.071499"
     ],
     [
      "2025-03-31",
      "362",
      "235777.63",
-     "0.472934",
+     "0.477901",
      "4708",
-     "0"
+     "0.076890"
     ],
     [
      "2025-04-30",
      "362",
      "225882.35",
-     "0.450142",
+     "0.450276",
      "5221",
-     "0"
+     "0.069335"
     ],
     [
      "2025-05-31",
      "362",
      "215720.01",
-     "0.475921",
+     "0.475138",
      "4972",
-     "0"
+     "0.072808"
     ],
     [
      "2025-06-30",
      "362",
      "231079.32",
-     "0.491620",
+     "0.488950",
      "5484",
-     "0"
+     "0.066010"
     ],
     [
      "2025-07-31",
      "362",
      "231050.33",
-     "0.433803",
+     "0.430939",
      "4471",
-     "0"
+     "0.080966"
     ],
     [
      "2025-08-31",
      "362",
      "221241.33",
-     "0.494350",
+     "0.497238",
      "4682",
-     "0"
+     "0.077317"
     ],
     [
      "2025-09-30",
      "362",
      "220005.29",
-     "0.480000",
+     "0.466851",
      "4135",
-     "0"
+     "0.087545"
     ],
     [
      "2025-10-31",
      "362",
      "210504.05",
-     "0.431487",
+     "0.430939",
      "5210",
-     "0"
+     "0.069482"
     ],
     [
      "2025-11-30",
      "574",
      "358589.73",
-     "0.475763",
+     "0.473868",
      "5076",
-     "0"
+     "0.113081"
     ],
     [
      "2025-12-31",
      "574",
      "363036.37",
-     "0.480287",
+     "0.480836",
      "4955",
-     "0"
+     "0.115843"
     ],
     [
      "2026-01-31",
      "574",
      "343741.10",
-     "0.470163",
+     "0.461672",
      "5298",
-     "0"
+     "0.108343"
     ],
     [
      "2026-02-28",
      "362",
      "230338.75",
-     "0.485714",
+     "0.486188",
      "5402",
-     "0"
+     "0.067012"
     ],
     [
      "2026-03-31",
@@ -179,7 +179,7 @@
      "214771.64",
      "0.432056",
      "5083",
-     "0"
+     "0.071218"
     ],
     [
      "2026-04-30",
@@ -187,7 +187,7 @@
      "220110.10",
      "0.491525",
      "5165",
-     "0"
+     "0.070087"
     ],
     [
      "2026-05-31",
@@ -195,7 +195,7 @@
      "230303.59",
      "0.443182",
      "5486",
-     "0"
+     "0.065986"
     ],
     [
      "2026-06-30",
@@ -203,11 +203,11 @@
      "219547.10",
      "0.497382",
      "4213",
-     "0"
+     "0.085925"
     ]
    ]
   }
  ],
- "sql": "SELECT month_end, SUM(dispute_count) AS total_disputes, SUM(total_dispute_amount) AS dispute_usd, SUM(won_count)/NULLIF(SUM(resolved_count),0) AS win_rate, MAX(cfpb_complaint_count) AS cfpb_complaints, MAX(cfpb_complaint_count)-MIN(cfpb_complaint_count) AS cfpb_spread FROM __d GROUP BY month_end ORDER BY month_end",
- "latency_ms": 30475
+ "sql": "SELECT month_end, SUM(dispute_count) AS total_disputes, SUM(total_dispute_amount) AS dispute_usd, SUM(won_count)/NULLIF(SUM(resolved_count),0) AS win_rate, MAX(cfpb_complaint_count) AS cfpb_complaints, SUM(dispute_count)/NULLIF(MAX(cfpb_complaint_count),0) AS disputes_per_complaint FROM __d GROUP BY month_end ORDER BY month_end",
+ "latency_ms": 33507
 }

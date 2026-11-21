@@ -149,7 +149,6 @@ SELECT ROW_NUMBER() OVER (ORDER BY d.month_end, d.merchant_category, d.network, 
             WHEN d.age_months <= 3 AND d.u_open < 8  THEN 'open'
             WHEN d.age_months <= 1 AND d.u_prearb < 12 THEN 'pre-arb'
             WHEN d.age_months <= 3 AND d.u_prearb < 14 THEN 'pre-arb'
-            WHEN d.u_prearb < 3 THEN 'pre-arb'
             WHEN d.u_win < (CASE WHEN d.is_friendly_fraud THEN 35 ELSE 55 END) THEN 'won'
             ELSE 'lost' END AS status
 FROM drawn d

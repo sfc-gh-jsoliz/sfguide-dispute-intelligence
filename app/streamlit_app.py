@@ -34,6 +34,7 @@ C = {  # design tokens (docs/DESIGN.md)
     "won": "#11795B", "lost": "#A33A12", "prearb": "#4B4FA6", "open": "#55606B",
     "gold": "#7A6A2E", "bench": "#6B5512", "ai": "#0E6E7E",
 }
+CATEGORY_NAMES = {"DIGITAL": "Digital Goods", "TRAVEL": "Travel", "RETAIL": "Retail", "GROCERY": "Grocery"}
 CAT_COLORS = {"Fraud": C["lost"], "Consumer Disputes": C["primary"], "Processing Errors": C["gold"]}
 SAMPLE_QUESTIONS = [
     "How did chargeback volume in Nov-Dec compare to the prior 3 months, by reason category?",
@@ -304,6 +305,11 @@ def op(name, *args):
 # ----------------------------------------------------------------------------
 # Formatting and small HTML helpers
 # ----------------------------------------------------------------------------
+def month_start(col):
+    """Plot months at the 1st so bars and points sit on their own month tick (month_end would drift to the next)."""
+    return pd.to_datetime(col).dt.to_period("M").dt.to_timestamp()
+
+
 def usd(v):
     v = float(v or 0)
     return f"${v / 1e6:.2f}M" if abs(v) >= 1e6 else f"${v / 1e3:.0f}K" if abs(v) >= 1e3 else f"${v:,.0f}"
@@ -338,8 +344,11 @@ def kpi_tile(label, value, note, trend=None, good_when_up=True, count=None):
         up = trend >= 0
         kind = "won" if up == good_when_up else "lost"
         arrow = f'<span class="rb-trend rb-t-{kind}">{"&#9650;" if up else "&#9660;"} {abs(trend) * 100:.0f}%</span>'
-    val = (f'<span class="rb-count" style="--n:{int(count)}" aria-label="{esc(value)}"></span>' if count is not None
-           else esc(value))
+    if count is not None:  # odometer: each digit ticks up from 0, separators stay put
+        digits = "".join(f'<span class="rb-count" style="--n:{ch}"></span>' if ch.isdigit() else esc(ch) for ch in value)
+        val = f'<span aria-label="{esc(value)}">{digits}</span>'
+    else:
+        val = esc(value)
     return (f'<div class="rb-kpi"><div class="rb-kpi-l">{esc(label)}</div><div class="rb-kpi-v">{val}</div>'
             f'<div class="rb-kpi-n">{arrow}<span>{esc(note)}</span></div></div>')
 
@@ -509,7 +518,7 @@ def cite(md):
 # ----------------------------------------------------------------------------
 def monthly_df():
     df = pd.DataFrame(guarded("monthly"))
-    df["month"] = pd.to_datetime(df["month_end"])
+    df["month"] = month_start(df["month_end"])
     return df
 
 
@@ -542,7 +551,7 @@ def page_overview():
     df = monthly_df()
     t = book_totals(df)
     cm = pd.DataFrame(guarded("category_month"))
-    cm["month"] = pd.to_datetime(cm["month_end"])
+    cm["month"] = month_start(cm["month_end"])
     proc = cm.groupby("month")["processed_txn"].sum()
     t = t.merge(proc.rename("processed").reset_index(), on="month")
     t["bps"] = t["disputes"] / t["processed"] * 1e4
@@ -567,7 +576,7 @@ def page_overview():
         st.markdown("### Disputes by reason category, with the complaint benchmark")
         badge("Semantic View DISPUTE_SV · SEMANTIC_VIEW() query")
         area_src = df.rename(columns={"total_disputes": "Disputes", "reason_category": "Reason category"})
-        bands = pd.DataFrame({"start": pd.to_datetime(["2024-10-16", "2025-10-16"]), "end": pd.to_datetime(["2025-01-31", "2026-01-31"]),
+        bands = pd.DataFrame({"start": pd.to_datetime(["2024-10-16", "2025-10-16"]), "end": pd.to_datetime(["2025-01-16", "2026-01-16"]),
                               "label": ["Holiday", "Holiday"]})
         x = alt.X("month:T", title=None, axis=alt.Axis(format="%b %y", labelAngle=0, tickCount=8))
         band = alt.Chart(bands).mark_rect(color="#F3E9CC", opacity=.55).encode(x="start:T", x2="end:T")
@@ -584,7 +593,7 @@ def page_overview():
             x=x, y=alt.Y("cfpb:Q", title="Complaints / month", axis=alt.Axis(titleColor=C["bench"])),
             tooltip=[alt.Tooltip("month:T", format="%b %Y", title="Month"), alt.Tooltip("cfpb:Q", format=",", title="Complaints")])
         ch = alt.layer(band, band_t, area, line).resolve_scale(y="independent").properties(height=300)
-        st.altair_chart(chart_config(ch), use_container_width=True)
+        st.altair_chart(chart_config(ch), width="stretch")
         st.caption("Complaint counts are a market-wide monthly signal, joined by month only and never summed with disputes.")
     _, rt = reason_table()
     with right.container(key="card_insights"):
@@ -616,7 +625,7 @@ def page_overview():
                             legend=alt.Legend(title=None)),
             tooltip=[alt.Tooltip("label:N", title="Reason code"), alt.Tooltip("lost:Q", format="$,.0f", title="Lost"),
                      alt.Tooltip("win_rate:Q", format=".1%", title="Win rate"), alt.Tooltip("disputes:Q", format=",")])
-        st.altair_chart(chart_config(bars.properties(height=250)), use_container_width=True)
+        st.altair_chart(chart_config(bars.properties(height=250)), width="stretch")
 
 
 @st.dialog("Reason code", width="large")
@@ -635,7 +644,7 @@ def reason_drawer(code):
         kpi_tile("Disputes", f"{int(r.disputes):,}", "24 months"), kpi_tile("Disputed", usd(r.usd), "USD"),
         kpi_tile("Win rate", pct(r.win_rate), f"book {pct(book_wr)}"), kpi_tile("Lost", usd(r.lost), "status lost")]) + "</div>")
     m = rm[rm.reason_code == code].copy()
-    m["month"] = pd.to_datetime(m["month_end"])
+    m["month"] = month_start(m["month_end"])
     m["win_rate"] = m.total_won / m.total_resolved.where(m.total_resolved > 0)
     base = alt.Chart(m).encode(x=alt.X("month:T", title=None, axis=alt.Axis(format="%b %y", labelAngle=0)))
     ch = alt.layer(
@@ -645,7 +654,7 @@ def reason_drawer(code):
                      alt.Tooltip("win_rate:Q", format=".1%", title="Win rate")]),
         base.mark_line(color=C["ink"], strokeWidth=1.6).encode(y=alt.Y("win_rate:Q", title="Win rate", axis=alt.Axis(format="%")))
     ).resolve_scale(y="independent").properties(height=200, title="Monthly disputes (bars) and win rate (line)")
-    st.altair_chart(chart_config(ch), use_container_width=True)
+    st.altair_chart(chart_config(ch), width="stretch")
     bc = pd.DataFrame(guarded("reason_by_category"))
     bc = bc[bc.reason_code == code].assign(win_rate=lambda d: d.total_won / d.total_resolved)
     rows = "".join(f'<tr><td>{esc(x.category_name)}</td><td class="n">{int(x.total_disputes):,}</td><td class="n">{pct(x.win_rate)}</td>'
@@ -670,21 +679,22 @@ def page_reasons():
     if f.empty:
         html('<div class="rb-empty">No reason codes match these filters. Clear a filter or the search box.</div>')
         return
-    f = f.assign(status=f.win_rate.map(lambda w: "● Below book" if w < book_wr - .05 else "● At or above book"))
+    f = f.assign(status=f.win_rate.map(lambda w: "● Below book" if w < book_wr - .05 else "● At or above book"),
+                 net=f.network.str.title(), usd_k=f.usd / 1e3, lost_k=f.lost / 1e3, win_pct=f.win_rate * 100)
     with st.container(key="card_reasons"):
         badge(f"Book win rate {pct(book_wr)} · rows from SEMANTIC_VIEW(DISPUTE_SV)")
         ev = st.dataframe(
-            f[["network", "reason_code", "reason_name", "reason_category", "disputes", "usd", "win_rate", "lost", "status",
+            f[["net", "reason_code", "reason_name", "reason_category", "disputes", "usd_k", "win_pct", "lost_k", "status",
                "typical_root_cause"]],
-            hide_index=True, use_container_width=True, on_select="rerun", selection_mode="single-row", key="reason_grid",
+            hide_index=True, width="stretch", on_select="rerun", selection_mode="single-row", key="reason_grid",
             column_config={
-                "network": st.column_config.TextColumn("Network", width="small"),
+                "net": st.column_config.TextColumn("Network"),
                 "reason_code": st.column_config.TextColumn("Code", width="small"),
                 "reason_name": "Reason", "reason_category": "Category",
-                "disputes": st.column_config.NumberColumn("Disputes", format="%d"),
-                "usd": st.column_config.NumberColumn("Disputed $", format="dollar"),
-                "win_rate": st.column_config.ProgressColumn("Win rate", min_value=0, max_value=1, format="percent"),
-                "lost": st.column_config.NumberColumn("Lost $", format="dollar"),
+                "disputes": st.column_config.NumberColumn("Disputes", format="localized"),
+                "usd_k": st.column_config.NumberColumn("Disputed", format="$%.0fK"),
+                "win_pct": st.column_config.ProgressColumn("Win rate", min_value=0, max_value=100, format="%.1f%%"),
+                "lost_k": st.column_config.NumberColumn("Lost", format="$%.0fK"),
                 "status": st.column_config.TextColumn("Status"),
                 "typical_root_cause": "Typical root cause",
             })
@@ -712,6 +722,16 @@ def merchant_table():
     g["win_rate"] = g.n_won / (g.n_won + g.n_lost).where(g.n_won + g.n_lost > 0)
     g["top_share"] = g.top_n / g.disputes
     g["in_flight"] = g["n_open"] + g["n_pre-arb"]
+    # Concentration: the reason code whose share at this merchant is furthest above the category's mix.
+    mc = raw.groupby(["merchant_id", "merchant_category", "reason_code"])["disputes"].sum().reset_index()
+    mc["share"] = mc.disputes / mc.groupby("merchant_id").disputes.transform("sum")
+    cat = mc.groupby(["merchant_category", "reason_code"]).disputes.sum()
+    cat = (cat / cat.groupby(level=0).transform("sum")).rename("cat_share").reset_index()
+    mc = mc.merge(cat, on=["merchant_category", "reason_code"])
+    mc["lift"] = mc.share / mc.cat_share
+    hot = mc.sort_values(["lift", "reason_code"], ascending=[False, True]).drop_duplicates("merchant_id").set_index("merchant_id")
+    g = g.join(hot[["reason_code", "share", "cat_share", "lift"]].rename(columns={"reason_code": "hot_code"}), on="merchant_id")
+    g["category"] = g.merchant_category.map(CATEGORY_NAMES)
     return raw, g
 
 
@@ -720,40 +740,43 @@ def page_merchants():
     html('<p class="rb-sub">Chargeback rate by merchant category and month, and every merchant in the book. Select a merchant '
          'to see its disputes in flight.</p>')
     cm = pd.DataFrame(guarded("category_month"))
-    cm["month"] = pd.to_datetime(cm["month_end"])
+    cm["month"] = month_start(cm["month_end"])
     cm["bps"] = cm.total_disputes / cm.processed_txn * 1e4
     with st.container(key="card_heat"):
         st.markdown("### Chargeback rate (bps of processed transactions)")
         heat = alt.Chart(cm).mark_rect(cornerRadius=3, stroke="#FFFFFF", strokeWidth=1.5).encode(
             x=alt.X("month:O", title=None, timeUnit="yearmonth", axis=alt.Axis(format="%b %y", labelAngle=-45)),
-            y=alt.Y("category_name:N", title=None, sort=["Digital Goods & Subscriptions", "Travel & Hospitality",
+            y=alt.Y("category_name:N", title=None, axis=alt.Axis(labelLimit=220), sort=["Digital Goods & Subscriptions", "Travel & Hospitality",
                                                          "Retail & E-commerce", "Grocery & Essentials"]),
             color=alt.Color("bps:Q", scale=alt.Scale(range=["#EAF3F3", "#7FBDBF", "#11757B", "#0C3B3E"]),
                             legend=alt.Legend(title="bps", orient="right")),
             tooltip=[alt.Tooltip("month:T", format="%b %Y", title="Month"), alt.Tooltip("category_name:N", title="Category"),
                      alt.Tooltip("bps:Q", format=".1f", title="Chargeback bps"), alt.Tooltip("total_disputes:Q", title="Disputes"),
                      alt.Tooltip("processed_txn:Q", format=",", title="Processed txns")])
-        st.altair_chart(chart_config(heat.properties(height=190)), use_container_width=True)
+        st.altair_chart(chart_config(heat.properties(height=190)), width="stretch")
         badge("Semantic View DISPUTE_SV · processed volume is non-additive (MAX per category-month)")
     raw, g = merchant_table()
-    cats = st.pills("Category", sorted(g.merchant_category.unique()), selection_mode="multi", default=sorted(g.merchant_category.unique()))
-    f = g[g.merchant_category.isin(cats or [])].sort_values("lost", ascending=False).reset_index(drop=True)
+    names = list(CATEGORY_NAMES.values())
+    cats = st.pills("Category", names, selection_mode="multi", default=names)
+    f = g[g.category.isin(cats or [])].sort_values("lost", ascending=False).reset_index(drop=True)
     if f.empty:
         html('<div class="rb-empty">No merchants in the selected categories.</div>')
         return
-    f["flag"] = f.apply(lambda r: f"● {r.reason_code} is {r.top_share:.0%} of disputes" if r.top_share >= .3 else "● Mixed reasons", axis=1)
+    f["flag"] = f.apply(lambda r: f"● {r.hot_code}: {r.share:.0%} of disputes vs {r.cat_share:.0%} for the category"
+                        if r.lift >= 2 else "● In line with category mix", axis=1)
+    f["usd_k"], f["lost_k"], f["win_pct"] = f.usd / 1e3, f.lost / 1e3, f.win_rate * 100
     with st.container(key="card_merchants"):
         ev = st.dataframe(
-            f[["merchant_name", "merchant_category", "mcc", "disputes", "usd", "win_rate", "lost", "in_flight", "flag"]],
-            hide_index=True, use_container_width=True, on_select="rerun", selection_mode="single-row", key="merchant_grid",
+            f[["merchant_name", "category", "mcc", "disputes", "usd_k", "win_pct", "lost_k", "in_flight", "flag"]],
+            hide_index=True, width="stretch", on_select="rerun", selection_mode="single-row", key="merchant_grid",
             column_config={
-                "merchant_name": "Merchant", "merchant_category": "Category", "mcc": st.column_config.TextColumn("MCC", width="small"),
-                "disputes": st.column_config.NumberColumn("Disputes", format="%d"),
-                "usd": st.column_config.NumberColumn("Disputed $", format="dollar"),
-                "win_rate": st.column_config.ProgressColumn("Win rate", min_value=0, max_value=1, format="percent"),
-                "lost": st.column_config.NumberColumn("Lost $", format="dollar"),
+                "merchant_name": "Merchant", "category": "Category", "mcc": st.column_config.TextColumn("MCC", width="small"),
+                "disputes": st.column_config.NumberColumn("Disputes", format="localized"),
+                "usd_k": st.column_config.NumberColumn("Disputed", format="$%.0fK"),
+                "win_pct": st.column_config.ProgressColumn("Win rate", min_value=0, max_value=100, format="%.1f%%"),
+                "lost_k": st.column_config.NumberColumn("Lost", format="$%.0fK"),
                 "in_flight": st.column_config.NumberColumn("In flight", format="%d", help="Open or in pre-arbitration"),
-                "flag": "Concentration",
+                "flag": st.column_config.TextColumn("Concentration", width="large"),
             })
         st.caption("Merchant rows come from DISPUTE_FACT (the semantic view stops at merchant category).")
     sel = ev.selection.rows if ev else []
@@ -769,18 +792,18 @@ def page_merchants():
 def merchant_drawer(mid, row):
     d = guarded("merchant_detail", mid)
     html(f'<h3 class="rb-h" style="margin:0">{esc(row["merchant_name"])}</h3>'
-         f'<div class="rb-ctx" style="margin:.4rem 0 .6rem">{pill(row["merchant_category"].title(), "ai")} {pill("MCC " + row["mcc"], "open")}'
+         f'<div class="rb-ctx" style="margin:.4rem 0 .6rem">{pill(row["category"], "ai")} {pill("MCC " + row["mcc"], "open")}'
          f' {pill(str(int(row["in_flight"])) + " in flight", "prearb")}</div>')
     html('<div class="rb-kpis" style="grid-template-columns:repeat(4,minmax(0,1fr))">' + "".join([
         kpi_tile("Disputes", f"{int(row['disputes']):,}", "24 months"), kpi_tile("Win rate", pct(row["win_rate"]), "won / resolved"),
-        kpi_tile("Lost", usd(row["lost"]), "USD"), kpi_tile("Top code", row["reason_code"], f"{row['top_share']:.0%} of disputes")]) + "</div>")
+        kpi_tile("Lost", usd(row["lost"]), "USD"), kpi_tile("Hot code", row["hot_code"], f"{row['share']:.0%} vs {row['cat_share']:.0%} category")]) + "</div>")
     m = pd.DataFrame(d["monthly"])
-    m["month"] = pd.to_datetime(m["month_end"])
+    m["month"] = month_start(m["month_end"])
     ch = alt.Chart(m).mark_bar().encode(
         x=alt.X("month:T", title=None, axis=alt.Axis(format="%b %y", labelAngle=0)), y=alt.Y("disputes:Q", stack=True, title="Disputes"),
         color=alt.Color("reason_code:N", title="Reason code", scale=alt.Scale(scheme="tealblues")),
         tooltip=[alt.Tooltip("month:T", format="%b %Y"), "reason_code:N", "disputes:Q"]).properties(height=190)
-    st.altair_chart(chart_config(ch), use_container_width=True)
+    st.altair_chart(chart_config(ch), width="stretch")
     st.markdown("**Disputes in flight** (respond-by is 30 days after filing)")
     inf = d["inflight"]
     if not inf:
@@ -843,10 +866,10 @@ def page_notes():
         st.markdown("### Write a note")
         scope = st.radio("Scope", list(SCOPES), format_func=lambda k: SCOPES[k], key="scope")
         badge("Cortex AI_COMPLETE · draft + verifier")
-        if st.button("Run dispute analysis", type="primary", use_container_width=True, icon=":material/play_arrow:"):
+        if st.button("Run dispute analysis", type="primary", width="stretch", icon=":material/play_arrow:"):
             with right:
                 run_note(scope)
-        st.caption("Live runs take 20-40 s and cost two AI_COMPLETE calls.")
+        st.caption("Live runs took 8-11 s in testing and cost two AI_COMPLETE calls.")
     note = st.session_state.get("note")
     with right:
         if not note:
@@ -869,7 +892,7 @@ def page_notes():
                     html(cite(body))
                 note_view(res, scope, "main")
                 with st.expander(f"Sources: fact pack ({len(res['fact_pack'])} rows, cited as F1-F{len(res['fact_pack'])})"):
-                    st.dataframe(pd.DataFrame(res["fact_pack"]), hide_index=True, use_container_width=True)
+                    st.dataframe(pd.DataFrame(res["fact_pack"]), hide_index=True, width="stretch")
             with st.container(key="card_break"):
                 st.markdown("### Try to break it")
                 st.caption("Add a hedged, unsupported sentence to the draft and run only the verifier again.")
@@ -905,7 +928,7 @@ def page_notes():
             html(f'<div class="rb-docket {"" if ok else "bad"}">{pill("Verified" if ok else "Needs review", "won" if ok else "lost")}'
                  f'<div class="t">{esc(title[:90])}</div><div class="s">{esc(r["subject"])} · {esc(r["created_at"])} · '
                  f'{r["edits_applied"]} flagged</div></div>')
-            if st.button("Open note", key=f"open_{r['run_id']}", use_container_width=True):
+            if st.button("Open note", key=f"open_{r['run_id']}", width="stretch"):
                 report_dialog(r)
 
 
@@ -919,7 +942,7 @@ def report_dialog(r):
         html("<b>Verifier flags</b><ul>" + "".join(f"<li>{esc(e)}</li>" for e in edits) + "</ul>")
     if r.get("fact_pack"):
         with st.expander("Sources: fact pack"):
-            st.dataframe(pd.DataFrame(json.loads(r["fact_pack"])), hide_index=True, use_container_width=True)
+            st.dataframe(pd.DataFrame(json.loads(r["fact_pack"])), hide_index=True, width="stretch")
 
 
 def render_answer(a, fresh):
@@ -930,7 +953,7 @@ def render_answer(a, fresh):
         st.markdown(a["text"])
     for t in a.get("tables", []):
         if t["rows"]:
-            st.dataframe(pd.DataFrame(t["rows"], columns=t["columns"] or None), hide_index=True, use_container_width=True)
+            st.dataframe(pd.DataFrame(t["rows"], columns=t["columns"] or None), hide_index=True, width="stretch")
     if a.get("sql"):
         with st.expander("Source: SQL generated by Cortex Analyst over DISPUTE_SV"):
             st.code(a["sql"], language="sql")
@@ -945,7 +968,7 @@ def page_ask():
     cols = st.columns(3)
     asked = None
     for i, q in enumerate(SAMPLE_QUESTIONS):
-        if cols[i].button(q, key=f"sq{i}", use_container_width=True, icon=":material/forum:"):
+        if cols[i].button(q, key=f"sq{i}", width="stretch", icon=":material/forum:"):
             asked = q
     typed = st.chat_input("Ask about disputes, reason codes, win rates or complaints"
                           if st.session_state.mode == "Live" else "Sample mode answers the three questions above")

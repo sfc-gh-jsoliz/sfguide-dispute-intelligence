@@ -7,7 +7,7 @@
    "month": "2024-07-31",
    "dispute_count": 210,
    "dispute_usd": 128886,
-   "win_rate": 0.561,
+   "win_rate": 0.567,
    "friendly_fraud_rate": 0.0,
    "cfpb_complaints": 4155
   },
@@ -27,7 +27,7 @@
    "month": "2024-07-31",
    "dispute_count": 126,
    "dispute_usd": 80733,
-   "win_rate": 0.424,
+   "win_rate": 0.421,
    "friendly_fraud_rate": 1.0,
    "cfpb_complaints": 4155
   },
@@ -47,7 +47,7 @@
    "month": "2024-07-31",
    "dispute_count": 26,
    "dispute_usd": 15512,
-   "win_rate": 0.64,
+   "win_rate": 0.654,
    "friendly_fraud_rate": 0.0,
    "cfpb_complaints": 4155
   },
@@ -62,16 +62,16 @@
    "cfpb_complaints": 4213
   }
  ],
- "draft": "# Consumer Disputes and Fraud drive dispute volume at stable levels; Processing Errors win rate declined\n\n| Reason Category | Disputes | Disputed $ | Win Rate | Friendly Fraud Rate |\n|---|---|---|---|---|\n| Consumer Disputes | 210 [F1] \u2192 210 [F2] | $129K [F1] \u2192 $125K [F2] | 56.1% [F1] \u2192 53.0% [F2] (resolved only) | 0.0% [F1,F2] |\n| Fraud | 126 [F3] \u2192 126 [F4] | $81K [F3] \u2192 $79K [F4] | 42.4% [F3] \u2192 44.1% [F4] (resolved only) | 100.0% [F3,F4] |\n| Processing Errors | 26 [F5] \u2192 26 [F6] | $16K [F5] \u2192 $15K [F6] | 64.0% [F5] \u2192 50.0% [F6] (resolved only) | 0.0% [F5,F6] |\n\n- Dispute counts held flat across all reason categories from 2024-07-31 to 2026-06-30, with Consumer Disputes representing 58% (210 of 362 total) [F1,F2,F3,F4,F5,F6]\n- All Fraud disputes flagged as friendly fraud (100.0%) [F3,F4], while Consumer Disputes and Processing Errors show 0.0% friendly fraud rates [F1,F2,F5,F6]\n- Processing Errors win rate dropped 14 percentage points from 64.0% [F5] to 50.0% [F6]; market-wide CFPB complaints rose from 4,155 [F1,F3,F5] to 4,213 [F2,F4,F6] between comparable months\n\n## Data Coverage\n2024-07-31 through 2026-06-30",
+ "draft": "# Chargeback Analysis: Consumer Disputes and Fraud categories account for majority of dispute volume and dollars\n\nConsumer Disputes and Fraud reason categories drove disputes, representing 93% of total volume (336 of 362 disputes) and 93% of disputed dollars ($205K of $220K) in the latest period.\n\n| Reason Category | Disputes | Disputed $ | Win Rate | Friendly Fraud Rate |\n|---|---|---|---|---|\n| Consumer Disputes | 210 [F2] | $125K [F2] | 53.0% [F2] | 0.0% [F2] |\n| Fraud | 126 [F4] | $79K [F4] | 44.1% [F4] | 100.0% [F4] |\n| Processing Errors | 26 [F6] | $15K [F6] | 50.0% [F6] | 0.0% [F6] |\n\n- **Consumer Disputes** volume flat at 210 disputes [F1][F2], but win rate declined from 56.7% [F1] to 53.0% [F2] (resolved disputes only for latest month); disputed dollars decreased 3% from $129K [F1] to $125K [F2]\n- **Fraud** disputes remained stable at 126 cases [F3][F4] with 100.0% friendly fraud rate [F3][F4]; win rate improved from 42.1% [F3] to 44.1% [F4] (resolved disputes only for latest month); disputed dollars decreased 2% from $81K [F3] to $79K [F4]\n- **Processing Errors** volume steady at 26 disputes [F5][F6], but win rate dropped from 65.4% [F5] to 50.0% [F6] (resolved disputes only for latest month); CFPB complaints (market-wide monthly benchmark) were 4,155 [F1][F3][F5] in earliest month and 4,213 [F2][F4][F6] in latest month\n\n## Data Coverage\nAnalysis period: 2024-07-31 to 2026-06-30",
  "verdict": {
   "status": "verified",
   "residual_hedges": 0,
   "edits": []
  },
- "latency_ms": 8894,
+ "latency_ms": 7994,
  "timings_ms": {
-  "fact_pack": 192,
-  "draft": 6392,
-  "verify": 2310
+  "fact_pack": 195,
+  "draft": 6387,
+  "verify": 1411
  }
 }

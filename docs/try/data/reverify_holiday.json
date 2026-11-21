@@ -3,10 +3,9 @@
   "status": "needs_review",
   "residual_hedges": 3,
   "edits": [
-   "Last sentence contains hedge words 'likely' and 'could' which are not allowed",
-   "Last sentence contains hedge word 'around' which is not allowed",
-   "Last sentence claims '40%' increase but Fraud disputes increased 60% per the facts (201 vs 126)"
+   "Final sentence contains hedge words 'likely' and 'could'",
+   "Final sentence claims Fraud disputes 'likely rose around 40%' but facts show 60% increase (126 to 201), not 40%"
   ]
  },
- "latency_ms": 2641
+ "latency_ms": 2556
 }

@@ -2,7 +2,7 @@
  {
   "total_disputes": 181,
   "total_dispute_usd": 115222.76,
-  "total_lost_usd": 50984.98,
+  "total_lost_usd": 51697.0,
   "processed_txn": 15000,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -38,7 +38,7 @@
  {
   "total_disputes": 181,
   "total_dispute_usd": 105091.24,
-  "total_lost_usd": 50308.02,
+  "total_lost_usd": 51041.49,
   "processed_txn": 15150,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -47,7 +47,7 @@
  {
   "total_disputes": 38,
   "total_dispute_usd": 19948.32,
-  "total_lost_usd": 9685.17,
+  "total_lost_usd": 10360.93,
   "processed_txn": 12625,
   "merchant_category": "GROCERY",
   "category_name": "Grocery & Essentials",
@@ -56,7 +56,7 @@
  {
   "total_disputes": 94,
   "total_dispute_usd": 52207.62,
-  "total_lost_usd": 26518.17,
+  "total_lost_usd": 29207.77,
   "processed_txn": 22725,
   "merchant_category": "RETAIL",
   "category_name": "Retail & E-commerce",
@@ -74,7 +74,7 @@
  {
   "total_disputes": 181,
   "total_dispute_usd": 109709.6,
-  "total_lost_usd": 57105.79,
+  "total_lost_usd": 59496.27,
   "processed_txn": 15300,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -83,7 +83,7 @@
  {
   "total_disputes": 38,
   "total_dispute_usd": 22080.23,
-  "total_lost_usd": 12851.77,
+  "total_lost_usd": 13242.46,
   "processed_txn": 12750,
   "merchant_category": "GROCERY",
   "category_name": "Grocery & Essentials",
@@ -92,7 +92,7 @@
  {
   "total_disputes": 94,
   "total_dispute_usd": 59710.16,
-  "total_lost_usd": 30435.8,
+  "total_lost_usd": 31512.8,
   "processed_txn": 22950,
   "merchant_category": "RETAIL",
   "category_name": "Retail & E-commerce",
@@ -110,7 +110,7 @@
  {
   "total_disputes": 181,
   "total_dispute_usd": 115167.52,
-  "total_lost_usd": 53014.32,
+  "total_lost_usd": 55274.37,
   "processed_txn": 15450,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -119,7 +119,7 @@
  {
   "total_disputes": 38,
   "total_dispute_usd": 24246.98,
-  "total_lost_usd": 11551.97,
+  "total_lost_usd": 12301.82,
   "processed_txn": 12875,
   "merchant_category": "GROCERY",
   "category_name": "Grocery & Essentials",
@@ -128,7 +128,7 @@
  {
   "total_disputes": 94,
   "total_dispute_usd": 61408.31,
-  "total_lost_usd": 23202.58,
+  "total_lost_usd": 23383.2,
   "processed_txn": 23175,
   "merchant_category": "RETAIL",
   "category_name": "Retail & E-commerce",
@@ -146,7 +146,7 @@
  {
   "total_disputes": 287,
   "total_dispute_usd": 174995.73,
-  "total_lost_usd": 89739.25,
+  "total_lost_usd": 91809.24,
   "processed_txn": 19500,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -164,7 +164,7 @@
  {
   "total_disputes": 151,
   "total_dispute_usd": 89469.98,
-  "total_lost_usd": 46288.45,
+  "total_lost_usd": 46362.24,
   "processed_txn": 29250,
   "merchant_category": "RETAIL",
   "category_name": "Retail & E-commerce",
@@ -182,7 +182,7 @@
  {
   "total_disputes": 287,
   "total_dispute_usd": 163556.65,
-  "total_lost_usd": 76036.79,
+  "total_lost_usd": 78007.81,
   "processed_txn": 19688,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -200,7 +200,7 @@
  {
   "total_disputes": 151,
   "total_dispute_usd": 89323.38,
-  "total_lost_usd": 39216.54,
+  "total_lost_usd": 41063.76,
   "processed_txn": 29531,
   "merchant_category": "RETAIL",
   "category_name": "Retail & E-commerce",
@@ -209,7 +209,7 @@
  {
   "total_disputes": 77,
   "total_dispute_usd": 47522.22,
-  "total_lost_usd": 23419.46,
+  "total_lost_usd": 23751.35,
   "processed_txn": 9844,
   "merchant_category": "TRAVEL",
   "category_name": "Travel & Hospitality",
@@ -218,7 +218,7 @@
  {
   "total_disputes": 287,
   "total_dispute_usd": 177998.27,
-  "total_lost_usd": 92752.63,
+  "total_lost_usd": 97068.74,
   "processed_txn": 19875,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -236,7 +236,7 @@
  {
   "total_disputes": 151,
   "total_dispute_usd": 94763.55,
-  "total_lost_usd": 39664.99,
+  "total_lost_usd": 41046.45,
   "processed_txn": 29813,
   "merchant_category": "RETAIL",
   "category_name": "Retail & E-commerce",
@@ -245,7 +245,7 @@
  {
   "total_disputes": 77,
   "total_dispute_usd": 49838.64,
-  "total_lost_usd": 31004.17,
+  "total_lost_usd": 33025.26,
   "processed_txn": 9938,
   "merchant_category": "TRAVEL",
   "category_name": "Travel & Hospitality",
@@ -254,7 +254,7 @@
  {
   "total_disputes": 181,
   "total_dispute_usd": 113208.15,
-  "total_lost_usd": 57945.0,
+  "total_lost_usd": 59481.43,
   "processed_txn": 16050,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -263,7 +263,7 @@
  {
   "total_disputes": 38,
   "total_dispute_usd": 22760.04,
-  "total_lost_usd": 9757.19,
+  "total_lost_usd": 11592.91,
   "processed_txn": 13375,
   "merchant_category": "GROCERY",
   "category_name": "Grocery & Essentials",
@@ -290,7 +290,7 @@
  {
   "total_disputes": 181,
   "total_dispute_usd": 112746.19,
-  "total_lost_usd": 57444.89,
+  "total_lost_usd": 59553.97,
   "processed_txn": 16200,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -308,7 +308,7 @@
  {
   "total_disputes": 94,
   "total_dispute_usd": 64455.05,
-  "total_lost_usd": 31894.15,
+  "total_lost_usd": 32869.88,
   "processed_txn": 24300,
   "merchant_category": "RETAIL",
   "category_name": "Retail & E-commerce",
@@ -326,7 +326,7 @@
  {
   "total_disputes": 181,
   "total_dispute_usd": 114415.11,
-  "total_lost_usd": 59557.52,
+  "total_lost_usd": 60688.68,
   "processed_txn": 16350,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -335,7 +335,7 @@
  {
   "total_disputes": 38,
   "total_dispute_usd": 22899.07,
-  "total_lost_usd": 15002.58,
+  "total_lost_usd": 15091.34,
   "processed_txn": 13625,
   "merchant_category": "GROCERY",
   "category_name": "Grocery & Essentials",
@@ -344,7 +344,7 @@
  {
   "total_disputes": 94,
   "total_dispute_usd": 56238.19,
-  "total_lost_usd": 27994.04,
+  "total_lost_usd": 30504.67,
   "processed_txn": 24525,
   "merchant_category": "RETAIL",
   "category_name": "Retail & E-commerce",
@@ -353,7 +353,7 @@
  {
   "total_disputes": 49,
   "total_dispute_usd": 32329.98,
-  "total_lost_usd": 13244.94,
+  "total_lost_usd": 13886.58,
   "processed_txn": 8175,
   "merchant_category": "TRAVEL",
   "category_name": "Travel & Hospitality",
@@ -362,7 +362,7 @@
  {
   "total_disputes": 181,
   "total_dispute_usd": 105461.67,
-  "total_lost_usd": 59085.98,
+  "total_lost_usd": 60158.13,
   "processed_txn": 16500,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -380,7 +380,7 @@
  {
   "total_disputes": 94,
   "total_dispute_usd": 57396.5,
-  "total_lost_usd": 27872.33,
+  "total_lost_usd": 29453.05,
   "processed_txn": 24750,
   "merchant_category": "RETAIL",
   "category_name": "Retail & E-commerce",
@@ -398,7 +398,7 @@
  {
   "total_disputes": 181,
   "total_dispute_usd": 119613.69,
-  "total_lost_usd": 57799.79,
+  "total_lost_usd": 57867.73,
   "processed_txn": 16650,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -425,7 +425,7 @@
  {
   "total_disputes": 49,
   "total_dispute_usd": 30529.43,
-  "total_lost_usd": 13680.18,
+  "total_lost_usd": 15259.85,
   "processed_txn": 8325,
   "merchant_category": "TRAVEL",
   "category_name": "Travel & Hospitality",
@@ -434,7 +434,7 @@
  {
   "total_disputes": 181,
   "total_dispute_usd": 113243.96,
-  "total_lost_usd": 66703.84,
+  "total_lost_usd": 69012.46,
   "processed_txn": 16800,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -452,7 +452,7 @@
  {
   "total_disputes": 94,
   "total_dispute_usd": 61305.72,
-  "total_lost_usd": 30007.72,
+  "total_lost_usd": 31431.07,
   "processed_txn": 25200,
   "merchant_category": "RETAIL",
   "category_name": "Retail & E-commerce",
@@ -470,7 +470,7 @@
  {
   "total_disputes": 181,
   "total_dispute_usd": 111894.14,
-  "total_lost_usd": 54458.9,
+  "total_lost_usd": 54789.74,
   "processed_txn": 16950,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -479,7 +479,7 @@
  {
   "total_disputes": 38,
   "total_dispute_usd": 22090.12,
-  "total_lost_usd": 10276.74,
+  "total_lost_usd": 11010.18,
   "processed_txn": 14125,
   "merchant_category": "GROCERY",
   "category_name": "Grocery & Essentials",
@@ -488,7 +488,7 @@
  {
   "total_disputes": 94,
   "total_dispute_usd": 57829.08,
-  "total_lost_usd": 29956.56,
+  "total_lost_usd": 30999.35,
   "processed_txn": 25425,
   "merchant_category": "RETAIL",
   "category_name": "Retail & E-commerce",
@@ -506,7 +506,7 @@
  {
   "total_disputes": 181,
   "total_dispute_usd": 107176.66,
-  "total_lost_usd": 51857.83,
+  "total_lost_usd": 57197.75,
   "processed_txn": 17100,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -524,7 +524,7 @@
  {
   "total_disputes": 94,
   "total_dispute_usd": 63122.06,
-  "total_lost_usd": 39912.99,
+  "total_lost_usd": 40201.1,
   "processed_txn": 25650,
   "merchant_category": "RETAIL",
   "category_name": "Retail & E-commerce",
@@ -533,7 +533,7 @@
  {
   "total_disputes": 49,
   "total_dispute_usd": 28796.54,
-  "total_lost_usd": 13076.46,
+  "total_lost_usd": 14723.37,
   "processed_txn": 8550,
   "merchant_category": "TRAVEL",
   "category_name": "Travel & Hospitality",
@@ -542,7 +542,7 @@
  {
   "total_disputes": 181,
   "total_dispute_usd": 107371.17,
-  "total_lost_usd": 55607.6,
+  "total_lost_usd": 59931.44,
   "processed_txn": 17250,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -560,7 +560,7 @@
  {
   "total_disputes": 94,
   "total_dispute_usd": 50539.43,
-  "total_lost_usd": 28117.05,
+  "total_lost_usd": 29673.1,
   "processed_txn": 25875,
   "merchant_category": "RETAIL",
   "category_name": "Retail & E-commerce",
@@ -569,7 +569,7 @@
  {
   "total_disputes": 49,
   "total_dispute_usd": 30665.67,
-  "total_lost_usd": 20128.93,
+  "total_lost_usd": 21086.39,
   "processed_txn": 8625,
   "merchant_category": "TRAVEL",
   "category_name": "Travel & Hospitality",
@@ -578,7 +578,7 @@
  {
   "total_disputes": 287,
   "total_dispute_usd": 182630.89,
-  "total_lost_usd": 92239.07,
+  "total_lost_usd": 96731.52,
   "processed_txn": 21750,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -596,7 +596,7 @@
  {
   "total_disputes": 151,
   "total_dispute_usd": 89121.25,
-  "total_lost_usd": 39899.45,
+  "total_lost_usd": 40960.46,
   "processed_txn": 32625,
   "merchant_category": "RETAIL",
   "category_name": "Retail & E-commerce",
@@ -614,7 +614,7 @@
  {
   "total_disputes": 287,
   "total_dispute_usd": 186915.95,
-  "total_lost_usd": 93832.58,
+  "total_lost_usd": 94850.68,
   "processed_txn": 21938,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -623,7 +623,7 @@
  {
   "total_disputes": 59,
   "total_dispute_usd": 39716.53,
-  "total_lost_usd": 19608.62,
+  "total_lost_usd": 23569.22,
   "processed_txn": 18281,
   "merchant_category": "GROCERY",
   "category_name": "Grocery & Essentials",
@@ -632,7 +632,7 @@
  {
   "total_disputes": 151,
   "total_dispute_usd": 89962.36,
-  "total_lost_usd": 45389.6,
+  "total_lost_usd": 46009.76,
   "processed_txn": 32906,
   "merchant_category": "RETAIL",
   "category_name": "Retail & E-commerce",
@@ -650,7 +650,7 @@
  {
   "total_disputes": 287,
   "total_dispute_usd": 165542.32,
-  "total_lost_usd": 83707.78,
+  "total_lost_usd": 89942.23,
   "processed_txn": 22125,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -659,7 +659,7 @@
  {
   "total_disputes": 59,
   "total_dispute_usd": 34315.34,
-  "total_lost_usd": 18340.63,
+  "total_lost_usd": 19808.34,
   "processed_txn": 18438,
   "merchant_category": "GROCERY",
   "category_name": "Grocery & Essentials",
@@ -668,7 +668,7 @@
  {
   "total_disputes": 151,
   "total_dispute_usd": 98176.58,
-  "total_lost_usd": 47488.42,
+  "total_lost_usd": 49370.74,
   "processed_txn": 33188,
   "merchant_category": "RETAIL",
   "category_name": "Retail & E-commerce",
@@ -677,7 +677,7 @@
  {
   "total_disputes": 77,
   "total_dispute_usd": 45706.86,
-  "total_lost_usd": 26120.23,
+  "total_lost_usd": 26380.68,
   "processed_txn": 11063,
   "merchant_category": "TRAVEL",
   "category_name": "Travel & Hospitality",
@@ -686,7 +686,7 @@
  {
   "total_disputes": 181,
   "total_dispute_usd": 117817.03,
-  "total_lost_usd": 55124.32,
+  "total_lost_usd": 57783.9,
   "processed_txn": 17850,
   "merchant_category": "DIGITAL",
   "category_name": "Digital Goods & Subscriptions",
@@ -695,7 +695,7 @@
  {
   "total_disputes": 38,
   "total_dispute_usd": 19758.7,
-  "total_lost_usd": 9522.49,
+  "total_lost_usd": 9924.93,
   "processed_txn": 14875,
   "merchant_category": "GROCERY",
   "category_name": "Grocery & Essentials",
@@ -704,7 +704,7 @@
  {
   "total_disputes": 94,
   "total_dispute_usd": 62877.28,
-  "total_lost_usd": 29884.4,
+  "total_lost_usd": 30185.35,
   "processed_txn": 26775,
   "merchant_category": "RETAIL",
   "category_name": "Retail & E-commerce",

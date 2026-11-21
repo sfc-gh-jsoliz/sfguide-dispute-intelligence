@@ -7,7 +7,7 @@
    "period": "Nov 2025-Jan 2026",
    "avg_monthly_disputes": 333,
    "dispute_usd": 618647,
-   "win_rate": 0.557,
+   "win_rate": 0.556,
    "friendly_fraud_rate": 0.0,
    "avg_monthly_cfpb_complaints": 5110
   },
@@ -17,7 +17,7 @@
    "period": "Aug-Oct 2025",
    "avg_monthly_disputes": 210,
    "dispute_usd": 371327,
-   "win_rate": 0.53,
+   "win_rate": 0.524,
    "friendly_fraud_rate": 0.0,
    "avg_monthly_cfpb_complaints": 4676
   },
@@ -27,7 +27,7 @@
    "period": "Nov 2025-Jan 2026",
    "avg_monthly_disputes": 201,
    "dispute_usd": 374855,
-   "win_rate": 0.331,
+   "win_rate": 0.328,
    "friendly_fraud_rate": 1.0,
    "avg_monthly_cfpb_complaints": 5110
   },
@@ -37,7 +37,7 @@
    "period": "Aug-Oct 2025",
    "avg_monthly_disputes": 126,
    "dispute_usd": 230582,
-   "win_rate": 0.355,
+   "win_rate": 0.352,
    "friendly_fraud_rate": 1.0,
    "avg_monthly_cfpb_complaints": 4676
   },
@@ -47,7 +47,7 @@
    "period": "Nov 2025-Jan 2026",
    "avg_monthly_disputes": 40,
    "dispute_usd": 71866,
-   "win_rate": 0.509,
+   "win_rate": 0.5,
    "friendly_fraud_rate": 0.0,
    "avg_monthly_cfpb_complaints": 5110
   },
@@ -57,21 +57,21 @@
    "period": "Aug-Oct 2025",
    "avg_monthly_disputes": 26,
    "dispute_usd": 49842,
-   "win_rate": 0.534,
+   "win_rate": 0.538,
    "friendly_fraud_rate": 0.0,
    "avg_monthly_cfpb_complaints": 4676
   }
  ],
- "draft": "# Chargeback Analysis: Consumer Disputes and Fraud drove holiday period dispute volume increases\n\n| Reason Category | Disputes (avg/mo) | Disputed $ (avg/mo) | Win Rate | Friendly Fraud Rate |\n|---|---|---|---|---|\n| Consumer Disputes | 333 [F1] | $619K [F1] | 55.7% [F1] | 0.0% [F1] |\n| Fraud | 201 [F3] | $375K [F3] | 33.1% [F3] | 100.0% [F3] |\n| Processing Errors | 40 [F5] | $72K [F5] | 50.9% [F5] | 0.0% [F5] |\n\n- **Consumer Disputes** surged 59% from 210 [F2] to 333 disputes/month [F1] during the holiday period, with disputed amounts rising 67% from $371K [F2] to $619K [F1]; win rate improved marginally to 55.7% [F1] from 53.0% [F2] (latest month win rate covers resolved disputes only)\n\n- **Fraud** disputes increased 60% from 126 [F4] to 201/month [F3], with dollars rising 63% from $231K [F4] to $375K [F3]; all disputes flagged as friendly fraud (100.0% [F3], [F4]) but win rate declined to 33.1% [F3] from 35.5% [F4]\n\n- **Processing Errors** grew 54% from 26 [F6] to 40 disputes/month [F5] with amounts up 44% from $50K [F6] to $72K [F5]; win rate declined to 50.9% [F5] from 53.4% [F6]\n\n## Data Coverage\nNov 2025-Jan 2026 vs Aug-Oct 2025; CFPB complaints: 5,110/month [F1] and 4,676/month [F2] market-wide benchmarks",
+ "draft": "# Chargeback Analysis: Consumer Disputes and Fraud drove holiday period increases\n\nConsumer Disputes and Fraud reason categories drove disputes during the Nov 2025-Jan 2026 holiday period, with Consumer Disputes up 59% in volume and Fraud up 60% versus Aug-Oct 2025.\n\n| Reason Category | Disputes (avg/mo) | Disputed $ | Win Rate | Friendly Fraud Rate |\n|---|---|---|---|\n| Consumer Disputes | 333 [F1] | $619K [F1] | 55.6% [F1] | 0.0% [F1] |\n| Fraud | 201 [F3] | $375K [F3] | 32.8% [F3] | 100.0% [F3] |\n| Processing Errors | 40 [F5] | $72K [F5] | 50.0% [F5] | 0.0% [F5] |\n\n- **Consumer Disputes** surged from 210 [F2] to 333 disputes/month [F1] (59% increase) and from $371K [F2] to $619K [F1] (67% increase) during the holiday period; win rate improved from 52.4% [F2] to 55.6% [F1] for resolved disputes only\n- **Fraud** disputes increased from 126 [F4] to 201/month [F3] (60% increase) with disputed dollars rising from $231K [F4] to $375K [F3] (62% increase); all disputes flagged as friendly fraud [F3, F4] with win rate declining from 35.2% [F4] to 32.8% [F3] for resolved disputes only\n- **Processing Errors** rose from 26 [F6] to 40 disputes/month [F5] (54% increase) and $50K [F6] to $72K [F5] (44% increase); win rate at 50.0% [F5] versus 53.8% [F6] for resolved disputes only\n\n## Data Coverage\nNov 2025-Jan 2026 vs Aug-Oct 2025 comparison. CFPB complaint benchmarks: 5,110/month [F1, F3, F5] and 4,676/month [F2, F4, F6] respectively (market-wide figures, not summed).",
  "verdict": {
   "status": "verified",
   "residual_hedges": 0,
   "edits": []
  },
- "latency_ms": 8018,
+ "latency_ms": 8799,
  "timings_ms": {
-  "fact_pack": 244,
-  "draft": 6186,
-  "verify": 1587
+  "fact_pack": 216,
+  "draft": 6999,
+  "verify": 1584
  }
 }
