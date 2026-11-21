@@ -4,6 +4,8 @@ This branch rebuilds Chargeback & Dispute Intelligence to the Snow Packs v2 bar 
 `COCO-V2-INSTRUCTIONS.md`). Your data stories, Snowflake features, Streamlit stack and owner
 line are unchanged. The app, the landing page and the polish are new.
 
+Please squash-merge this PR.
+
 ## Screen by screen
 
 | Screen | v1 | v2 | Why |
