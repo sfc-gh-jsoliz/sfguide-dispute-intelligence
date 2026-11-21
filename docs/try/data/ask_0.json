@@ -1,0 +1,41 @@
+{
+ "question": "How did chargeback volume in Nov-Dec compare to the prior 3 months, by reason category?",
+ "text": "Chargeback volume rose about 59% in Nov\u2013Dec 2025 compared with Aug\u2013Oct 2025, and every reason category went up by a similar amount. The data ends in June 2026, so Nov\u2013Dec 2026 hasn't happened yet. This uses 2025, the latest Nov\u2013Dec available. Because the two periods have different lengths, I compared average disputes per month.\n\n- **All categories together:** 574 disputes a month in Nov\u2013Dec, up from 362 (+58.6%).\n- **Consumer Disputes:** 333 a month, up from 210 (+123, +58.6%). This is the biggest category by volume.\n- **Fraud:** 201 a month, up from 126 (+75, +59.5%). This is the largest percentage increase.\n- **Processing Errors:** 40 a month, up from 26 (+14, +53.8%).\n\nThe numbers look artificial. Every month in Aug\u2013Oct shows exactly the same count, and so does every month in Nov 2025\u2013Jan 2026. Volume then drops back to the Aug\u2013Oct level from Feb 2026. That points to a fixed seasonal multiplier rather than natural variation, so treat this as a clear holiday-season jump in the model, not a fine-grained trend.",
+ "tables": [
+  {
+   "title": "Avg Monthly Chargebacks by Reason Category: Aug\u2013Oct vs Nov\u2013Dec 2025",
+   "columns": [
+    "REASON_CATEGORY",
+    "AUG_OCT_AVG_MONTHLY",
+    "NOV_DEC_AVG_MONTHLY",
+    "CHANGE",
+    "PCT_CHANGE"
+   ],
+   "rows": [
+    [
+     "Consumer Disputes",
+     "210.000000",
+     "333.000000",
+     "123.000000",
+     "0.585714285714"
+    ],
+    [
+     "Fraud",
+     "126.000000",
+     "201.000000",
+     "75.000000",
+     "0.595238095238"
+    ],
+    [
+     "Processing Errors",
+     "26.000000",
+     "40.000000",
+     "14.000000",
+     "0.538461538462"
+    ]
+   ]
+  }
+ ],
+ "sql": "WITH p AS (SELECT reason_category,\n SUM(CASE WHEN month_end BETWEEN '2025-08-01' AND '2025-10-31' THEN dispute_count END)/3.0 AS aug_oct_avg_monthly,\n SUM(CASE WHEN month_end BETWEEN '2025-11-01' AND '2025-12-31' THEN dispute_count END)/2.0 AS nov_dec_avg_monthly\n FROM __d WHERE month_end BETWEEN '2025-08-01' AND '2025-12-31' GROUP BY 1)\nSELECT reason_category, aug_oct_avg_monthly, nov_dec_avg_monthly, nov_dec_avg_monthly-aug_oct_avg_monthly AS change, (nov_dec_avg_monthly-aug_oct_avg_monthly)/NULLIF(aug_oct_avg_monthly,0) AS pct_change FROM p ORDER BY nov_dec_avg_monthly DESC",
+ "latency_ms": 40380
+}

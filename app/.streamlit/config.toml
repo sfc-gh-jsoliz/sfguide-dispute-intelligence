@@ -1,0 +1,23 @@
+# Rebuttra Dispute Desk theme (tokens from docs/DESIGN.md)
+[server]
+enableStaticServing = true
+
+[client]
+toolbarMode = "minimal"
+
+[theme]
+base = "light"
+primaryColor = "#11757B"
+backgroundColor = "#EDF1F2"
+secondaryBackgroundColor = "#F5F8F8"
+textColor = "#102326"
+linkColor = "#11757B"
+borderColor = "#D3DCDD"
+baseRadius = "10px"
+font = "-apple-system, 'Segoe UI', Roboto, sans-serif"
+headingFont = "Sora, -apple-system, 'Segoe UI', sans-serif"
+chartCategoricalColors = ["#A33A12", "#11757B", "#7A6A2E", "#4B4FA6"]
+
+[[theme.fontFaces]]
+family = "Sora"
+url = "app/static/Sora.woff2"

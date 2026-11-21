@@ -1,0 +1,62 @@
+[
+ {
+  "id": "F1",
+  "reason_category": "Consumer Disputes",
+  "period": "Nov 2025-Jan 2026",
+  "avg_monthly_disputes": 333,
+  "dispute_usd": 618647,
+  "win_rate": 0.557,
+  "friendly_fraud_rate": 0.0,
+  "avg_monthly_cfpb_complaints": 5110
+ },
+ {
+  "id": "F2",
+  "reason_category": "Consumer Disputes",
+  "period": "Aug-Oct 2025",
+  "avg_monthly_disputes": 210,
+  "dispute_usd": 371327,
+  "win_rate": 0.53,
+  "friendly_fraud_rate": 0.0,
+  "avg_monthly_cfpb_complaints": 4676
+ },
+ {
+  "id": "F3",
+  "reason_category": "Fraud",
+  "period": "Nov 2025-Jan 2026",
+  "avg_monthly_disputes": 201,
+  "dispute_usd": 374855,
+  "win_rate": 0.331,
+  "friendly_fraud_rate": 1.0,
+  "avg_monthly_cfpb_complaints": 5110
+ },
+ {
+  "id": "F4",
+  "reason_category": "Fraud",
+  "period": "Aug-Oct 2025",
+  "avg_monthly_disputes": 126,
+  "dispute_usd": 230582,
+  "win_rate": 0.355,
+  "friendly_fraud_rate": 1.0,
+  "avg_monthly_cfpb_complaints": 4676
+ },
+ {
+  "id": "F5",
+  "reason_category": "Processing Errors",
+  "period": "Nov 2025-Jan 2026",
+  "avg_monthly_disputes": 40,
+  "dispute_usd": 71866,
+  "win_rate": 0.509,
+  "friendly_fraud_rate": 0.0,
+  "avg_monthly_cfpb_complaints": 5110
+ },
+ {
+  "id": "F6",
+  "reason_category": "Processing Errors",
+  "period": "Aug-Oct 2025",
+  "avg_monthly_disputes": 26,
+  "dispute_usd": 49842,
+  "win_rate": 0.534,
+  "friendly_fraud_rate": 0.0,
+  "avg_monthly_cfpb_complaints": 4676
+ }
+]

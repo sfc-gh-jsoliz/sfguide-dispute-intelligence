@@ -259,7 +259,7 @@ CREATE OR REPLACE SEMANTIC VIEW DISPUTE_SV
     d.total_resolved AS SUM(d.resolved_count) COMMENT = 'Disputes resolved (won+lost); overall win rate = total_won / total_resolved',
     d.total_lost_usd AS SUM(d.lost_amount) COMMENT = 'Disputed dollars lost (status lost)',
     d.total_friendly_fraud AS SUM(d.friendly_fraud_count) COMMENT = 'Friendly-fraud disputes',
-    d.total_processed_txn AS SUM(d.processed_txn_count) COMMENT = 'Processed transactions (repeated on every reason-code row of a category-month; use only with MERCHANT_CATEGORY and MONTH_END)',
+    d.processed_txn AS MAX(d.processed_txn_count) COMMENT = 'Processed transactions for a merchant category in a month (non-additive across reason codes; group by MERCHANT_CATEGORY and MONTH_END, then sum)',
     d.avg_chargeback_rate_bps AS AVG(d.chargeback_rate_bps) COMMENT = 'Average chargeback rate (bps of processed txns)',
     d.avg_win_rate AS AVG(d.win_rate) COMMENT = 'Average segment win rate',
     d.avg_friendly_fraud_rate AS AVG(d.friendly_fraud_rate) COMMENT = 'Average friendly-fraud share of disputes',

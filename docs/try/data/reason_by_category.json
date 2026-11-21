@@ -1,0 +1,226 @@
+[
+ {
+  "total_disputes": 1488,
+  "total_won": 506,
+  "total_resolved": 1374,
+  "total_lost_usd": 554436.56,
+  "reason_code": "10.4",
+  "category_name": "Digital Goods & Subscriptions"
+ },
+ {
+  "total_disputes": 306,
+  "total_won": 91,
+  "total_resolved": 280,
+  "total_lost_usd": 115859.81,
+  "reason_code": "10.4",
+  "category_name": "Grocery & Essentials"
+ },
+ {
+  "total_disputes": 774,
+  "total_won": 240,
+  "total_resolved": 711,
+  "total_lost_usd": 281979.46,
+  "reason_code": "10.4",
+  "category_name": "Retail & E-commerce"
+ },
+ {
+  "total_disputes": 408,
+  "total_won": 131,
+  "total_resolved": 378,
+  "total_lost_usd": 159070.3,
+  "reason_code": "10.4",
+  "category_name": "Travel & Hospitality"
+ },
+ {
+  "total_disputes": 354,
+  "total_won": 176,
+  "total_resolved": 318,
+  "total_lost_usd": 94754.7,
+  "reason_code": "12.6",
+  "category_name": "Digital Goods & Subscriptions"
+ },
+ {
+  "total_disputes": 78,
+  "total_won": 40,
+  "total_resolved": 71,
+  "total_lost_usd": 18074.31,
+  "reason_code": "12.6",
+  "category_name": "Grocery & Essentials"
+ },
+ {
+  "total_disputes": 192,
+  "total_won": 100,
+  "total_resolved": 173,
+  "total_lost_usd": 47003.92,
+  "reason_code": "12.6",
+  "category_name": "Retail & E-commerce"
+ },
+ {
+  "total_disputes": 84,
+  "total_won": 45,
+  "total_resolved": 81,
+  "total_lost_usd": 18512.4,
+  "reason_code": "12.6",
+  "category_name": "Travel & Hospitality"
+ },
+ {
+  "total_disputes": 1098,
+  "total_won": 548,
+  "total_resolved": 1016,
+  "total_lost_usd": 263019.4,
+  "reason_code": "13.1",
+  "category_name": "Digital Goods & Subscriptions"
+ },
+ {
+  "total_disputes": 222,
+  "total_won": 116,
+  "total_resolved": 208,
+  "total_lost_usd": 61623.75,
+  "reason_code": "13.1",
+  "category_name": "Grocery & Essentials"
+ },
+ {
+  "total_disputes": 576,
+  "total_won": 300,
+  "total_resolved": 537,
+  "total_lost_usd": 144812.67,
+  "reason_code": "13.1",
+  "category_name": "Retail & E-commerce"
+ },
+ {
+  "total_disputes": 300,
+  "total_won": 148,
+  "total_resolved": 275,
+  "total_lost_usd": 77948.39,
+  "reason_code": "13.1",
+  "category_name": "Travel & Hospitality"
+ },
+ {
+  "total_disputes": 690,
+  "total_won": 350,
+  "total_resolved": 641,
+  "total_lost_usd": 176285.9,
+  "reason_code": "13.2",
+  "category_name": "Digital Goods & Subscriptions"
+ },
+ {
+  "total_disputes": 138,
+  "total_won": 67,
+  "total_resolved": 128,
+  "total_lost_usd": 35610.62,
+  "reason_code": "13.2",
+  "category_name": "Grocery & Essentials"
+ },
+ {
+  "total_disputes": 360,
+  "total_won": 197,
+  "total_resolved": 341,
+  "total_lost_usd": 88824.27,
+  "reason_code": "13.2",
+  "category_name": "Retail & E-commerce"
+ },
+ {
+  "total_disputes": 192,
+  "total_won": 99,
+  "total_resolved": 182,
+  "total_lost_usd": 49458.82,
+  "reason_code": "13.2",
+  "category_name": "Travel & Hospitality"
+ },
+ {
+  "total_disputes": 606,
+  "total_won": 309,
+  "total_resolved": 562,
+  "total_lost_usd": 149879.67,
+  "reason_code": "13.3",
+  "category_name": "Digital Goods & Subscriptions"
+ },
+ {
+  "total_disputes": 132,
+  "total_won": 65,
+  "total_resolved": 125,
+  "total_lost_usd": 38594.1,
+  "reason_code": "13.3",
+  "category_name": "Grocery & Essentials"
+ },
+ {
+  "total_disputes": 306,
+  "total_won": 162,
+  "total_resolved": 281,
+  "total_lost_usd": 67873.13,
+  "reason_code": "13.3",
+  "category_name": "Retail & E-commerce"
+ },
+ {
+  "total_disputes": 162,
+  "total_won": 76,
+  "total_resolved": 151,
+  "total_lost_usd": 50692.1,
+  "reason_code": "13.3",
+  "category_name": "Travel & Hospitality"
+ },
+ {
+  "total_disputes": 246,
+  "total_won": 72,
+  "total_resolved": 221,
+  "total_lost_usd": 86619.64,
+  "reason_code": "4837",
+  "category_name": "Digital Goods & Subscriptions"
+ },
+ {
+  "total_disputes": 54,
+  "total_won": 19,
+  "total_resolved": 49,
+  "total_lost_usd": 15124.79,
+  "reason_code": "4837",
+  "category_name": "Grocery & Essentials"
+ },
+ {
+  "total_disputes": 138,
+  "total_won": 42,
+  "total_resolved": 131,
+  "total_lost_usd": 48679.3,
+  "reason_code": "4837",
+  "category_name": "Retail & E-commerce"
+ },
+ {
+  "total_disputes": 60,
+  "total_won": 12,
+  "total_resolved": 56,
+  "total_lost_usd": 24686.78,
+  "reason_code": "4837",
+  "category_name": "Travel & Hospitality"
+ },
+ {
+  "total_disputes": 498,
+  "total_won": 251,
+  "total_resolved": 465,
+  "total_lost_usd": 135748.84,
+  "reason_code": "4853",
+  "category_name": "Digital Goods & Subscriptions"
+ },
+ {
+  "total_disputes": 108,
+  "total_won": 50,
+  "total_resolved": 99,
+  "total_lost_usd": 27688.82,
+  "reason_code": "4853",
+  "category_name": "Grocery & Essentials"
+ },
+ {
+  "total_disputes": 252,
+  "total_won": 119,
+  "total_resolved": 235,
+  "total_lost_usd": 74892.85,
+  "reason_code": "4853",
+  "category_name": "Retail & E-commerce"
+ },
+ {
+  "total_disputes": 138,
+  "total_won": 71,
+  "total_resolved": 127,
+  "total_lost_usd": 33950.16,
+  "reason_code": "4853",
+  "category_name": "Travel & Hospitality"
+ }
+]

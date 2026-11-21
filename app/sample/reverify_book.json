@@ -1,0 +1,13 @@
+{
+ "verdict": {
+  "status": "needs_review",
+  "residual_hedges": 3,
+  "edits": [
+   "Final sentence claims 'Fraud disputes likely rose around 40%' but FACTS show Fraud disputes flat at 126 in both periods [F3,F4]",
+   "Hedge word 'likely' found in final sentence",
+   "Hedge word 'around' found in final sentence",
+   "Hedge word 'could' found in final sentence"
+  ]
+ },
+ "latency_ms": 3656
+}

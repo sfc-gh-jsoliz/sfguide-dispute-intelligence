@@ -1,0 +1,12 @@
+{
+ "verdict": {
+  "status": "needs_review",
+  "residual_hedges": 3,
+  "edits": [
+   "Last sentence contains hedge words 'likely' and 'could' which are not allowed",
+   "Last sentence contains hedge word 'around' which is not allowed",
+   "Last sentence claims '40%' increase but Fraud disputes increased 60% per the facts (201 vs 126)"
+  ]
+ },
+ "latency_ms": 2641
+}

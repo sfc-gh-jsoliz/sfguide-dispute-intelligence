@@ -1,0 +1,77 @@
+{
+ "scope": "holiday",
+ "fact_pack": [
+  {
+   "id": "F1",
+   "reason_category": "Consumer Disputes",
+   "period": "Nov 2025-Jan 2026",
+   "avg_monthly_disputes": 333,
+   "dispute_usd": 618647,
+   "win_rate": 0.557,
+   "friendly_fraud_rate": 0.0,
+   "avg_monthly_cfpb_complaints": 5110
+  },
+  {
+   "id": "F2",
+   "reason_category": "Consumer Disputes",
+   "period": "Aug-Oct 2025",
+   "avg_monthly_disputes": 210,
+   "dispute_usd": 371327,
+   "win_rate": 0.53,
+   "friendly_fraud_rate": 0.0,
+   "avg_monthly_cfpb_complaints": 4676
+  },
+  {
+   "id": "F3",
+   "reason_category": "Fraud",
+   "period": "Nov 2025-Jan 2026",
+   "avg_monthly_disputes": 201,
+   "dispute_usd": 374855,
+   "win_rate": 0.331,
+   "friendly_fraud_rate": 1.0,
+   "avg_monthly_cfpb_complaints": 5110
+  },
+  {
+   "id": "F4",
+   "reason_category": "Fraud",
+   "period": "Aug-Oct 2025",
+   "avg_monthly_disputes": 126,
+   "dispute_usd": 230582,
+   "win_rate": 0.355,
+   "friendly_fraud_rate": 1.0,
+   "avg_monthly_cfpb_complaints": 4676
+  },
+  {
+   "id": "F5",
+   "reason_category": "Processing Errors",
+   "period": "Nov 2025-Jan 2026",
+   "avg_monthly_disputes": 40,
+   "dispute_usd": 71866,
+   "win_rate": 0.509,
+   "friendly_fraud_rate": 0.0,
+   "avg_monthly_cfpb_complaints": 5110
+  },
+  {
+   "id": "F6",
+   "reason_category": "Processing Errors",
+   "period": "Aug-Oct 2025",
+   "avg_monthly_disputes": 26,
+   "dispute_usd": 49842,
+   "win_rate": 0.534,
+   "friendly_fraud_rate": 0.0,
+   "avg_monthly_cfpb_complaints": 4676
+  }
+ ],
+ "draft": "# Chargeback Analysis: Consumer Disputes and Fraud drove holiday period dispute volume increases\n\n| Reason Category | Disputes (avg/mo) | Disputed $ (avg/mo) | Win Rate | Friendly Fraud Rate |\n|---|---|---|---|---|\n| Consumer Disputes | 333 [F1] | $619K [F1] | 55.7% [F1] | 0.0% [F1] |\n| Fraud | 201 [F3] | $375K [F3] | 33.1% [F3] | 100.0% [F3] |\n| Processing Errors | 40 [F5] | $72K [F5] | 50.9% [F5] | 0.0% [F5] |\n\n- **Consumer Disputes** surged 59% from 210 [F2] to 333 disputes/month [F1] during the holiday period, with disputed amounts rising 67% from $371K [F2] to $619K [F1]; win rate improved marginally to 55.7% [F1] from 53.0% [F2] (latest month win rate covers resolved disputes only)\n\n- **Fraud** disputes increased 60% from 126 [F4] to 201/month [F3], with dollars rising 63% from $231K [F4] to $375K [F3]; all disputes flagged as friendly fraud (100.0% [F3], [F4]) but win rate declined to 33.1% [F3] from 35.5% [F4]\n\n- **Processing Errors** grew 54% from 26 [F6] to 40 disputes/month [F5] with amounts up 44% from $50K [F6] to $72K [F5]; win rate declined to 50.9% [F5] from 53.4% [F6]\n\n## Data Coverage\nNov 2025-Jan 2026 vs Aug-Oct 2025; CFPB complaints: 5,110/month [F1] and 4,676/month [F2] market-wide benchmarks",
+ "verdict": {
+  "status": "verified",
+  "residual_hedges": 0,
+  "edits": []
+ },
+ "latency_ms": 8018,
+ "timings_ms": {
+  "fact_pack": 244,
+  "draft": 6186,
+  "verify": 1587
+ }
+}

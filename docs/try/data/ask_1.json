@@ -1,0 +1,101 @@
+{
+ "question": "What is our win rate by reason code, and where are we losing the most dollars?",
+ "text": "Fraud-type disputes are where we lose the most money. Card-absent/friendly fraud costs the most dollars, and the two fraud codes also have the lowest win rates. The figures below cover July 2024 to June 2026, all networks and merchant categories, with win rate calculated as disputes won \u00f7 disputes resolved.\n\n\n\n**Where we lose the most dollars**\n- **10.4 Card-Absent / Friendly Fraud** is the largest loss at **$1.11M** lost of $1.85M disputed. That's about 37% of all lost dollars and roughly twice the next code. Its win rate is only **35.3%** (968 of 2,743 resolved).\n- **13.1 Merchandise Not Received** is next at **$547K** lost, with a 54.6% win rate.\n- **13.2 Cancelled Recurring** ($350K) and **13.3 Not As Described** ($307K) follow.\n\n**Win rates**\n- **Weakest:** 4837 No Cardholder Authorization has the lowest win rate at **31.7%**. It loses fewer dollars ($175K) only because its volume is small.\n- **Strongest:** the service and processing codes all win about 53\u201356%. 12.6 Duplicate / Paid Other Means is best at **56.1%**.\n\n**What to do:** Better evidence for fraud disputes would help most. Lifting the win rate on 10.4 even part of the way toward the ~55% we get elsewhere would recover more dollars than any other single fix. That evidence could include device, delivery or usage data, or proof of the cardholder's past purchases.",
+ "tables": [
+  {
+   "title": "Win Rate and Lost Dollars by Reason Code (Jul 2024 \u2013 Jun 2026)",
+   "columns": [
+    "REASON_CODE",
+    "REASON_NAME",
+    "WON",
+    "RESOLVED",
+    "WIN_RATE",
+    "LOST_USD",
+    "DISPUTED_USD",
+    "START_MONTH",
+    "END_MONTH"
+   ],
+   "rows": [
+    [
+     "10.4",
+     "Card-Absent / Friendly Fraud",
+     "968",
+     "2743",
+     "0.352898",
+     "1111346.13",
+     "1853990.87",
+     "2024-07-31",
+     "2026-06-30"
+    ],
+    [
+     "13.1",
+     "Merchandise Not Received",
+     "1112",
+     "2036",
+     "0.546169",
+     "547404.21",
+     "1348433.73",
+     "2024-07-31",
+     "2026-06-30"
+    ],
+    [
+     "13.2",
+     "Cancelled Recurring",
+     "713",
+     "1292",
+     "0.551858",
+     "350179.61",
+     "845745.54",
+     "2024-07-31",
+     "2026-06-30"
+    ],
+    [
+     "13.3",
+     "Not As Described",
+     "612",
+     "1119",
+     "0.546917",
+     "307039.00",
+     "740480.57",
+     "2024-07-31",
+     "2026-06-30"
+    ],
+    [
+     "4853",
+     "Cardholder Dispute",
+     "491",
+     "926",
+     "0.530238",
+     "272280.67",
+     "616332.41",
+     "2024-07-31",
+     "2026-06-30"
+    ],
+    [
+     "12.6",
+     "Duplicate / Paid Other Means",
+     "361",
+     "643",
+     "0.561431",
+     "178345.33",
+     "432307.58",
+     "2024-07-31",
+     "2026-06-30"
+    ],
+    [
+     "4837",
+     "No Cardholder Authorization",
+     "145",
+     "457",
+     "0.317287",
+     "175110.51",
+     "284443.57",
+     "2024-07-31",
+     "2026-06-30"
+    ]
+   ]
+  }
+ ],
+ "sql": "SELECT reason_code, MAX(reason_name) AS reason_name, SUM(won_count) AS won, SUM(resolved_count) AS resolved, SUM(won_count)/NULLIF(SUM(resolved_count),0) AS win_rate, SUM(lost_amount) AS lost_usd, SUM(total_dispute_amount) AS disputed_usd, MIN(month_end) AS start_month, MAX(month_end) AS end_month FROM __d GROUP BY reason_code ORDER BY lost_usd DESC NULLS LAST",
+ "latency_ms": 28964
+}
