@@ -1,4 +1,4 @@
-"""WCAG AA contrast check for the Rebuttra design tokens (docs/DESIGN.md)."""
+"""WCAG AA contrast check for the app's design tokens (docs/DESIGN.md)."""
 import sys
 
 

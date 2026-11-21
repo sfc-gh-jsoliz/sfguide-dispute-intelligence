@@ -1,4 +1,4 @@
-/* Rebuttra Dispute Desk: hosted no-account example (Sample mode only).
+/* Chargeback & Dispute Intelligence: hosted no-account example (Sample mode only).
    Renders the same five screens as app/streamlit_app.py from data/*.json, which
    scripts/capture_sample.py captured from a Live run. No external scripts. */
 (function () {
@@ -462,7 +462,7 @@
     var route = (location.hash.replace(/^#\//, "") || "overview").split("?")[0];
     if (!screens[route]) route = "overview";
     document.querySelectorAll(".tabs a").forEach(function (a) { if (a.getAttribute("data-r") === route) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
-    document.title = document.querySelector('.tabs a[data-r="' + route + '"]').textContent + " · Rebuttra Dispute Desk (sample)";
+    document.title = document.querySelector('.tabs a[data-r="' + route + '"]').textContent + " · Chargeback & Dispute Intelligence (sample)";
     view.innerHTML = '<div class="card" style="height:120px;background:linear-gradient(90deg,#E3E9EA 25%,#F2F5F5 37%,#E3E9EA 63%);background-size:400% 100%"></div>';
     screens[route]().then(function (h) { view.innerHTML = h; wire(route); }).catch(fail);
   }

@@ -1,4 +1,4 @@
-"""Rebuttra Dispute Desk: Chargeback & Dispute Intelligence (Streamlit).
+"""Chargeback & Dispute Intelligence (Streamlit).
 
 One file, so it can be pasted into a Streamlit in Snowflake app as-is.
 - Live mode: Snowpark. Inside Streamlit in Snowflake it uses the app's session; locally it
@@ -1091,7 +1091,7 @@ def context_bar():
 
 
 def main():
-    st.set_page_config(page_title="Rebuttra Dispute Desk", page_icon=":material/gavel:", layout="wide")
+    st.set_page_config(page_title="Chargeback & Dispute Intelligence", page_icon=":material/gavel:", layout="wide")
     html(CSS)
     logo = Path(__file__).parent / "static" / "logo.svg"
     if logo.exists():
@@ -1106,7 +1106,7 @@ def main():
     nav = st.navigation(list(PAGES.values()), position="top")
     context_bar()
     nav.run()
-    html('<p style="color:#4E6064;font-size:.74rem;margin-top:2rem">Rebuttra and Halvane Payments are fictional. Synthetic data and '
+    html('<p style="color:#4E6064;font-size:.74rem;margin-top:2rem">Halvane Payments is fictional. Synthetic data and '
          'illustrative logic only; not production, regulatory or compliance advice. Owner: Javier Soliz.</p>')
 
 

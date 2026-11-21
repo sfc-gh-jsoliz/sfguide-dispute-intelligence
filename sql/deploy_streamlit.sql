@@ -22,7 +22,7 @@ CREATE OR REPLACE STREAMLIT DISPUTE_APP
   MAIN_FILE = 'streamlit_app.py'
   RUNTIME_NAME = 'SYSTEM$WAREHOUSE_RUNTIME'   -- packages come from environment.yml
   QUERY_WAREHOUSE = SNOWPACK_DISPUTE_INTEL_WH
-  TITLE = 'Rebuttra Dispute Desk'
+  TITLE = 'Chargeback & Dispute Intelligence'
   COMMENT = 'Chargeback & Dispute Intelligence example app';
 
 SHOW STREAMLITS LIKE 'DISPUTE_APP';

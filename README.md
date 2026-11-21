@@ -1,13 +1,13 @@
 # Chargeback & Dispute Intelligence
 
-Explain a chargeback spike in one page where every number backs up. A Streamlit app, branded as the fictional **Rebuttra Dispute Desk**, reads a card processor's dispute book by reason code, network and merchant. It benchmarks the book against a monthly consumer-complaint signal and calls Cortex `AI_COMPLETE` twice: once to draft a cited chargeback note from a small fact pack, and once to fact-check it, stamping the note **Verified** or **Needs review**. A Cortex Agent answers plain-English questions with Cortex Analyst over the same semantic view.
+Explain a chargeback spike in one page where every number backs up. A Streamlit app reads a card processor's dispute book by reason code, network and merchant. It benchmarks the book against a monthly consumer-complaint signal and calls Cortex `AI_COMPLETE` twice: once to draft a cited chargeback note from a small fact pack, and once to fact-check it, stamping the note **Verified** or **Needs review**. A Cortex Agent answers plain-English questions with Cortex Analyst over the same semantic view.
 
 - **Guide:** https://sfc-gh-jsoliz.github.io/sfguide-dispute-intelligence/
 - **Try it, no account:** https://sfc-gh-jsoliz.github.io/sfguide-dispute-intelligence/try/
 
 Owner: Javier Soliz · Last reviewed: November 2026
 
-> Synthetic data and illustrative logic only. Halvane Payments, Rebuttra and every merchant are fictional. Not production software, and not regulatory, compliance or legal advice.
+> Synthetic data and illustrative logic only. Halvane Payments and every merchant are fictional. Not production software, and not regulatory, compliance or legal advice.
 
 ## What it shows
 
@@ -44,7 +44,7 @@ With no Snowflake settings the app opens in **Sample** mode on `app/sample/*.jso
 
 1. **Setup.** Run [`sql/setup.sql`](sql/setup.sql) top to bottom in a Snowsight worksheet. It creates the role, warehouse and database, generates the synthetic book, and creates the semantic view, the reports table, the app stage and the agent. It took 16–18 s in testing.
 2. **Optional: real complaint benchmark.** If your account has the free CFPB consumer-complaint data mounted as `CFPB_COMPLAINT`, run [`sql/setup_cfpb.sql`](sql/setup_cfpb.sql) to swap the synthetic benchmark for real monthly payment-card complaints. The dispute book stays synthetic.
-3. **Deploy the app to Streamlit in Snowflake.** Upload `app/streamlit_app.py`, `app/environment.yml`, `app/.streamlit/config.toml`, `app/static/*` and (optionally) `app/sample/*.json` to the stage `SNOWPACK_DISPUTE_INTEL.CORE.DISPUTE_APP_STAGE`, keeping the folders, then run [`sql/deploy_streamlit.sql`](sql/deploy_streamlit.sql). The app uses the warehouse runtime, and its packages come from `environment.yml`. Open it from **Projects > Streamlit > Rebuttra Dispute Desk**. It opens in Live mode; if you uploaded the sample files, the Sample switch also works there.
+3. **Deploy the app to Streamlit in Snowflake.** Upload `app/streamlit_app.py`, `app/environment.yml`, `app/.streamlit/config.toml`, `app/static/*` and (optionally) `app/sample/*.json` to the stage `SNOWPACK_DISPUTE_INTEL.CORE.DISPUTE_APP_STAGE`, keeping the folders, then run [`sql/deploy_streamlit.sql`](sql/deploy_streamlit.sql). The app uses the warehouse runtime, and its packages come from `environment.yml`. Open it from **Projects > Streamlit > Chargeback & Dispute Intelligence**. It opens in Live mode; if you uploaded the sample files, the Sample switch also works there.
 4. **Or run locally in Live mode** with key-pair auth (never a password in the browser). Register a public key on your user ([key-pair authentication](https://docs.snowflake.com/en/user-guide/key-pair-auth)), then:
 
    ```bash

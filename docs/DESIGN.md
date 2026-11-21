@@ -1,9 +1,8 @@
-# Design: Rebuttra Dispute Desk
+# Design: Chargeback & Dispute Intelligence
 
-The app and the landing page share one fictional product brand. **Rebuttra** is a coined name
-(from *rebuttal*, the evidence a merchant sends back to fight a chargeback). The processor that
-uses it, **Halvane Payments**, is fictional too, and so is every merchant in the data. No domain
-or company with either name turned up when this was written (November 2026).
+The app and the landing page share one product name, **Chargeback & Dispute Intelligence**. The
+processor that uses it, **Halvane Payments**, is fictional, and so is every merchant in the data. No domain
+or company with that processor name turned up when this was written (November 2026).
 
 ## Audience and voice
 
@@ -118,7 +117,7 @@ Analysis. What this pack avoids:
   (Tallyward), no cobalt and highlighter yellow (Lintora), no navy and pink (Tidemere), no amber
   on black (Cadrel, Quillstone), no lime on graphite (Veritome), no purple night (Loss
   Triangle), no cream and plum (Workforce). Harbor teal with jade/rust status is unused.
-- **Layout:** almost every pack uses a left sidebar. Rebuttra uses a top-nav masthead and
+- **Layout:** almost every pack uses a left sidebar. This app uses a top-nav masthead and
   docket cards with a status rule.
 - **Hero:** no dashboard screenshot hero, no gradient blob, no terminal mock. The landing hero
   is a stack of perforated "chargeback tickets" drawn in CSS, with a verdict stamp on top.
